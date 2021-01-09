@@ -14,6 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+using DragonHoard.Core;
 using DragonHoard.Core.BaseClasses;
 using DragonHoard.Core.Interfaces;
 using Microsoft.Extensions.Caching.Memory;
@@ -155,6 +156,30 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
             if (InternalCache is null)
                 return;
             InternalCache.Remove(key);
+        }
+
+        /// <summary>
+        /// Sets the value with the options sent in.
+        /// </summary>
+        /// <typeparam name="TValue">The type of the value.</typeparam>
+        /// <param name="key">The key.</param>
+        /// <param name="value">The value.</param>
+        /// <param name="cacheEntryOptions">The cache entry options.</param>
+        /// <returns>The value sent in.</returns>
+        protected override TValue SetWithOptions<TValue>(object key, TValue value, CacheEntryOptions cacheEntryOptions)
+        {
+            if (InternalCache is null)
+                return value;
+            var Options = new MemoryCacheEntryOptions();
+            Options.RegisterPostEvictionCallback(EvictionCallback);
+            if (cacheEntryOptions.AbsoluteExpiration.HasValue)
+                Options.AbsoluteExpiration = cacheEntryOptions.AbsoluteExpiration;
+            if (cacheEntryOptions.AbsoluteExpirationRelativeToNow.HasValue)
+                Options.AbsoluteExpirationRelativeToNow = cacheEntryOptions.AbsoluteExpirationRelativeToNow;
+            if (cacheEntryOptions.SlidingExpiration.HasValue)
+                Options.SlidingExpiration = cacheEntryOptions.SlidingExpiration;
+            InternalCache.Set(key, value, Options);
+            return value;
         }
     }
 }

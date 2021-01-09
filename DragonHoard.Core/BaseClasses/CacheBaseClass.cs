@@ -173,13 +173,7 @@ namespace DragonHoard.Core.BaseClasses
                     TagIndex.Remove(key);
                     TagIndex.Add(key, cacheEntryOptions.Tags.Select(tag => tag.GetHashCode(StringComparison.Ordinal)).ToArray());
                 }
-                if (cacheEntryOptions.AbsoluteExpiration.HasValue)
-                    return Set(key, value, cacheEntryOptions.AbsoluteExpiration.Value);
-                if (cacheEntryOptions.AbsoluteExpirationRelativeToNow.HasValue)
-                    return Set(key, value, cacheEntryOptions.AbsoluteExpirationRelativeToNow.Value, false);
-                if (cacheEntryOptions.SlidingExpiration.HasValue)
-                    return Set(key, value, cacheEntryOptions.SlidingExpiration.Value, true);
-                return Set(key, value);
+                return SetWithOptions(key, value, cacheEntryOptions);
             }
         }
 
@@ -210,5 +204,15 @@ namespace DragonHoard.Core.BaseClasses
         /// </summary>
         /// <param name="key">The key.</param>
         protected abstract void RemoveByKey(object key);
+
+        /// <summary>
+        /// Sets the value with the options sent in.
+        /// </summary>
+        /// <typeparam name="TValue">The type of the value.</typeparam>
+        /// <param name="key">The key.</param>
+        /// <param name="value">The value.</param>
+        /// <param name="cacheEntryOptions">The cache entry options.</param>
+        /// <returns>The value sent in.</returns>
+        protected abstract TValue SetWithOptions<TValue>(object key, TValue value, CacheEntryOptions cacheEntryOptions);
     }
 }

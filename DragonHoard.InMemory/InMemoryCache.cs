@@ -14,11 +14,11 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+using DragonHoard.Core;
 using DragonHoard.Core.BaseClasses;
 using DragonHoard.Core.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace DragonHoard.InMemory
 {
@@ -45,7 +45,7 @@ namespace DragonHoard.InMemory
         /// <summary>
         /// Internal cache
         /// </summary>
-        private Dictionary<int, object>? InternalCache { get; set; } = new Dictionary<int, object>();
+        private Dictionary<int, CacheEntry>? InternalCache { get; set; } = new Dictionary<int, CacheEntry>();
 
         /// <summary>
         /// The lock object
@@ -69,7 +69,7 @@ namespace DragonHoard.InMemory
         {
             if (InternalCache is null)
                 return;
-            foreach (var Item in InternalCache.Values.OfType<IDisposable>())
+            foreach (var Item in InternalCache.Values)
             {
                 Item.Dispose();
             }
@@ -90,7 +90,16 @@ namespace DragonHoard.InMemory
                 return value;
             lock (LockObject)
             {
-                InternalCache[key.GetHashCode()] = value;
+                var HashKey = key.GetHashCode();
+                if (InternalCache.TryGetValue(HashKey, out var current))
+                {
+                    if (current.Value is IDisposable disposable)
+                        disposable.Dispose();
+                    current.Value = value;
+                    current.LastAccessed = DateTimeOffset.UtcNow;
+                }
+                else
+                    InternalCache[key.GetHashCode()] = new CacheEntry { Value = value, LastAccessed = DateTimeOffset.UtcNow };
             }
             return value;
         }
@@ -140,7 +149,14 @@ namespace DragonHoard.InMemory
             lock (LockObject)
             {
                 ReturnValue = InternalCache.TryGetValue(key.GetHashCode(), out var TempValue);
-                value = (TValue)TempValue;
+
+                if (ReturnValue)
+                {
+                    value = (TValue)TempValue.Value;
+                    TempValue.LastAccessed = DateTimeOffset.UtcNow;
+                }
+                else
+                    value = default;
             }
             return ReturnValue;
         }
@@ -157,6 +173,19 @@ namespace DragonHoard.InMemory
             {
                 InternalCache.Remove(key.GetHashCode());
             }
+        }
+
+        /// <summary>
+        /// Sets the value with the options sent in.
+        /// </summary>
+        /// <typeparam name="TValue">The type of the value.</typeparam>
+        /// <param name="key">The key.</param>
+        /// <param name="value">The value.</param>
+        /// <param name="cacheEntryOptions">The cache entry options.</param>
+        /// <returns>The value sent in.</returns>
+        protected override TValue SetWithOptions<TValue>(object key, TValue value, CacheEntryOptions cacheEntryOptions)
+        {
+            return Set(key, value);
         }
     }
 }
