@@ -9,7 +9,7 @@ using System;
 namespace DragonHoard.Benchmarks.Tests
 {
     [MemoryDiagnoser, HtmlExporter]
-    public class SetSpeedTests
+    public class UpdateSpeedTests
     {
         private ICache IMemoryCacheCache { get; set; }
 
@@ -20,13 +20,13 @@ namespace DragonHoard.Benchmarks.Tests
         [Benchmark(Baseline = true)]
         public void InMemory()
         {
-            InMemoryCache.Set(Rand.Next(), new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
+            InMemoryCache.Set("Update", new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
         }
 
         [Benchmark]
         public void MicrosoftMemory()
         {
-            IMemoryCacheCache.Set(Rand.Next(), new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
+            IMemoryCacheCache.Set("Update", new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
         }
 
         [GlobalSetup]
@@ -39,6 +39,9 @@ namespace DragonHoard.Benchmarks.Tests
             Services.AddCanisterModules(x => x.RegisterInMemoryHoard().RegisterMemoryCacheHoard());
             InMemoryCache = Canister.Builder.Bootstrapper.Resolve<Cache>().GetOrAddCache("In Memory");
             IMemoryCacheCache = Canister.Builder.Bootstrapper.Resolve<Cache>().GetOrAddCache("Microsoft.Extensions.Caching.Memory");
+
+            InMemoryCache.Set("Update", new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
+            IMemoryCacheCache.Set("Update", new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
         }
     }
 }

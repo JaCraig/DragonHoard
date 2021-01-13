@@ -9,7 +9,7 @@ using System;
 namespace DragonHoard.Benchmarks.Tests
 {
     [MemoryDiagnoser, HtmlExporter]
-    public class SetSpeedTests
+    public class RemoveSpeedTests
     {
         private ICache IMemoryCacheCache { get; set; }
 
@@ -20,13 +20,17 @@ namespace DragonHoard.Benchmarks.Tests
         [Benchmark(Baseline = true)]
         public void InMemory()
         {
-            InMemoryCache.Set(Rand.Next(), new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
+            var Key = Rand.Next();
+            InMemoryCache.Set(Key, new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
+            InMemoryCache.Remove(Key);
         }
 
         [Benchmark]
         public void MicrosoftMemory()
         {
-            IMemoryCacheCache.Set(Rand.Next(), new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
+            var Key = Rand.Next();
+            IMemoryCacheCache.Set(Key, new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
+            IMemoryCacheCache.Remove(Key);
         }
 
         [GlobalSetup]
