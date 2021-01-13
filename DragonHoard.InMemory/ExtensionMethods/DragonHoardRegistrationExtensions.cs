@@ -16,6 +16,7 @@ limitations under the License.
 
 using Canister.Interfaces;
 using DragonHoard.InMemory;
+using System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -32,10 +33,22 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <returns>The service collection</returns>
         public static IServiceCollection? AddInMemoryHoard(this IServiceCollection? services)
         {
+            return services.AddInMemoryHoard(options => { options.ScanFrequency = TimeSpan.FromMinutes(1); });
+        }
+
+        /// <summary>
+        /// Adds the in memory hoard.
+        /// </summary>
+        /// <param name="services">The services.</param>
+        /// <param name="setupAction">The setup action.</param>
+        /// <returns></returns>
+        public static IServiceCollection? AddInMemoryHoard(this IServiceCollection? services, Action<InMemoryCacheOptions> setupAction)
+        {
             if (services is null)
                 return services;
             services.AddDragonHoard();
             services.AddSingleton<InMemoryCache>();
+            services.Configure(setupAction);
             return services;
         }
 

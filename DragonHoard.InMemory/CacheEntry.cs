@@ -8,10 +8,22 @@ namespace DragonHoard.InMemory
     internal class CacheEntry : IDisposable
     {
         /// <summary>
-        /// Gets the absolute expiration relative to now.
+        /// Gets or sets the absolute expiration.
         /// </summary>
-        /// <value>The absolute expiration relative to now.</value>
-        public TimeSpan? AbsoluteExpirationRelativeToNow { get; set; }
+        /// <value>The absolute expiration.</value>
+        public DateTimeOffset? AbsoluteExpiration { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether this <see cref="CacheEntry"/> is invalid.
+        /// </summary>
+        /// <value><c>true</c> if invalid; otherwise, <c>false</c>.</value>
+        public bool Invalid { get; set; }
+
+        /// <summary>
+        /// Gets or sets the key.
+        /// </summary>
+        /// <value>The key.</value>
+        public int Key { get; set; }
 
         /// <summary>
         /// Gets the last accessed.
