@@ -15,7 +15,6 @@ limitations under the License.
 */
 
 using System;
-using System.Collections.Generic;
 
 namespace DragonHoard.Core.Interfaces
 {
@@ -49,7 +48,7 @@ namespace DragonHoard.Core.Interfaces
         /// <typeparam name="TValue">The type of the value.</typeparam>
         /// <param name="tag">The tag.</param>
         /// <returns>The IEnumerable of items associated with the tag.</returns>
-        IEnumerable<TValue> GetByTag<TValue>(string tag);
+        TValue[] GetByTag<TValue>(string tag);
 
         /// <summary>
         /// Removes the object associated with the specified key.

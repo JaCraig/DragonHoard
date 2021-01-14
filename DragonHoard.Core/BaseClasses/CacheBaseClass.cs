@@ -18,7 +18,6 @@ using DragonHoard.Core.Interfaces;
 using DragonHoard.Core.Utils;
 using Microsoft.Extensions.Caching.Memory;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace DragonHoard.Core.BaseClasses
@@ -76,7 +75,7 @@ namespace DragonHoard.Core.BaseClasses
         /// <typeparam name="TValue">The type of the value.</typeparam>
         /// <param name="tag">The tag.</param>
         /// <returns>The IEnumerable of items associated with the tag.</returns>
-        public IEnumerable<TValue> GetByTag<TValue>(string tag)
+        public TValue[] GetByTag<TValue>(string tag)
         {
             if (tag is null)
                 return Array.Empty<TValue>();
