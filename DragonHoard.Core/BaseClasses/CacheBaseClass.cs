@@ -59,6 +59,12 @@ namespace DragonHoard.Core.BaseClasses
         public abstract ICache Clone();
 
         /// <summary>
+        /// Compacts the cache by the specified percentage.
+        /// </summary>
+        /// <param name="percentage">The percentage.</param>
+        public abstract void Compact(double? percentage);
+
+        /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting
         /// unmanaged resources.
         /// </summary>

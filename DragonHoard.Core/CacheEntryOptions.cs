@@ -36,6 +36,18 @@ namespace DragonHoard.Core
         public TimeSpan? AbsoluteExpirationRelativeToNow { get; set; }
 
         /// <summary>
+        /// Gets or sets the priority.
+        /// </summary>
+        /// <value>The priority.</value>
+        public CachePriority Priority { get; set; }
+
+        /// <summary>
+        /// Gets or sets the size.
+        /// </summary>
+        /// <value>The size.</value>
+        public long? Size { get; set; }
+
+        /// <summary>
         /// Gets or sets the sliding expiration.
         /// </summary>
         /// <value>The sliding expiration.</value>

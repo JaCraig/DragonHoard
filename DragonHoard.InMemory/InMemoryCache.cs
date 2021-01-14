@@ -39,11 +39,10 @@ namespace DragonHoard.InMemory
         /// <param name="memoryCache">The memory cache.</param>
         public InMemoryCache(IEnumerable<IOptions<InMemoryCacheOptions>> options)
         {
-            Options = (options.FirstOrDefault() ?? InMemoryCacheOptions.Default);
-            if (Options.Value.ScanFrequency == default)
-                Options = InMemoryCacheOptions.Default;
+            Options = options.FirstOrDefault()?.Value ?? InMemoryCacheOptions.Default;
+            if (Options.ScanFrequency == default)
+                Options.ScanFrequency = TimeSpan.FromMinutes(1);
             LastScan = DateTimeOffset.UtcNow;
-            ScanFrequency = Options.Value.ScanFrequency;
         }
 
         /// <summary>
@@ -61,12 +60,17 @@ namespace DragonHoard.InMemory
         /// Gets the options.
         /// </summary>
         /// <value>The options.</value>
-        private IOptions<InMemoryCacheOptions> Options { get; }
+        private InMemoryCacheOptions Options { get; }
 
         /// <summary>
         /// The lock object
         /// </summary>
         private readonly object LockObject = new object();
+
+        /// <summary>
+        /// The current size
+        /// </summary>
+        private long CurrentSize;
 
         /// <summary>
         /// Gets or sets the last scan.
@@ -75,17 +79,74 @@ namespace DragonHoard.InMemory
         private DateTimeOffset LastScan;
 
         /// <summary>
-        /// The scan frequency
-        /// </summary>
-        private TimeSpan ScanFrequency;
-
-        /// <summary>
         /// Clones this instance.
         /// </summary>
         /// <returns>A copy of this cache.</returns>
         public override ICache Clone()
         {
             return new InMemoryCache(new IOptions<InMemoryCacheOptions>[] { Options });
+        }
+
+        /// <summary>
+        /// Compacts the specified percentage.
+        /// </summary>
+        /// <param name="percentage">The percentage.</param>
+        public override void Compact(double? percentage)
+        {
+            int CurrentCount = InternalCache.Count;
+            int ItemsToRemove = (int)(CurrentCount * percentage);
+            int TargetCount = CurrentCount - ItemsToRemove;
+
+            var CurrentTime = DateTimeOffset.UtcNow;
+            lock (LockObject)
+            {
+                var Items = InternalCache.Values.ToArray();
+                var EntriesToRemove = new List<CacheEntry>();
+                var LowPriorty = new List<CacheEntry>();
+                var NormalPriorty = new List<CacheEntry>();
+                var HighPriorty = new List<CacheEntry>();
+                for (int i = 0; i < Items.Length; i++)
+                {
+                    var Item = Items[i];
+                    if (!CheckValid(Item, CurrentTime))
+                    {
+                        Item.Invalid = true;
+                        EntriesToRemove.Add(Item);
+                        --CurrentCount;
+                    }
+                    else
+                    {
+                        switch (Item.Priority)
+                        {
+                            case CachePriority.Low:
+                                {
+                                    LowPriorty.Add(Item);
+                                    break;
+                                }
+
+                            case CachePriority.Normal:
+                                {
+                                    NormalPriorty.Add(Item);
+                                    break;
+                                }
+
+                            case CachePriority.High:
+                                {
+                                    HighPriorty.Add(Item);
+                                    break;
+                                }
+                        }
+                    }
+                }
+                CurrentCount = ExpirePriorityBucket(CurrentCount, TargetCount, EntriesToRemove, LowPriorty);
+                CurrentCount = ExpirePriorityBucket(CurrentCount, TargetCount, EntriesToRemove, NormalPriorty);
+                CurrentCount = ExpirePriorityBucket(CurrentCount, TargetCount, EntriesToRemove, HighPriorty);
+                foreach (var Item in EntriesToRemove)
+                {
+                    InternalCache.Remove(Item.Key);
+                    EvictionCallback(Item.Key, Item.Value, EvictionReason.Expired, this);
+                }
+            }
         }
 
         /// <summary>
@@ -227,6 +288,7 @@ namespace DragonHoard.InMemory
                 if (InternalCache.TryGetValue(HashKey, out var current))
                 {
                     InternalCache.Remove(HashKey);
+                    CurrentSize -= (current.Size ?? 0);
                 }
             }
             ScanForItemsToRemove(CurrentTime);
@@ -244,6 +306,7 @@ namespace DragonHoard.InMemory
         {
             if (InternalCache is null)
                 return value;
+            var ExceedsSize = Options.MaxCacheSize.HasValue && cacheEntryOptions.Size.HasValue && cacheEntryOptions.Size + CurrentSize > Options.MaxCacheSize;
             var UTCNow = DateTimeOffset.UtcNow;
             lock (LockObject)
             {
@@ -254,9 +317,58 @@ namespace DragonHoard.InMemory
                     entry.AbsoluteExpiration = UTCNow + cacheEntryOptions.AbsoluteExpirationRelativeToNow;
                 if (cacheEntryOptions.SlidingExpiration.HasValue)
                     entry.SlidingExpiration = cacheEntryOptions.SlidingExpiration;
+                if (cacheEntryOptions.Size.HasValue)
+                {
+                    entry.Size = cacheEntryOptions.Size;
+                    CurrentSize += entry.Size.Value;
+                }
+                entry.Priority = cacheEntryOptions.Priority;
+            }
+            if (ExceedsSize)
+            {
+                Compact(Options.CompactionPercentage);
             }
             ScanForItemsToRemove(UTCNow);
             return value;
+        }
+
+        /// <summary>
+        /// Expires the priority bucket.
+        /// </summary>
+        /// <param name="currentCount">The current count.</param>
+        /// <param name="targetCount">The target count.</param>
+        /// <param name="entriesToRemove">The entries to remove.</param>
+        /// <param name="bucket">The bucket.</param>
+        /// <returns>The number of items left.</returns>
+        private static int ExpirePriorityBucket(int currentCount, int targetCount, List<CacheEntry> entriesToRemove, List<CacheEntry> bucket)
+        {
+            if (targetCount >= currentCount)
+                return currentCount;
+            foreach (var Item in bucket.Where(x => x.AbsoluteExpiration.HasValue && !x.Invalid).OrderBy(x => x.AbsoluteExpiration))
+            {
+                Item.Invalid = true;
+                entriesToRemove.Add(Item);
+                --currentCount;
+                if (targetCount >= currentCount)
+                    return currentCount;
+            }
+            foreach (var Item in bucket.Where(x => x.SlidingExpiration.HasValue && !x.Invalid).OrderBy(x => x.SlidingExpiration))
+            {
+                Item.Invalid = true;
+                entriesToRemove.Add(Item);
+                --currentCount;
+                if (targetCount >= currentCount)
+                    return currentCount;
+            }
+            foreach (var Item in bucket.Where(x => !x.Invalid).OrderBy(x => x.LastAccessed))
+            {
+                Item.Invalid = true;
+                entriesToRemove.Add(Item);
+                --currentCount;
+                if (targetCount >= currentCount)
+                    return currentCount;
+            }
+            return currentCount;
         }
 
         /// <summary>
@@ -324,8 +436,11 @@ namespace DragonHoard.InMemory
         /// </summary>
         private void ScanForItemsToRemove(DateTimeOffset currentTime)
         {
-            if (LastScan + ScanFrequency > currentTime)
+            if (LastScan + Options.ScanFrequency > currentTime)
+            {
                 return;
+            }
+
             LastScan = currentTime;
             Task.Factory.StartNew(state => ScanForItemsToRemove((InMemoryCache)state), this, CancellationToken.None, TaskCreationOptions.DenyChildAttach, TaskScheduler.Default);
         }

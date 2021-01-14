@@ -19,6 +19,18 @@ namespace DragonHoard.InMemory
         };
 
         /// <summary>
+        /// Gets or sets the compaction percentage.
+        /// </summary>
+        /// <value>The compaction percentage.</value>
+        public double? CompactionPercentage { get; set; }
+
+        /// <summary>
+        /// Gets or sets the maximum size.
+        /// </summary>
+        /// <value>The maximum size.</value>
+        public long? MaxCacheSize { get; set; }
+
+        /// <summary>
         /// Gets or sets the scan frequency.
         /// </summary>
         /// <value>The scan frequency.</value>

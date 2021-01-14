@@ -38,6 +38,12 @@ namespace DragonHoard.Core.Interfaces
         ICache Clone();
 
         /// <summary>
+        /// Compacts the cache by the specified percentage.
+        /// </summary>
+        /// <param name="percentage">The percentage.</param>
+        void Compact(double? percentage);
+
+        /// <summary>
         /// Gets the by tag.
         /// </summary>
         /// <typeparam name="TValue">The type of the value.</typeparam>

@@ -59,6 +59,15 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
         }
 
         /// <summary>
+        /// Compacts the cache by the specified percentage.
+        /// </summary>
+        /// <param name="percentage">The percentage.</param>
+        public override void Compact(double? percentage)
+        {
+            ((MemoryCache)InternalCache).Compact(percentage);
+        }
+
+        /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting
         /// unmanaged resources.
         /// </summary>
@@ -178,6 +187,26 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
                 Options.AbsoluteExpirationRelativeToNow = cacheEntryOptions.AbsoluteExpirationRelativeToNow;
             if (cacheEntryOptions.SlidingExpiration.HasValue)
                 Options.SlidingExpiration = cacheEntryOptions.SlidingExpiration;
+            if (cacheEntryOptions.Size.HasValue)
+                Options.Size = cacheEntryOptions.Size;
+            switch (cacheEntryOptions.Priority)
+            {
+                case CachePriority.Normal:
+                    {
+                        Options.Priority = CacheItemPriority.Normal;
+                        break;
+                    }
+                case CachePriority.Low:
+                    {
+                        Options.Priority = CacheItemPriority.Low;
+                        break;
+                    }
+                case CachePriority.High:
+                    {
+                        Options.Priority = CacheItemPriority.High;
+                        break;
+                    }
+            }
             InternalCache.Set(key, value, Options);
             return value;
         }

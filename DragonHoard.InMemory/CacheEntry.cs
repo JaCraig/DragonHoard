@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DragonHoard.Core;
+using System;
 
 namespace DragonHoard.InMemory
 {
@@ -30,6 +31,12 @@ namespace DragonHoard.InMemory
         /// </summary>
         /// <value>The last accessed.</value>
         public DateTimeOffset LastAccessed { get; set; }
+
+        /// <summary>
+        /// Gets or sets the priority.
+        /// </summary>
+        /// <value>The priority.</value>
+        public CachePriority Priority { get; set; }
 
         /// <summary>
         /// Gets the size.
