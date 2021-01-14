@@ -159,6 +159,7 @@ namespace DragonHoard.InMemory
                 CurrentCount = ExpirePriorityBucket(CurrentCount, TargetCount, EntriesToRemove, HighPriorty);
                 foreach (var Item in EntriesToRemove)
                 {
+                    CurrentSize -= (Item.Size ?? 0);
                     InternalCache.Remove(Item.Key);
                     EvictionCallback(Item.Key, Item.Value, EvictionReason.Expired, this);
                 }
@@ -486,6 +487,7 @@ namespace DragonHoard.InMemory
                     {
                         Disposable.Dispose();
                     }
+                    cache.CurrentSize -= (Item.Size ?? 0);
                     cache.InternalCache.Remove(Item.Key);
                     cache.EvictionCallback(Item.Key, Item.Value, EvictionReason.Expired, cache);
                 }
