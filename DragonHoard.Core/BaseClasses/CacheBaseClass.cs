@@ -79,17 +79,19 @@ namespace DragonHoard.Core.BaseClasses
         public IEnumerable<TValue> GetByTag<TValue>(string tag)
         {
             if (tag is null)
-                yield break;
+                return Array.Empty<TValue>();
             lock (LockObject)
             {
                 if (!TagIndex.TryGetValue(tag.GetHashCode(StringComparison.Ordinal), out var Keys))
-                    yield break;
+                    return Array.Empty<TValue>();
 
+                var ReturnValues = new TValue[Keys.Length];
                 for (int i = 0; i < Keys.Length; i++)
                 {
                     if (TryGetValue<TValue>(Keys[i], out var ReturnValue))
-                        yield return ReturnValue;
+                        ReturnValues[i] = ReturnValue;
                 }
+                return ReturnValues;
             }
         }
 
