@@ -18,6 +18,7 @@ using DragonHoard.Core;
 using DragonHoard.Core.BaseClasses;
 using DragonHoard.Core.Interfaces;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Options;
 using System;
 
 namespace DragonHoard.MicrosoftExtensionsCachingMemory
@@ -56,6 +57,17 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
         public override ICache Clone()
         {
             return new MemoryCache(InternalCache ?? new Microsoft.Extensions.Caching.Memory.MemoryCache(null));
+        }
+
+        /// <summary>
+        /// Clones this instance.
+        /// </summary>
+        /// <typeparam name="TOption">The type of the option.</typeparam>
+        /// <param name="options">The options to use for the cache.</param>
+        /// <returns>A copy of this cache.</returns>
+        public override ICache Clone<TOption>(TOption options)
+        {
+            return new MemoryCache(InternalCache ?? new Microsoft.Extensions.Caching.Memory.MemoryCache(options as IOptions<MemoryCacheOptions>));
         }
 
         /// <summary>

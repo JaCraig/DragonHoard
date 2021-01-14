@@ -88,6 +88,32 @@ namespace DragonHoard.Core
         }
 
         /// <summary>
+        /// Gets the or add cache.
+        /// </summary>
+        /// <typeparam name="TOptions">The type of the options.</typeparam>
+        /// <param name="options">The options the cache should use.</param>
+        /// <param name="name">The name.</param>
+        /// <returns>The cache specified.</returns>
+        public ICache? GetOrAddCache<TOptions>(TOptions options, string name = "Default")
+        {
+            if (Caches is null)
+                return null;
+
+            var CacheKey = GetKey(name);
+            if (Caches.TryGetValue(CacheKey, out var ReturnValue))
+                return ReturnValue;
+
+            var DefaultKey = GetKey("Default");
+            Caches.TryGetValue(DefaultKey, out ReturnValue);
+            ReturnValue = ReturnValue.Clone(options);
+            if (ReturnValue is null)
+                return null;
+
+            Caches.Add(CacheKey, ReturnValue);
+            return ReturnValue;
+        }
+
+        /// <summary>
         /// Releases unmanaged and - optionally - managed resources.
         /// </summary>
         /// <param name="disposing">

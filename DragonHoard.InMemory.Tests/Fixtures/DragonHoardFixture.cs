@@ -26,6 +26,7 @@ namespace DragonHoard.InMemory.Tests.Fixtures
         /// </summary>
         public void Dispose()
         {
+            GC.SuppressFinalize(this);
         }
     }
 }

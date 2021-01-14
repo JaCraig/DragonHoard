@@ -88,6 +88,17 @@ namespace DragonHoard.InMemory
         }
 
         /// <summary>
+        /// Clones this instance.
+        /// </summary>
+        /// <typeparam name="TOption">The type of the option.</typeparam>
+        /// <param name="options">The options to use for the cache.</param>
+        /// <returns>A copy of this cache.</returns>
+        public override ICache Clone<TOption>(TOption options)
+        {
+            return new InMemoryCache(new IOptions<InMemoryCacheOptions>[] { options as IOptions<InMemoryCacheOptions> ?? Options });
+        }
+
+        /// <summary>
         /// Compacts the specified percentage.
         /// </summary>
         /// <param name="percentage">The percentage.</param>

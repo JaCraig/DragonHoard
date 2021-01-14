@@ -37,6 +37,14 @@ namespace DragonHoard.Core.Interfaces
         ICache Clone();
 
         /// <summary>
+        /// Clones this instance.
+        /// </summary>
+        /// <typeparam name="TOption">The type of the option.</typeparam>
+        /// <param name="options">The options to use for the cache.</param>
+        /// <returns>A copy of this cache.</returns>
+        ICache Clone<TOption>(TOption options);
+
+        /// <summary>
         /// Compacts the cache by the specified percentage.
         /// </summary>
         /// <param name="percentage">The percentage.</param>
