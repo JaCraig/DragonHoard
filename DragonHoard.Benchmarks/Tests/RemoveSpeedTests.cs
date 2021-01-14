@@ -38,8 +38,8 @@ namespace DragonHoard.Benchmarks.Tests
         {
             Rand = new Random();
             var Services = new ServiceCollection().AddOptions()
-                .Configure<InMemoryCacheOptions>(options => { options.ScanFrequency = TimeSpan.FromSeconds(10); })
-                .Configure<MemoryCacheOptions>(options => { options.ExpirationScanFrequency = TimeSpan.FromSeconds(10); });
+                .Configure<InMemoryCacheOptions>(options => options.ScanFrequency = TimeSpan.FromSeconds(10))
+                .Configure<MemoryCacheOptions>(options => options.ExpirationScanFrequency = TimeSpan.FromSeconds(10));
             Services.AddCanisterModules(x => x.RegisterInMemoryHoard().RegisterMemoryCacheHoard());
             InMemoryCache = Canister.Builder.Bootstrapper.Resolve<Cache>().GetOrAddCache("In Memory");
             IMemoryCacheCache = Canister.Builder.Bootstrapper.Resolve<Cache>().GetOrAddCache("Microsoft.Extensions.Caching.Memory");

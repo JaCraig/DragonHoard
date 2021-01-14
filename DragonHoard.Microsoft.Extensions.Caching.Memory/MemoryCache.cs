@@ -55,16 +55,16 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
         /// <returns>A copy of this cache.</returns>
         public override ICache Clone()
         {
-            return new MemoryCache(InternalCache);
+            return new MemoryCache(InternalCache ?? new Microsoft.Extensions.Caching.Memory.MemoryCache(null));
         }
 
         /// <summary>
         /// Compacts the cache by the specified percentage.
         /// </summary>
         /// <param name="percentage">The percentage.</param>
-        public override void Compact(double? percentage)
+        public override void Compact(double percentage)
         {
-            ((MemoryCache)InternalCache).Compact(percentage);
+            (InternalCache as MemoryCache)?.Compact(percentage);
         }
 
         /// <summary>
@@ -150,7 +150,7 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
         {
             if (InternalCache is null)
             {
-                value = default;
+                value = default!;
                 return false;
             }
             return InternalCache.TryGetValue(key, out value);

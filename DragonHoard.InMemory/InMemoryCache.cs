@@ -36,7 +36,7 @@ namespace DragonHoard.InMemory
         /// <summary>
         /// Initializes a new instance of the <see cref="InMemoryCache"/> class.
         /// </summary>
-        /// <param name="memoryCache">The memory cache.</param>
+        /// <param name="options">The options.</param>
         public InMemoryCache(IEnumerable<IOptions<InMemoryCacheOptions>> options)
         {
             Options = options.FirstOrDefault()?.Value ?? InMemoryCacheOptions.Default;
@@ -91,11 +91,16 @@ namespace DragonHoard.InMemory
         /// Compacts the specified percentage.
         /// </summary>
         /// <param name="percentage">The percentage.</param>
-        public override void Compact(double? percentage)
+        public override void Compact(double percentage)
         {
+            if (InternalCache is null)
+                return;
             int CurrentCount = InternalCache.Count;
-            int ItemsToRemove = (int)(CurrentCount * percentage);
+            int ItemsToRemove = (int)Math.Round(CurrentCount * percentage, MidpointRounding.AwayFromZero);
             int TargetCount = CurrentCount - ItemsToRemove;
+
+            if (TargetCount == CurrentCount)
+                return;
 
             var CurrentTime = DateTimeOffset.UtcNow;
             lock (LockObject)
@@ -176,12 +181,12 @@ namespace DragonHoard.InMemory
         {
             if (InternalCache is null)
                 return value;
-            var UTCNow = DateTimeOffset.UtcNow;
+            var UtcNow = DateTimeOffset.UtcNow;
             lock (LockObject)
             {
-                var entry = GetOrCreateEntry(key, value, UTCNow);
+                var Entry = GetOrCreateEntry(key, value, UtcNow);
             }
-            ScanForItemsToRemove(UTCNow);
+            ScanForItemsToRemove(UtcNow);
             return value;
         }
 
@@ -197,13 +202,13 @@ namespace DragonHoard.InMemory
         {
             if (InternalCache is null)
                 return value;
-            var UTCNow = DateTimeOffset.UtcNow;
+            var UtcNow = DateTimeOffset.UtcNow;
             lock (LockObject)
             {
-                var entry = GetOrCreateEntry(key, value, UTCNow);
-                entry.AbsoluteExpiration = absoluteExpiration;
+                var Entry = GetOrCreateEntry(key, value, UtcNow);
+                Entry.AbsoluteExpiration = absoluteExpiration;
             }
-            ScanForItemsToRemove(UTCNow);
+            ScanForItemsToRemove(UtcNow);
             return value;
         }
 
@@ -220,16 +225,16 @@ namespace DragonHoard.InMemory
         {
             if (InternalCache is null)
                 return value;
-            var UTCNow = DateTimeOffset.UtcNow;
+            var UtcNow = DateTimeOffset.UtcNow;
             lock (LockObject)
             {
-                var entry = GetOrCreateEntry(key, value, UTCNow);
+                var Entry = GetOrCreateEntry(key, value, UtcNow);
                 if (sliding)
-                    entry.SlidingExpiration = expirationRelativeToNow;
+                    Entry.SlidingExpiration = expirationRelativeToNow;
                 else
-                    entry.AbsoluteExpiration = UTCNow + expirationRelativeToNow;
+                    Entry.AbsoluteExpiration = UtcNow + expirationRelativeToNow;
             }
-            ScanForItemsToRemove(UTCNow);
+            ScanForItemsToRemove(UtcNow);
             return value;
         }
 
@@ -244,7 +249,7 @@ namespace DragonHoard.InMemory
         {
             if (InternalCache is null)
             {
-                value = default;
+                value = default!;
                 return false;
             }
             bool ReturnValue;
@@ -257,17 +262,19 @@ namespace DragonHoard.InMemory
                 {
                     if (CheckValid(TempValue, CurrentTime))
                     {
-                        value = (TValue)TempValue.Value;
+                        value = (TValue)TempValue.Value!;
                         TempValue.LastAccessed = CurrentTime;
                     }
                     else
                     {
                         ReturnValue = false;
-                        value = default;
+                        value = default!;
                     }
                 }
                 else
-                    value = default;
+                {
+                    value = default!;
+                }
             }
             ScanForItemsToRemove(CurrentTime);
             return ReturnValue;
@@ -285,10 +292,10 @@ namespace DragonHoard.InMemory
             lock (LockObject)
             {
                 var HashKey = key.GetHashCode();
-                if (InternalCache.TryGetValue(HashKey, out var current))
+                if (InternalCache.TryGetValue(HashKey, out var Current))
                 {
                     InternalCache.Remove(HashKey);
-                    CurrentSize -= (current.Size ?? 0);
+                    CurrentSize -= (Current.Size ?? 0);
                 }
             }
             ScanForItemsToRemove(CurrentTime);
@@ -307,28 +314,28 @@ namespace DragonHoard.InMemory
             if (InternalCache is null)
                 return value;
             var ExceedsSize = Options.MaxCacheSize.HasValue && cacheEntryOptions.Size.HasValue && cacheEntryOptions.Size + CurrentSize > Options.MaxCacheSize;
-            var UTCNow = DateTimeOffset.UtcNow;
+            var UtcNow = DateTimeOffset.UtcNow;
             lock (LockObject)
             {
-                var entry = GetOrCreateEntry(key, value, UTCNow);
+                var Entry = GetOrCreateEntry(key, value, UtcNow);
                 if (cacheEntryOptions.AbsoluteExpiration.HasValue)
-                    entry.AbsoluteExpiration = cacheEntryOptions.AbsoluteExpiration;
+                    Entry.AbsoluteExpiration = cacheEntryOptions.AbsoluteExpiration;
                 if (cacheEntryOptions.AbsoluteExpirationRelativeToNow.HasValue)
-                    entry.AbsoluteExpiration = UTCNow + cacheEntryOptions.AbsoluteExpirationRelativeToNow;
+                    Entry.AbsoluteExpiration = UtcNow + cacheEntryOptions.AbsoluteExpirationRelativeToNow;
                 if (cacheEntryOptions.SlidingExpiration.HasValue)
-                    entry.SlidingExpiration = cacheEntryOptions.SlidingExpiration;
+                    Entry.SlidingExpiration = cacheEntryOptions.SlidingExpiration;
                 if (cacheEntryOptions.Size.HasValue)
                 {
-                    entry.Size = cacheEntryOptions.Size;
-                    CurrentSize += entry.Size.Value;
+                    Entry.Size = cacheEntryOptions.Size;
+                    CurrentSize += Entry.Size.Value;
                 }
-                entry.Priority = cacheEntryOptions.Priority;
+                Entry.Priority = cacheEntryOptions.Priority;
             }
+            ScanForItemsToRemove(UtcNow);
             if (ExceedsSize)
             {
-                Compact(Options.CompactionPercentage);
+                Compact(Options.CompactionPercentage ?? 0.1);
             }
-            ScanForItemsToRemove(UTCNow);
             return value;
         }
 
@@ -405,30 +412,34 @@ namespace DragonHoard.InMemory
         /// <summary>
         /// Gets or creates the entry.
         /// </summary>
+        /// <typeparam name="TValue">The type of the value.</typeparam>
         /// <param name="key">The key.</param>
+        /// <param name="value">The value.</param>
         /// <param name="currentTime">The current time.</param>
         /// <returns>The entry</returns>
         private CacheEntry GetOrCreateEntry<TValue>(object key, TValue value, DateTimeOffset currentTime)
         {
+            if (InternalCache is null)
+                return CacheEntry.Empty;
             var HashKey = key.GetHashCode();
-            if (InternalCache.TryGetValue(HashKey, out var current))
+            if (InternalCache.TryGetValue(HashKey, out var Current))
             {
-                if (current.Value is IDisposable disposable)
-                    disposable.Dispose();
-                current.LastAccessed = currentTime;
-                current.AbsoluteExpiration = null;
-                current.SlidingExpiration = null;
-                current.Invalid = false;
-                current.Size = 0;
+                if (Current.Value is IDisposable Disposable)
+                    Disposable.Dispose();
+                Current.LastAccessed = currentTime;
+                Current.AbsoluteExpiration = null;
+                Current.SlidingExpiration = null;
+                Current.Invalid = false;
+                Current.Size = 0;
             }
             else
             {
-                current = new CacheEntry { LastAccessed = currentTime };
-                InternalCache[HashKey] = current;
+                Current = new CacheEntry { LastAccessed = currentTime };
+                InternalCache[HashKey] = Current;
             }
-            current.Key = HashKey;
-            current.Value = value;
-            return current;
+            Current.Key = HashKey;
+            Current.Value = value;
+            return Current;
         }
 
         /// <summary>
@@ -451,6 +462,8 @@ namespace DragonHoard.InMemory
         /// <param name="cache">The state.</param>
         private void ScanForItemsToRemove(InMemoryCache cache)
         {
+            if (cache.InternalCache is null)
+                return;
             var CurrentTime = DateTimeOffset.UtcNow;
             lock (LockObject)
             {
@@ -458,9 +471,9 @@ namespace DragonHoard.InMemory
                 for (int i = 0; i < Items.Length; i++)
                 {
                     var Item = Items[i];
-                    if (Item.Value is IDisposable disposable)
+                    if (Item.Value is IDisposable Disposable)
                     {
-                        disposable.Dispose();
+                        Disposable.Dispose();
                     }
                     cache.InternalCache.Remove(Item.Key);
                     cache.EvictionCallback(Item.Key, Item.Value, EvictionReason.Expired, cache);

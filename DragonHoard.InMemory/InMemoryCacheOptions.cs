@@ -37,7 +37,7 @@ namespace DragonHoard.InMemory
         public TimeSpan ScanFrequency { get; set; }
 
         /// <summary>
-        /// Gets the default configured <typeparamref name="TOptions"/> instance.
+        /// Gets the default configured Options instance.
         /// </summary>
         public InMemoryCacheOptions Value => this;
     }

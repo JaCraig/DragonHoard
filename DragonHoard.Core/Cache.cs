@@ -31,7 +31,9 @@ namespace DragonHoard.Core
         /// Initializes a new instance of the <see cref="Cache"/> class.
         /// </summary>
         /// <param name="caches">The caches.</param>
-        /// <param name="cacheOptions">The cache options.</param>
+        /// <exception cref="ArgumentException">
+        /// No caches were found in the system. Please register one prior to initializing.
+        /// </exception>
         public Cache(IEnumerable<ICache> caches)
         {
             caches ??= Array.Empty<ICache>();
@@ -50,11 +52,6 @@ namespace DragonHoard.Core
         /// Caches
         /// </summary>
         private Dictionary<int, ICache>? Caches { get; set; }
-
-        /// <summary>
-        /// The disposed value
-        /// </summary>
-        private bool disposedValue;
 
         /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting
@@ -99,18 +96,13 @@ namespace DragonHoard.Core
         /// </param>
         protected virtual void Dispose(bool disposing)
         {
-            if (!disposedValue)
+            if (Caches is null)
+                return;
+            foreach (var Cache in Caches)
             {
-                if (disposing)
-                {
-                    foreach (var Cache in Caches)
-                    {
-                        Cache.Value.Dispose();
-                    }
-                    Caches = null;
-                }
-                disposedValue = true;
+                Cache.Value.Dispose();
             }
+            Caches = null;
         }
 
         /// <summary>

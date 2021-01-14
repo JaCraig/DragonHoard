@@ -29,11 +29,10 @@ namespace Microsoft.Extensions.DependencyInjection
         /// Adds the dragon hoard.
         /// </summary>
         /// <param name="services">The services.</param>
-        /// <param name="options">The options.</param>
         /// <returns>The service collection</returns>
         public static IServiceCollection? AddInMemoryHoard(this IServiceCollection? services)
         {
-            return services.AddInMemoryHoard(options => { options.ScanFrequency = TimeSpan.FromMinutes(1); });
+            return services.AddInMemoryHoard(options => options.ScanFrequency = TimeSpan.FromMinutes(1));
         }
 
         /// <summary>
@@ -41,7 +40,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         /// <param name="services">The services.</param>
         /// <param name="setupAction">The setup action.</param>
-        /// <returns></returns>
+        /// <returns>The service collection</returns>
         public static IServiceCollection? AddInMemoryHoard(this IServiceCollection? services, Action<InMemoryCacheOptions> setupAction)
         {
             if (services is null)

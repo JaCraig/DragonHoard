@@ -15,27 +15,24 @@ namespace DragonHoard.Benchmarks.Tests
 
         private ICache InMemoryCache { get; set; }
 
-        private Random Rand { get; set; }
-
         [Benchmark(Baseline = true)]
         public void InMemory()
         {
-            InMemoryCache.TryGetValue("Testing", out object Value);
+            InMemoryCache.TryGetValue("Testing", out object _);
         }
 
         [Benchmark]
         public void MicrosoftMemory()
         {
-            IMemoryCacheCache.TryGetValue("Testing", out object Value);
+            IMemoryCacheCache.TryGetValue("Testing", out object _);
         }
 
         [GlobalSetup]
         public void Setup()
         {
-            Rand = new Random();
             var Services = new ServiceCollection().AddOptions()
-                .Configure<InMemoryCacheOptions>(options => { options.ScanFrequency = TimeSpan.FromSeconds(10); })
-                .Configure<MemoryCacheOptions>(options => { options.ExpirationScanFrequency = TimeSpan.FromSeconds(10); });
+                .Configure<InMemoryCacheOptions>(options => options.ScanFrequency = TimeSpan.FromSeconds(10))
+                .Configure<MemoryCacheOptions>(options => options.ExpirationScanFrequency = TimeSpan.FromSeconds(10));
             Services.AddCanisterModules(x => x.RegisterInMemoryHoard().RegisterMemoryCacheHoard());
             InMemoryCache = Canister.Builder.Bootstrapper.Resolve<Cache>().GetOrAddCache("In Memory");
             IMemoryCacheCache = Canister.Builder.Bootstrapper.Resolve<Cache>().GetOrAddCache("Microsoft.Extensions.Caching.Memory");

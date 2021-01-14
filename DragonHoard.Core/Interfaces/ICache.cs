@@ -41,7 +41,7 @@ namespace DragonHoard.Core.Interfaces
         /// Compacts the cache by the specified percentage.
         /// </summary>
         /// <param name="percentage">The percentage.</param>
-        void Compact(double? percentage);
+        void Compact(double percentage);
 
         /// <summary>
         /// Gets the by tag.
@@ -69,7 +69,6 @@ namespace DragonHoard.Core.Interfaces
         /// <typeparam name="TValue">The type of the value.</typeparam>
         /// <param name="key">The key.</param>
         /// <param name="value">The value.</param>
-        /// <param name="absoluteExpiration">The absolute expiration.</param>
         /// <returns>The value sent in.</returns>
         TValue Set<TValue>(object key, TValue value);
 

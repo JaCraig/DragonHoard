@@ -62,7 +62,7 @@ namespace DragonHoard.Core.BaseClasses
         /// Compacts the cache by the specified percentage.
         /// </summary>
         /// <param name="percentage">The percentage.</param>
-        public abstract void Compact(double? percentage);
+        public abstract void Compact(double percentage);
 
         /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting
@@ -115,11 +115,11 @@ namespace DragonHoard.Core.BaseClasses
             if (tag is null)
                 return;
             var TagHashCode = tag.GetHashCode(StringComparison.Ordinal);
-            if (!TagIndex.TryGetValue(TagHashCode, out var Keys))
+            if (!TagIndex.TryGetValue(TagHashCode, out _))
                 return;
             lock (LockObject)
             {
-                if (!TagIndex.TryGetValue(TagHashCode, out Keys))
+                if (!TagIndex.TryGetValue(TagHashCode, out var Keys))
                     return;
                 for (int i = 0; i < Keys.Length; i++)
                 {
@@ -199,7 +199,7 @@ namespace DragonHoard.Core.BaseClasses
         /// <param name="value">The value.</param>
         /// <param name="reason">The reason.</param>
         /// <param name="state">The state.</param>
-        protected void EvictionCallback(object key, object value, EvictionReason reason, object state)
+        protected void EvictionCallback(object key, object? value, EvictionReason reason, object state)
         {
             if (EvictionReason.Expired == reason || reason == EvictionReason.Capacity || reason == EvictionReason.TokenExpired)
                 TagIndex.Remove(key);

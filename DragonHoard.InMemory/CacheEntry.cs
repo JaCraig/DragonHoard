@@ -9,6 +9,12 @@ namespace DragonHoard.InMemory
     internal class CacheEntry : IDisposable
     {
         /// <summary>
+        /// Gets the empty entry.
+        /// </summary>
+        /// <value>The empty entry.</value>
+        public static CacheEntry Empty { get; } = new CacheEntry();
+
+        /// <summary>
         /// Gets or sets the absolute expiration.
         /// </summary>
         /// <value>The absolute expiration.</value>

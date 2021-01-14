@@ -45,6 +45,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// Adds the dragon hoard.
         /// </summary>
         /// <param name="services">The services.</param>
+        /// <param name="setupAction">The setup action.</param>
         /// <returns>The service collection</returns>
         public static IServiceCollection? AddMemoryCacheHoard(this IServiceCollection? services, Action<MemoryCacheOptions> setupAction)
         {

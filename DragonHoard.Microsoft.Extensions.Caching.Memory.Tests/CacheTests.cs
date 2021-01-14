@@ -10,6 +10,22 @@ namespace DragonHoard.InMemory.Tests
     public class CacheTests : TestBaseClass
     {
         [Fact]
+        public void Compact()
+        {
+            using var TestObject = Cache.GetOrAddCache().Clone();
+            Assert.Equal(12, TestObject.Set("Test", new { A = 12 }, new CacheEntryOptions() { Tags = new string[] { "Tag1", "Tag2" } }).A);
+            Assert.Equal(14, TestObject.Set("Test2", new { A = 14 }, new CacheEntryOptions() { Tags = new string[] { "Tag1", "Tag3" } }).A);
+            Assert.Equal(20, TestObject.Set("Test3", new { A = 20 }, new CacheEntryOptions() { Tags = new string[] { "Tag2", "Tag3" } }).A);
+            Assert.True(TestObject.TryGetValue("Test", out object Value));
+            Assert.True(TestObject.TryGetValue("Test2", out Value));
+            Assert.True(TestObject.TryGetValue("Test3", out Value));
+            TestObject.Compact(1);  //Microsoft's implementation seems fubar...
+            Assert.True(TestObject.TryGetValue("Test", out Value));
+            Assert.True(TestObject.TryGetValue("Test2", out Value));
+            Assert.True(TestObject.TryGetValue("Test3", out Value));
+        }
+
+        [Fact]
         public void Creation()
         {
             using var TestObject = Cache.GetOrAddCache().Clone();
