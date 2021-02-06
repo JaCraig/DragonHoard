@@ -32,7 +32,6 @@
 
   <ItemGroup>
     <PackageReference Include="Canister.IoC" Version="4.0.0" />
-    <PackageReference Include="Fast.Activator" Version="1.0.13" />
     <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
   </ItemGroup>
