@@ -1,5 +1,6 @@
 ﻿using DragonHoard.Core;
-using DragonHoard.MicrosoftExtensionsCachingMemory;
+using DragonHoard.Core.Interfaces;
+using Microsoft.Extensions.Caching.Memory;
 using System.Linq;
 using System.Threading.Tasks;
 using TestHelpers;
@@ -7,8 +8,13 @@ using Xunit;
 
 namespace DragonHoard.InMemory.Tests
 {
-    public class CacheTests : TestBaseClass
+    public class CacheTests : TestBaseClass<Cache>
     {
+        public CacheTests()
+        {
+            TestObject = new Cache(new ICache[] { new MicrosoftExtensionsCachingMemory.MemoryCache(Canister.Builder.Bootstrapper.Resolve<IMemoryCache>()) });
+        }
+
         [Fact]
         public void Compact()
         {
@@ -30,7 +36,7 @@ namespace DragonHoard.InMemory.Tests
         {
             using var TestObject = Cache.GetOrAddCache().Clone();
             Assert.NotNull(TestObject);
-            Assert.IsType<MemoryCache>(TestObject);
+            Assert.IsType<MicrosoftExtensionsCachingMemory.MemoryCache>(TestObject);
         }
 
         [Fact]

@@ -1,4 +1,6 @@
 ﻿using DragonHoard.Core;
+using DragonHoard.Core.Interfaces;
+using Microsoft.Extensions.Options;
 using System.Linq;
 using System.Threading.Tasks;
 using TestHelpers;
@@ -6,8 +8,13 @@ using Xunit;
 
 namespace DragonHoard.InMemory.Tests
 {
-    public class CacheTests : TestBaseClass
+    public class CacheTests : TestBaseClass<Cache>
     {
+        public CacheTests()
+        {
+            TestObject = new Cache(new ICache[] { new InMemoryCache(new IOptions<InMemoryCacheOptions>[] { InMemoryCacheOptions.Default }) });
+        }
+
         [Fact]
         public void Compact()
         {
