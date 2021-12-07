@@ -54,6 +54,11 @@ namespace DragonHoard.Core
         private Dictionary<int, ICache>? Caches { get; set; }
 
         /// <summary>
+        /// The cache creation lock
+        /// </summary>
+        private static readonly object CacheCreationLock = new object();
+
+        /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting
         /// unmanaged resources.
         /// </summary>
@@ -76,15 +81,20 @@ namespace DragonHoard.Core
             var CacheKey = GetKey(name);
             if (Caches.TryGetValue(CacheKey, out var ReturnValue))
                 return ReturnValue;
+            lock (CacheCreationLock)
+            {
+                if (Caches.TryGetValue(CacheKey, out ReturnValue))
+                    return ReturnValue;
 
-            var DefaultKey = GetKey("Default");
-            Caches.TryGetValue(DefaultKey, out ReturnValue);
-            ReturnValue = ReturnValue.Clone();
-            if (ReturnValue is null)
-                return null;
+                var DefaultKey = GetKey("Default");
+                Caches.TryGetValue(DefaultKey, out ReturnValue);
+                ReturnValue = ReturnValue.Clone();
+                if (ReturnValue is null)
+                    return null;
 
-            Caches.Add(CacheKey, ReturnValue);
-            return ReturnValue;
+                Caches.Add(CacheKey, ReturnValue);
+                return ReturnValue;
+            }
         }
 
         /// <summary>
@@ -102,15 +112,20 @@ namespace DragonHoard.Core
             var CacheKey = GetKey(name);
             if (Caches.TryGetValue(CacheKey, out var ReturnValue))
                 return ReturnValue;
+            lock (CacheCreationLock)
+            {
+                if (Caches.TryGetValue(CacheKey, out ReturnValue))
+                    return ReturnValue;
 
-            var DefaultKey = GetKey("Default");
-            Caches.TryGetValue(DefaultKey, out ReturnValue);
-            ReturnValue = ReturnValue.Clone(options);
-            if (ReturnValue is null)
-                return null;
+                var DefaultKey = GetKey("Default");
+                Caches.TryGetValue(DefaultKey, out ReturnValue);
+                ReturnValue = ReturnValue.Clone(options);
+                if (ReturnValue is null)
+                    return null;
 
-            Caches.Add(CacheKey, ReturnValue);
-            return ReturnValue;
+                Caches.Add(CacheKey, ReturnValue);
+                return ReturnValue;
+            }
         }
 
         /// <summary>
