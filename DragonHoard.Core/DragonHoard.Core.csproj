@@ -10,7 +10,7 @@
     <Description>DragonHoard's core library.</Description>
     <AssemblyTitle>DragonHoard.Core</AssemblyTitle>
     <Authors>James Craig</Authors>
-    <TargetFramework>netstandard2.1</TargetFramework>
+	  <TargetFrameworks>netstandard2.1;net5.0;net6.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>DragonHoard.Core</AssemblyName>
     <PackageId>DragonHoard.Core</PackageId>
