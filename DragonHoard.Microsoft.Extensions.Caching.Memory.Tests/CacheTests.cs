@@ -1,6 +1,7 @@
 ﻿using DragonHoard.Core;
 using DragonHoard.Core.Interfaces;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.DependencyInjection;
 using System.Linq;
 using System.Threading.Tasks;
 using TestHelpers;
@@ -12,7 +13,7 @@ namespace DragonHoard.InMemory.Tests
     {
         public CacheTests()
         {
-            TestObject = new Cache(new ICache[] { new MicrosoftExtensionsCachingMemory.MemoryCache(Canister.Builder.Bootstrapper.Resolve<IMemoryCache>()) });
+            TestObject = new Cache(new ICache[] { new MicrosoftExtensionsCachingMemory.MemoryCache(GetServiceProvider().GetService<IMemoryCache>()) });
         }
 
         [Fact]

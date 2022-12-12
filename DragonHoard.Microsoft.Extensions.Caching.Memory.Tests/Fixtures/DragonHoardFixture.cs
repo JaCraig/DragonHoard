@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿using System;
 
 namespace DragonHoard.InMemory.Tests.Fixtures
 {
@@ -14,10 +13,6 @@ namespace DragonHoard.InMemory.Tests.Fixtures
         /// </summary>
         public DragonHoardFixture()
         {
-            if (Canister.Builder.Bootstrapper is null)
-            {
-                new ServiceCollection().AddOptions().AddCanisterModules(configure => configure.AddAssembly(typeof(DragonHoardFixture).Assembly).RegisterMemoryCacheHoard());
-            }
         }
 
         /// <summary>

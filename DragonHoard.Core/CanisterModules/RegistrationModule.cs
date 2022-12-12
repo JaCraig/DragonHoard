@@ -35,10 +35,10 @@ namespace DragonHoard.Core.CanisterModules
         /// Loads the module using the bootstrapper
         /// </summary>
         /// <param name="bootstrapper">The bootstrapper.</param>
-        public void Load(IBootstrapper? bootstrapper)
+        public void Load(IServiceCollection? bootstrapper)
         {
-            bootstrapper?.Register<Cache>(ServiceLifetime.Singleton)
-                .RegisterAll<ICache>(ServiceLifetime.Singleton);
+            bootstrapper?.AddSingleton<Cache>()
+                .AddAllSingleton<ICache>();
         }
     }
 }
