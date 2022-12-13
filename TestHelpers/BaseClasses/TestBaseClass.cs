@@ -38,11 +38,7 @@ namespace TestHelpers
         /// </summary>
         /// <returns>The async task.</returns>
         [Fact]
-        public Task BreakObject()
-        {
-            return Task.CompletedTask;
-            return Mech.BreakAsync(TestObject, new Options { MaxDuration = 1000 });
-        }
+        public Task BreakObject() => Mech.BreakAsync(TestObject, new Options { MaxDuration = 100 });
     }
 
     /// <summary>
@@ -56,7 +52,7 @@ namespace TestHelpers
         /// </summary>
         protected TestBaseClass()
         {
-            //_ = Mech.Default;
+            _ = Mech.Default;
         }
 
         /// <summary>
@@ -74,7 +70,7 @@ namespace TestHelpers
         /// <summary>
         /// The service provider lock
         /// </summary>
-        private static readonly object ServiceProviderLock = new object();
+        private static readonly object ServiceProviderLock = new();
 
         /// <summary>
         /// The service provider
@@ -86,11 +82,7 @@ namespace TestHelpers
         /// </summary>
         /// <returns>The async task.</returns>
         [Fact]
-        public Task BreakType()
-        {
-            return Task.CompletedTask;
-            return Mech.BreakAsync(ObjectType, new Options { MaxDuration = 1000 });
-        }
+        public Task BreakType() => Mech.BreakAsync(ObjectType, new Options { MaxDuration = 100 });
 
         /// <summary>
         /// Gets the service provider.
