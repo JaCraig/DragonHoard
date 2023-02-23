@@ -76,7 +76,7 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
         /// <param name="percentage">The percentage.</param>
         public override void Compact(double percentage)
         {
-            (InternalCache as MemoryCache)?.Compact(percentage);
+            (InternalCache as Microsoft.Extensions.Caching.Memory.MemoryCache)?.Compact(percentage);
         }
 
         /// <summary>
@@ -204,20 +204,20 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
             switch (cacheEntryOptions.Priority)
             {
                 case CachePriority.Normal:
-                    {
-                        Options.Priority = CacheItemPriority.Normal;
-                        break;
-                    }
+                {
+                    Options.Priority = CacheItemPriority.Normal;
+                    break;
+                }
                 case CachePriority.Low:
-                    {
-                        Options.Priority = CacheItemPriority.Low;
-                        break;
-                    }
+                {
+                    Options.Priority = CacheItemPriority.Low;
+                    break;
+                }
                 case CachePriority.High:
-                    {
-                        Options.Priority = CacheItemPriority.High;
-                        break;
-                    }
+                {
+                    Options.Priority = CacheItemPriority.High;
+                    break;
+                }
             }
             InternalCache.Set(key, value, Options);
             return value;

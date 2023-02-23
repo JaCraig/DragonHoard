@@ -27,9 +27,9 @@ namespace DragonHoard.InMemory.Tests
             Assert.True(TestObject.TryGetValue("Test2", out Value));
             Assert.True(TestObject.TryGetValue("Test3", out Value));
             TestObject.Compact(1);  //Microsoft's implementation seems fubar...
-            Assert.True(TestObject.TryGetValue("Test", out Value));
-            Assert.True(TestObject.TryGetValue("Test2", out Value));
-            Assert.True(TestObject.TryGetValue("Test3", out Value));
+            Assert.False(TestObject.TryGetValue("Test", out Value));
+            Assert.False(TestObject.TryGetValue("Test2", out Value));
+            Assert.False(TestObject.TryGetValue("Test3", out Value));
         }
 
         [Fact]
