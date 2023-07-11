@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1FBE64CA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonHoard.Microsoft.Extensions.Caching.Memory.Tests", "DragonHoard.Microsoft.Extensions.Caching.Memory.Tests\DragonHoard.Microsoft.Extensions.Caching.Memory.Tests.csproj", "{DC6483EF-C9B4-4552-8938-FBBF25C1FA50}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestHelpers", "TestHelpers\TestHelpers.csproj", "{31761402-44D2-4F28-AAFF-C15811C2F17D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtilsHelpers", "TestHelpers\UtilsHelpers.csproj", "{31761402-44D2-4F28-AAFF-C15811C2F17D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonHoard.Benchmarks", "DragonHoard.Benchmarks\DragonHoard.Benchmarks.csproj", "{3BDD150F-69E8-4C8A-B436-72ABBF38F9C4}"
 EndProject
