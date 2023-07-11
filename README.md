@@ -1,6 +1,6 @@
 # Dragon Hoard
 
-[![Build status](https://ci.appveyor.com/api/projects/status/vrbkcs9gb64ch54m?svg=true)](https://ci.appveyor.com/project/JaCraig/dragonhoard)
+[![.NET Publish](https://github.com/JaCraig/DragonHoard/actions/workflows/dotnet-publish.yml/badge.svg)](https://github.com/JaCraig/DragonHoard/actions/workflows/dotnet-publish.yml)
 
 Dragon Hoard is a fast, thread safe, developer friendly in-memory caching service.
 
