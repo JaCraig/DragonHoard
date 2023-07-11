@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Dragon Hoard | DragonHoard API Reference </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Dragon Hoard | DragonHoard API Reference ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="styles/config.css">
+      <link rel="stylesheet" href="styles/discord.css">
+      <link rel="stylesheet" href="styles/singulink.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <meta property="docfx:navrel" content="toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="index.html">
+              <img src="images/icon.png" alt="DragonHoard" class="logomark">
+              <span class="brand-title">DragonHoard</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="index.html">
+                          <img src="images/icon.png" alt="DragonHoard" class="logomark">
+                          <span class="brand-title">DragonHoard</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+                </div>
+                <div class="footer">
+  <strong><a href='https://github.com/JaCraig/DragonHoard'>Open in Github</a></strong>
+  
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                               <a href="https://github.com/JaCraig/DragonHoard/blob/main/docfx_project/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="">
+<h1 id="dragon-hoard">Dragon Hoard</h1>
+
+<p><a href="https://ci.appveyor.com/project/JaCraig/dragonhoard"><img src="https://ci.appveyor.com/api/projects/status/vrbkcs9gb64ch54m?svg=true" alt="Build status"></a></p>
+<p>Dragon Hoard is a fast, thread safe, developer friendly in-memory caching service.</p>
+<h2 id="setting-up-the-library">Setting Up the Library</h2>
+<p>Dragon Hoard can be set up using the ServiceCollection extension depending on the cache you want to set up:</p>
+<pre><code>ServiceCollection.AddInMemoryHoard();
+</code></pre>
+<p>The above code adds the faster/lighter in-memory cache while:</p>
+<pre><code>ServiceCollection.AddMemoryCacheHoard();
+</code></pre>
+<p>That allows the system to wrap Microsoft.Extensions.Caching.Memory.MemoryCache. Note that they are in separate Nuget packages so you'll have to download the one that you want.</p>
+<h2 id="basic-usage">Basic Usage</h2>
+<p>The main class of interest is the Cache class found in DragonHoard.Core:</p>
+<pre><code>public class ExampleClass
+{
+    public ExampleClass(Cache myCache)
+    {
+        MyCache = myCache;
+    }
+
+    private Cache MyCache { get; set; }
+
+    public void SomeMethod()
+    {
+        var Cache = MyCache.GetOrAddCache(&quot;CacheName&quot;);
+    }
+}
+</code></pre>
+<p>The Cache object has a singleton lifespan and acts as a repository for your various caches. Note that it's generally a good idea to split caches based on their purpose so they can be treated accordingly and to reduce read/write contention. Once you have the ICache object that the GetOrAddCache method returns you have a couple of methods:</p>
+<pre><code>Cache.Set(...) // Used to set a key/value pair in the cache using various settings. You can specify absolute expiration, sliding, priority, size, and any tags that should be associated with the entry.
+Cache.Remove(...) // Used to remove an entry based on the key.
+Cache.TryGetValue(...) // Used to retrieve an entry from the cache based on the key.
+Cache.RemoveByTag(...) // Will remove all entries that have been tagged with the corresponding string.
+Cache.GetByTag(...) // Returns an array containing all entries that were tagged using the string.
+Cache.Compact(...) // Used to remove a percentage of items from the cache.
+</code></pre>
+<p>The cache will clear out invalid items on a scheduled period based on the criteria you set. However the schedule may only kick off after you call one of the above methods depending on the type of cache. Similarly the determination of what gets removed when calling Compact is specific to the individual cache provider. For instance, the in-memory provider uses these steps:</p>
+<ol>
+<li>Remove items that have expired.</li>
+<li>Put items into buckets based on priority and then go off this:
+<ol>
+<li>Remove items where absolute expiration is set going earliest to latest.</li>
+<li>Remove items where sliding expiration is set going earliest to latest.</li>
+<li>Remove items based on last accessed date/time.</li>
+</ol>
+</li>
+</ol>
+<h2 id="give-me-speed">Give Me Speed</h2>
+<p>For those wondering why you'd want to use this over the MemoryCache provided by Microsoft, considering the following using the following setup:</p>
+<pre><code class="lang-ini">
+BenchmarkDotNet=v0.12.1, OS=Windows 10.0.18363.1256 (1909/November2018Update/19H2)
+Intel Core i7-9850H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET Core SDK=5.0.102
+  [Host]     : .NET Core 5.0.2 (CoreCLR 5.0.220.61120, CoreFX 5.0.220.61120), X64 RyuJIT
+  DefaultJob : .NET Core 5.0.2 (CoreCLR 5.0.220.61120, CoreFX 5.0.220.61120), X64 RyuJIT
+</code></pre>
+<hr>
+<p>Adding and removing an item from the cache is about 4 times faster and uses about 1/5 of the memory overhead:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align: right;">Mean</th>
+<th style="text-align: right;">Error</th>
+<th style="text-align: right;">StdDev</th>
+<th style="text-align: right;">Median</th>
+<th style="text-align: right;">Ratio</th>
+<th style="text-align: right;">RatioSD</th>
+<th style="text-align: right;">Gen 0</th>
+<th style="text-align: right;">Gen 1</th>
+<th style="text-align: right;">Gen 2</th>
+<th style="text-align: right;">Allocated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>InMemory</td>
+<td style="text-align: right;">422.7 ns</td>
+<td style="text-align: right;">7.29 ns</td>
+<td style="text-align: right;">8.96 ns</td>
+<td style="text-align: right;">420.4 ns</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.0401</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">256 B</td>
+</tr>
+<tr>
+<td>MicrosoftMemory</td>
+<td style="text-align: right;">2,123.0 ns</td>
+<td style="text-align: right;">179.06 ns</td>
+<td style="text-align: right;">527.96 ns</td>
+<td style="text-align: right;">1,906.8 ns</td>
+<td style="text-align: right;">3.96</td>
+<td style="text-align: right;">0.29</td>
+<td style="text-align: right;">0.2060</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">1296 B</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>Retrieval of an item from the cache is about 50% faster:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align: right;">Mean</th>
+<th style="text-align: right;">Error</th>
+<th style="text-align: right;">StdDev</th>
+<th style="text-align: right;">Median</th>
+<th style="text-align: right;">Ratio</th>
+<th style="text-align: right;">RatioSD</th>
+<th style="text-align: right;">Gen 0</th>
+<th style="text-align: right;">Gen 1</th>
+<th style="text-align: right;">Gen 2</th>
+<th style="text-align: right;">Allocated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>InMemory</td>
+<td style="text-align: right;">153.9 ns</td>
+<td style="text-align: right;">3.06 ns</td>
+<td style="text-align: right;">7.39 ns</td>
+<td style="text-align: right;">151.5 ns</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr>
+<td>MicrosoftMemory</td>
+<td style="text-align: right;">214.9 ns</td>
+<td style="text-align: right;">14.32 ns</td>
+<td style="text-align: right;">42.22 ns</td>
+<td style="text-align: right;">200.0 ns</td>
+<td style="text-align: right;">1.50</td>
+<td style="text-align: right;">0.32</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>When creating/storing items at high throughput scenarios, the system is about 5x faster with reduced memory overhead even when aggressive cache cleanup is used:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align: right;">Mean</th>
+<th style="text-align: right;">Error</th>
+<th style="text-align: right;">StdDev</th>
+<th style="text-align: right;">Ratio</th>
+<th style="text-align: right;">RatioSD</th>
+<th style="text-align: right;">Gen 0</th>
+<th style="text-align: right;">Gen 1</th>
+<th style="text-align: right;">Gen 2</th>
+<th style="text-align: right;">Allocated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>InMemory</td>
+<td style="text-align: right;">1.043 μs</td>
+<td style="text-align: right;">0.0934 μs</td>
+<td style="text-align: right;">0.2557 μs</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.0362</td>
+<td style="text-align: right;">0.0134</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">232 B</td>
+</tr>
+<tr>
+<td>MicrosoftMemory</td>
+<td style="text-align: right;">4.900 μs</td>
+<td style="text-align: right;">0.4043 μs</td>
+<td style="text-align: right;">1.1920 μs</td>
+<td style="text-align: right;">5.01</td>
+<td style="text-align: right;">1.56</td>
+<td style="text-align: right;">0.1755</td>
+<td style="text-align: right;">0.0458</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">1200 B</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>And updating an item already in the cache is 8x faster with 12x improvement on memory consumption:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th style="text-align: right;">Mean</th>
+<th style="text-align: right;">Error</th>
+<th style="text-align: right;">StdDev</th>
+<th style="text-align: right;">Median</th>
+<th style="text-align: right;">Ratio</th>
+<th style="text-align: right;">RatioSD</th>
+<th style="text-align: right;">Gen 0</th>
+<th style="text-align: right;">Gen 1</th>
+<th style="text-align: right;">Gen 2</th>
+<th style="text-align: right;">Allocated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>InMemory</td>
+<td style="text-align: right;">257.2 ns</td>
+<td style="text-align: right;">15.47 ns</td>
+<td style="text-align: right;">45.12 ns</td>
+<td style="text-align: right;">241.6 ns</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.0165</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">104 B</td>
+</tr>
+<tr>
+<td>MicrosoftMemory</td>
+<td style="text-align: right;">2,041.9 ns</td>
+<td style="text-align: right;">204.26 ns</td>
+<td style="text-align: right;">602.26 ns</td>
+<td style="text-align: right;">1,785.9 ns</td>
+<td style="text-align: right;">8.00</td>
+<td style="text-align: right;">1.93</td>
+<td style="text-align: right;">0.1907</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">1200 B</td>
+</tr>
+</tbody>
+</table>
+<h2 id="installation">Installation</h2>
+<p>The library is available via Nuget with the package name &quot;DragonHoard.InMemory&quot; or &quot;DragonHoard.Microsoft.Extensions.Caching.Memory&quot;. To install it run the following command in the Package Manager Console:</p>
+<p>Install-Package DragonHoard.InMemory</p>
+<p>or</p>
+<p>Install-Package DragonHoard.Microsoft.Extensions.Caching.Memory</p>
+<h2 id="build-process">Build Process</h2>
+<p>In order to build the library you may require the following:</p>
+<ol>
+<li>Visual Studio 2019</li>
+</ol>
+<p>Other than that, just clone the project and you should be able to load the solution and build without too much effort.</p>
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>&#169; James Craig. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="styles/docfx.js"></script>
+        <script type="text/javascript" src="styles/main.js"></script>
+        <script type="text/javascript" src="styles/singulink.js"></script>    </body>
+</html>
