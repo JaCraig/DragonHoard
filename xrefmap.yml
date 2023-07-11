@@ -1,3 +1,1254 @@
 ### YamlMime:XRefMap
 sorted: true
-references: []
+references:
+- uid: DragonHoard.Core
+  name: DragonHoard.Core
+  href: api/DragonHoard.Core.html
+  commentId: N:DragonHoard.Core
+  fullName: DragonHoard.Core
+  nameWithType: DragonHoard.Core
+- uid: DragonHoard.Core.BaseClasses
+  name: DragonHoard.Core.BaseClasses
+  href: api/DragonHoard.Core.BaseClasses.html
+  commentId: N:DragonHoard.Core.BaseClasses
+  fullName: DragonHoard.Core.BaseClasses
+  nameWithType: DragonHoard.Core.BaseClasses
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass
+  name: CacheBaseClass
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html
+  commentId: T:DragonHoard.Core.BaseClasses.CacheBaseClass
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass
+  nameWithType: CacheBaseClass
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.#ctor
+  name: CacheBaseClass()
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass__ctor
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.#ctor
+  name.vb: New()
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.CacheBaseClass()
+  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.New()
+  nameWithType: CacheBaseClass.CacheBaseClass()
+  nameWithType.vb: CacheBaseClass.New()
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.#ctor*
+  name: CacheBaseClass
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass__ctor_
+  commentId: Overload:DragonHoard.Core.BaseClasses.CacheBaseClass.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.CacheBaseClass
+  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.New
+  nameWithType: CacheBaseClass.CacheBaseClass
+  nameWithType.vb: CacheBaseClass.New
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Clone
+  name: Clone()
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Clone
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.Clone
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Clone()
+  nameWithType: CacheBaseClass.Clone()
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Clone*
+  name: Clone
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Clone_
+  commentId: Overload:DragonHoard.Core.BaseClasses.CacheBaseClass.Clone
+  isSpec: "True"
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Clone
+  nameWithType: CacheBaseClass.Clone
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Clone``1(``0)
+  name: Clone<TOption>(TOption)
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Clone__1___0_
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.Clone``1(``0)
+  name.vb: Clone(Of TOption)(TOption)
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Clone<TOption>(TOption)
+  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.Clone(Of TOption)(TOption)
+  nameWithType: CacheBaseClass.Clone<TOption>(TOption)
+  nameWithType.vb: CacheBaseClass.Clone(Of TOption)(TOption)
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Compact(System.Double)
+  name: Compact(double)
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Compact_System_Double_
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.Compact(System.Double)
+  name.vb: Compact(Double)
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Compact(double)
+  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.Compact(Double)
+  nameWithType: CacheBaseClass.Compact(double)
+  nameWithType.vb: CacheBaseClass.Compact(Double)
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Compact*
+  name: Compact
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Compact_
+  commentId: Overload:DragonHoard.Core.BaseClasses.CacheBaseClass.Compact
+  isSpec: "True"
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Compact
+  nameWithType: CacheBaseClass.Compact
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Dispose
+  name: Dispose()
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Dispose
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.Dispose
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Dispose()
+  nameWithType: CacheBaseClass.Dispose()
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Dispose*
+  name: Dispose
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Dispose_
+  commentId: Overload:DragonHoard.Core.BaseClasses.CacheBaseClass.Dispose
+  isSpec: "True"
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Dispose
+  nameWithType: CacheBaseClass.Dispose
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.EvictionCallback(System.Object,System.Object,Microsoft.Extensions.Caching.Memory.EvictionReason,System.Object)
+  name: EvictionCallback(object, object?, EvictionReason, object)
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_EvictionCallback_System_Object_System_Object_Microsoft_Extensions_Caching_Memory_EvictionReason_System_Object_
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.EvictionCallback(System.Object,System.Object,Microsoft.Extensions.Caching.Memory.EvictionReason,System.Object)
+  name.vb: EvictionCallback(Object, Object, EvictionReason, Object)
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.EvictionCallback(object, object?, Microsoft.Extensions.Caching.Memory.EvictionReason, object)
+  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.EvictionCallback(Object, Object, Microsoft.Extensions.Caching.Memory.EvictionReason, Object)
+  nameWithType: CacheBaseClass.EvictionCallback(object, object?, EvictionReason, object)
+  nameWithType.vb: CacheBaseClass.EvictionCallback(Object, Object, EvictionReason, Object)
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.EvictionCallback*
+  name: EvictionCallback
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_EvictionCallback_
+  commentId: Overload:DragonHoard.Core.BaseClasses.CacheBaseClass.EvictionCallback
+  isSpec: "True"
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.EvictionCallback
+  nameWithType: CacheBaseClass.EvictionCallback
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.GetByTag*
+  name: GetByTag
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_GetByTag_
+  commentId: Overload:DragonHoard.Core.BaseClasses.CacheBaseClass.GetByTag
+  isSpec: "True"
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.GetByTag
+  nameWithType: CacheBaseClass.GetByTag
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.GetByTag``1(System.String)
+  name: GetByTag<TValue>(string)
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_GetByTag__1_System_String_
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.GetByTag``1(System.String)
+  name.vb: GetByTag(Of TValue)(String)
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.GetByTag<TValue>(string)
+  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.GetByTag(Of TValue)(String)
+  nameWithType: CacheBaseClass.GetByTag<TValue>(string)
+  nameWithType.vb: CacheBaseClass.GetByTag(Of TValue)(String)
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Name
+  name: Name
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Name
+  commentId: P:DragonHoard.Core.BaseClasses.CacheBaseClass.Name
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Name
+  nameWithType: CacheBaseClass.Name
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Name*
+  name: Name
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Name_
+  commentId: Overload:DragonHoard.Core.BaseClasses.CacheBaseClass.Name
+  isSpec: "True"
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Name
+  nameWithType: CacheBaseClass.Name
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Remove(System.Object)
+  name: Remove(object)
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Remove_System_Object_
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.Remove(System.Object)
+  name.vb: Remove(Object)
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Remove(object)
+  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.Remove(Object)
+  nameWithType: CacheBaseClass.Remove(object)
+  nameWithType.vb: CacheBaseClass.Remove(Object)
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Remove*
+  name: Remove
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Remove_
+  commentId: Overload:DragonHoard.Core.BaseClasses.CacheBaseClass.Remove
+  isSpec: "True"
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Remove
+  nameWithType: CacheBaseClass.Remove
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByKey(System.Object)
+  name: RemoveByKey(object)
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_RemoveByKey_System_Object_
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByKey(System.Object)
+  name.vb: RemoveByKey(Object)
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByKey(object)
+  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByKey(Object)
+  nameWithType: CacheBaseClass.RemoveByKey(object)
+  nameWithType.vb: CacheBaseClass.RemoveByKey(Object)
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByKey*
+  name: RemoveByKey
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_RemoveByKey_
+  commentId: Overload:DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByKey
+  isSpec: "True"
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByKey
+  nameWithType: CacheBaseClass.RemoveByKey
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByTag(System.String)
+  name: RemoveByTag(string)
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_RemoveByTag_System_String_
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByTag(System.String)
+  name.vb: RemoveByTag(String)
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByTag(string)
+  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByTag(String)
+  nameWithType: CacheBaseClass.RemoveByTag(string)
+  nameWithType.vb: CacheBaseClass.RemoveByTag(String)
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByTag*
+  name: RemoveByTag
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_RemoveByTag_
+  commentId: Overload:DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByTag
+  isSpec: "True"
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByTag
+  nameWithType: CacheBaseClass.RemoveByTag
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Set*
+  name: Set
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Set_
+  commentId: Overload:DragonHoard.Core.BaseClasses.CacheBaseClass.Set
+  isSpec: "True"
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Set
+  nameWithType: CacheBaseClass.Set
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Set``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
+  name: Set<TValue>(object, TValue, CacheEntryOptions)
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Set__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.Set``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
+  name.vb: Set(Of TValue)(Object, TValue, CacheEntryOptions)
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Set<TValue>(object, TValue, DragonHoard.Core.CacheEntryOptions)
+  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.Set(Of TValue)(Object, TValue, DragonHoard.Core.CacheEntryOptions)
+  nameWithType: CacheBaseClass.Set<TValue>(object, TValue, CacheEntryOptions)
+  nameWithType.vb: CacheBaseClass.Set(Of TValue)(Object, TValue, CacheEntryOptions)
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Set``1(System.Object,``0,System.DateTimeOffset)
+  name: Set<TValue>(object, TValue, DateTimeOffset)
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Set__1_System_Object___0_System_DateTimeOffset_
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.Set``1(System.Object,``0,System.DateTimeOffset)
+  name.vb: Set(Of TValue)(Object, TValue, DateTimeOffset)
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Set<TValue>(object, TValue, System.DateTimeOffset)
+  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.Set(Of TValue)(Object, TValue, System.DateTimeOffset)
+  nameWithType: CacheBaseClass.Set<TValue>(object, TValue, DateTimeOffset)
+  nameWithType.vb: CacheBaseClass.Set(Of TValue)(Object, TValue, DateTimeOffset)
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Set``1(System.Object,``0,System.TimeSpan,System.Boolean)
+  name: Set<TValue>(object, TValue, TimeSpan, bool)
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Set__1_System_Object___0_System_TimeSpan_System_Boolean_
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.Set``1(System.Object,``0,System.TimeSpan,System.Boolean)
+  name.vb: Set(Of TValue)(Object, TValue, TimeSpan, Boolean)
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Set<TValue>(object, TValue, System.TimeSpan, bool)
+  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.Set(Of TValue)(Object, TValue, System.TimeSpan, Boolean)
+  nameWithType: CacheBaseClass.Set<TValue>(object, TValue, TimeSpan, bool)
+  nameWithType.vb: CacheBaseClass.Set(Of TValue)(Object, TValue, TimeSpan, Boolean)
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Set``1(System.Object,``0)
+  name: Set<TValue>(object, TValue)
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Set__1_System_Object___0_
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.Set``1(System.Object,``0)
+  name.vb: Set(Of TValue)(Object, TValue)
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Set<TValue>(object, TValue)
+  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.Set(Of TValue)(Object, TValue)
+  nameWithType: CacheBaseClass.Set<TValue>(object, TValue)
+  nameWithType.vb: CacheBaseClass.Set(Of TValue)(Object, TValue)
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions*
+  name: SetWithOptions
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_SetWithOptions_
+  commentId: Overload:DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions
+  isSpec: "True"
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions
+  nameWithType: CacheBaseClass.SetWithOptions
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
+  name: SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_SetWithOptions__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
+  name.vb: SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions<TValue>(object, TValue, DragonHoard.Core.CacheEntryOptions)
+  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions(Of TValue)(Object, TValue, DragonHoard.Core.CacheEntryOptions)
+  nameWithType: CacheBaseClass.SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
+  nameWithType.vb: CacheBaseClass.SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.TryGetValue*
+  name: TryGetValue
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_TryGetValue_
+  commentId: Overload:DragonHoard.Core.BaseClasses.CacheBaseClass.TryGetValue
+  isSpec: "True"
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.TryGetValue
+  nameWithType: CacheBaseClass.TryGetValue
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.TryGetValue``1(System.Object,``0@)
+  name: TryGetValue<TValue>(object, out TValue)
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_TryGetValue__1_System_Object___0__
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.TryGetValue``1(System.Object,``0@)
+  name.vb: TryGetValue(Of TValue)(Object, TValue)
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.TryGetValue<TValue>(object, out TValue)
+  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.TryGetValue(Of TValue)(Object, TValue)
+  nameWithType: CacheBaseClass.TryGetValue<TValue>(object, out TValue)
+  nameWithType.vb: CacheBaseClass.TryGetValue(Of TValue)(Object, TValue)
+- uid: DragonHoard.Core.Cache
+  name: Cache
+  href: api/DragonHoard.Core.Cache.html
+  commentId: T:DragonHoard.Core.Cache
+  fullName: DragonHoard.Core.Cache
+  nameWithType: Cache
+- uid: DragonHoard.Core.Cache.#ctor(System.Collections.Generic.IEnumerable{DragonHoard.Core.Interfaces.ICache})
+  name: Cache(IEnumerable<ICache>)
+  href: api/DragonHoard.Core.Cache.html#DragonHoard_Core_Cache__ctor_System_Collections_Generic_IEnumerable_DragonHoard_Core_Interfaces_ICache__
+  commentId: M:DragonHoard.Core.Cache.#ctor(System.Collections.Generic.IEnumerable{DragonHoard.Core.Interfaces.ICache})
+  name.vb: New(IEnumerable(Of ICache))
+  fullName: DragonHoard.Core.Cache.Cache(System.Collections.Generic.IEnumerable<DragonHoard.Core.Interfaces.ICache>)
+  fullName.vb: DragonHoard.Core.Cache.New(System.Collections.Generic.IEnumerable(Of DragonHoard.Core.Interfaces.ICache))
+  nameWithType: Cache.Cache(IEnumerable<ICache>)
+  nameWithType.vb: Cache.New(IEnumerable(Of ICache))
+- uid: DragonHoard.Core.Cache.#ctor*
+  name: Cache
+  href: api/DragonHoard.Core.Cache.html#DragonHoard_Core_Cache__ctor_
+  commentId: Overload:DragonHoard.Core.Cache.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: DragonHoard.Core.Cache.Cache
+  fullName.vb: DragonHoard.Core.Cache.New
+  nameWithType: Cache.Cache
+  nameWithType.vb: Cache.New
+- uid: DragonHoard.Core.Cache.Dispose
+  name: Dispose()
+  href: api/DragonHoard.Core.Cache.html#DragonHoard_Core_Cache_Dispose
+  commentId: M:DragonHoard.Core.Cache.Dispose
+  fullName: DragonHoard.Core.Cache.Dispose()
+  nameWithType: Cache.Dispose()
+- uid: DragonHoard.Core.Cache.Dispose(System.Boolean)
+  name: Dispose(bool)
+  href: api/DragonHoard.Core.Cache.html#DragonHoard_Core_Cache_Dispose_System_Boolean_
+  commentId: M:DragonHoard.Core.Cache.Dispose(System.Boolean)
+  name.vb: Dispose(Boolean)
+  fullName: DragonHoard.Core.Cache.Dispose(bool)
+  fullName.vb: DragonHoard.Core.Cache.Dispose(Boolean)
+  nameWithType: Cache.Dispose(bool)
+  nameWithType.vb: Cache.Dispose(Boolean)
+- uid: DragonHoard.Core.Cache.Dispose*
+  name: Dispose
+  href: api/DragonHoard.Core.Cache.html#DragonHoard_Core_Cache_Dispose_
+  commentId: Overload:DragonHoard.Core.Cache.Dispose
+  isSpec: "True"
+  fullName: DragonHoard.Core.Cache.Dispose
+  nameWithType: Cache.Dispose
+- uid: DragonHoard.Core.Cache.GetOrAddCache(System.String)
+  name: GetOrAddCache(string)
+  href: api/DragonHoard.Core.Cache.html#DragonHoard_Core_Cache_GetOrAddCache_System_String_
+  commentId: M:DragonHoard.Core.Cache.GetOrAddCache(System.String)
+  name.vb: GetOrAddCache(String)
+  fullName: DragonHoard.Core.Cache.GetOrAddCache(string)
+  fullName.vb: DragonHoard.Core.Cache.GetOrAddCache(String)
+  nameWithType: Cache.GetOrAddCache(string)
+  nameWithType.vb: Cache.GetOrAddCache(String)
+- uid: DragonHoard.Core.Cache.GetOrAddCache*
+  name: GetOrAddCache
+  href: api/DragonHoard.Core.Cache.html#DragonHoard_Core_Cache_GetOrAddCache_
+  commentId: Overload:DragonHoard.Core.Cache.GetOrAddCache
+  isSpec: "True"
+  fullName: DragonHoard.Core.Cache.GetOrAddCache
+  nameWithType: Cache.GetOrAddCache
+- uid: DragonHoard.Core.Cache.GetOrAddCache``1(``0,System.String)
+  name: GetOrAddCache<TOptions>(TOptions, string)
+  href: api/DragonHoard.Core.Cache.html#DragonHoard_Core_Cache_GetOrAddCache__1___0_System_String_
+  commentId: M:DragonHoard.Core.Cache.GetOrAddCache``1(``0,System.String)
+  name.vb: GetOrAddCache(Of TOptions)(TOptions, String)
+  fullName: DragonHoard.Core.Cache.GetOrAddCache<TOptions>(TOptions, string)
+  fullName.vb: DragonHoard.Core.Cache.GetOrAddCache(Of TOptions)(TOptions, String)
+  nameWithType: Cache.GetOrAddCache<TOptions>(TOptions, string)
+  nameWithType.vb: Cache.GetOrAddCache(Of TOptions)(TOptions, String)
+- uid: DragonHoard.Core.CacheEntryOptions
+  name: CacheEntryOptions
+  href: api/DragonHoard.Core.CacheEntryOptions.html
+  commentId: T:DragonHoard.Core.CacheEntryOptions
+  fullName: DragonHoard.Core.CacheEntryOptions
+  nameWithType: CacheEntryOptions
+- uid: DragonHoard.Core.CacheEntryOptions.AbsoluteExpiration
+  name: AbsoluteExpiration
+  href: api/DragonHoard.Core.CacheEntryOptions.html#DragonHoard_Core_CacheEntryOptions_AbsoluteExpiration
+  commentId: P:DragonHoard.Core.CacheEntryOptions.AbsoluteExpiration
+  fullName: DragonHoard.Core.CacheEntryOptions.AbsoluteExpiration
+  nameWithType: CacheEntryOptions.AbsoluteExpiration
+- uid: DragonHoard.Core.CacheEntryOptions.AbsoluteExpiration*
+  name: AbsoluteExpiration
+  href: api/DragonHoard.Core.CacheEntryOptions.html#DragonHoard_Core_CacheEntryOptions_AbsoluteExpiration_
+  commentId: Overload:DragonHoard.Core.CacheEntryOptions.AbsoluteExpiration
+  isSpec: "True"
+  fullName: DragonHoard.Core.CacheEntryOptions.AbsoluteExpiration
+  nameWithType: CacheEntryOptions.AbsoluteExpiration
+- uid: DragonHoard.Core.CacheEntryOptions.AbsoluteExpirationRelativeToNow
+  name: AbsoluteExpirationRelativeToNow
+  href: api/DragonHoard.Core.CacheEntryOptions.html#DragonHoard_Core_CacheEntryOptions_AbsoluteExpirationRelativeToNow
+  commentId: P:DragonHoard.Core.CacheEntryOptions.AbsoluteExpirationRelativeToNow
+  fullName: DragonHoard.Core.CacheEntryOptions.AbsoluteExpirationRelativeToNow
+  nameWithType: CacheEntryOptions.AbsoluteExpirationRelativeToNow
+- uid: DragonHoard.Core.CacheEntryOptions.AbsoluteExpirationRelativeToNow*
+  name: AbsoluteExpirationRelativeToNow
+  href: api/DragonHoard.Core.CacheEntryOptions.html#DragonHoard_Core_CacheEntryOptions_AbsoluteExpirationRelativeToNow_
+  commentId: Overload:DragonHoard.Core.CacheEntryOptions.AbsoluteExpirationRelativeToNow
+  isSpec: "True"
+  fullName: DragonHoard.Core.CacheEntryOptions.AbsoluteExpirationRelativeToNow
+  nameWithType: CacheEntryOptions.AbsoluteExpirationRelativeToNow
+- uid: DragonHoard.Core.CacheEntryOptions.Priority
+  name: Priority
+  href: api/DragonHoard.Core.CacheEntryOptions.html#DragonHoard_Core_CacheEntryOptions_Priority
+  commentId: P:DragonHoard.Core.CacheEntryOptions.Priority
+  fullName: DragonHoard.Core.CacheEntryOptions.Priority
+  nameWithType: CacheEntryOptions.Priority
+- uid: DragonHoard.Core.CacheEntryOptions.Priority*
+  name: Priority
+  href: api/DragonHoard.Core.CacheEntryOptions.html#DragonHoard_Core_CacheEntryOptions_Priority_
+  commentId: Overload:DragonHoard.Core.CacheEntryOptions.Priority
+  isSpec: "True"
+  fullName: DragonHoard.Core.CacheEntryOptions.Priority
+  nameWithType: CacheEntryOptions.Priority
+- uid: DragonHoard.Core.CacheEntryOptions.Size
+  name: Size
+  href: api/DragonHoard.Core.CacheEntryOptions.html#DragonHoard_Core_CacheEntryOptions_Size
+  commentId: P:DragonHoard.Core.CacheEntryOptions.Size
+  fullName: DragonHoard.Core.CacheEntryOptions.Size
+  nameWithType: CacheEntryOptions.Size
+- uid: DragonHoard.Core.CacheEntryOptions.Size*
+  name: Size
+  href: api/DragonHoard.Core.CacheEntryOptions.html#DragonHoard_Core_CacheEntryOptions_Size_
+  commentId: Overload:DragonHoard.Core.CacheEntryOptions.Size
+  isSpec: "True"
+  fullName: DragonHoard.Core.CacheEntryOptions.Size
+  nameWithType: CacheEntryOptions.Size
+- uid: DragonHoard.Core.CacheEntryOptions.SlidingExpiration
+  name: SlidingExpiration
+  href: api/DragonHoard.Core.CacheEntryOptions.html#DragonHoard_Core_CacheEntryOptions_SlidingExpiration
+  commentId: P:DragonHoard.Core.CacheEntryOptions.SlidingExpiration
+  fullName: DragonHoard.Core.CacheEntryOptions.SlidingExpiration
+  nameWithType: CacheEntryOptions.SlidingExpiration
+- uid: DragonHoard.Core.CacheEntryOptions.SlidingExpiration*
+  name: SlidingExpiration
+  href: api/DragonHoard.Core.CacheEntryOptions.html#DragonHoard_Core_CacheEntryOptions_SlidingExpiration_
+  commentId: Overload:DragonHoard.Core.CacheEntryOptions.SlidingExpiration
+  isSpec: "True"
+  fullName: DragonHoard.Core.CacheEntryOptions.SlidingExpiration
+  nameWithType: CacheEntryOptions.SlidingExpiration
+- uid: DragonHoard.Core.CacheEntryOptions.Tags
+  name: Tags
+  href: api/DragonHoard.Core.CacheEntryOptions.html#DragonHoard_Core_CacheEntryOptions_Tags
+  commentId: P:DragonHoard.Core.CacheEntryOptions.Tags
+  fullName: DragonHoard.Core.CacheEntryOptions.Tags
+  nameWithType: CacheEntryOptions.Tags
+- uid: DragonHoard.Core.CacheEntryOptions.Tags*
+  name: Tags
+  href: api/DragonHoard.Core.CacheEntryOptions.html#DragonHoard_Core_CacheEntryOptions_Tags_
+  commentId: Overload:DragonHoard.Core.CacheEntryOptions.Tags
+  isSpec: "True"
+  fullName: DragonHoard.Core.CacheEntryOptions.Tags
+  nameWithType: CacheEntryOptions.Tags
+- uid: DragonHoard.Core.CachePriority
+  name: CachePriority
+  href: api/DragonHoard.Core.CachePriority.html
+  commentId: T:DragonHoard.Core.CachePriority
+  fullName: DragonHoard.Core.CachePriority
+  nameWithType: CachePriority
+- uid: DragonHoard.Core.CachePriority.High
+  name: High
+  href: api/DragonHoard.Core.CachePriority.html#DragonHoard_Core_CachePriority_High
+  commentId: F:DragonHoard.Core.CachePriority.High
+  fullName: DragonHoard.Core.CachePriority.High
+  nameWithType: CachePriority.High
+- uid: DragonHoard.Core.CachePriority.Low
+  name: Low
+  href: api/DragonHoard.Core.CachePriority.html#DragonHoard_Core_CachePriority_Low
+  commentId: F:DragonHoard.Core.CachePriority.Low
+  fullName: DragonHoard.Core.CachePriority.Low
+  nameWithType: CachePriority.Low
+- uid: DragonHoard.Core.CachePriority.Normal
+  name: Normal
+  href: api/DragonHoard.Core.CachePriority.html#DragonHoard_Core_CachePriority_Normal
+  commentId: F:DragonHoard.Core.CachePriority.Normal
+  fullName: DragonHoard.Core.CachePriority.Normal
+  nameWithType: CachePriority.Normal
+- uid: DragonHoard.Core.CanisterModules
+  name: DragonHoard.Core.CanisterModules
+  href: api/DragonHoard.Core.CanisterModules.html
+  commentId: N:DragonHoard.Core.CanisterModules
+  fullName: DragonHoard.Core.CanisterModules
+  nameWithType: DragonHoard.Core.CanisterModules
+- uid: DragonHoard.Core.CanisterModules.RegistrationModule
+  name: RegistrationModule
+  href: api/DragonHoard.Core.CanisterModules.RegistrationModule.html
+  commentId: T:DragonHoard.Core.CanisterModules.RegistrationModule
+  fullName: DragonHoard.Core.CanisterModules.RegistrationModule
+  nameWithType: RegistrationModule
+- uid: DragonHoard.Core.CanisterModules.RegistrationModule.Load(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: Load(IServiceCollection?)
+  href: api/DragonHoard.Core.CanisterModules.RegistrationModule.html#DragonHoard_Core_CanisterModules_RegistrationModule_Load_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:DragonHoard.Core.CanisterModules.RegistrationModule.Load(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: Load(IServiceCollection)
+  fullName: DragonHoard.Core.CanisterModules.RegistrationModule.Load(Microsoft.Extensions.DependencyInjection.IServiceCollection?)
+  fullName.vb: DragonHoard.Core.CanisterModules.RegistrationModule.Load(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: RegistrationModule.Load(IServiceCollection?)
+  nameWithType.vb: RegistrationModule.Load(IServiceCollection)
+- uid: DragonHoard.Core.CanisterModules.RegistrationModule.Load*
+  name: Load
+  href: api/DragonHoard.Core.CanisterModules.RegistrationModule.html#DragonHoard_Core_CanisterModules_RegistrationModule_Load_
+  commentId: Overload:DragonHoard.Core.CanisterModules.RegistrationModule.Load
+  isSpec: "True"
+  fullName: DragonHoard.Core.CanisterModules.RegistrationModule.Load
+  nameWithType: RegistrationModule.Load
+- uid: DragonHoard.Core.CanisterModules.RegistrationModule.Order
+  name: Order
+  href: api/DragonHoard.Core.CanisterModules.RegistrationModule.html#DragonHoard_Core_CanisterModules_RegistrationModule_Order
+  commentId: P:DragonHoard.Core.CanisterModules.RegistrationModule.Order
+  fullName: DragonHoard.Core.CanisterModules.RegistrationModule.Order
+  nameWithType: RegistrationModule.Order
+- uid: DragonHoard.Core.CanisterModules.RegistrationModule.Order*
+  name: Order
+  href: api/DragonHoard.Core.CanisterModules.RegistrationModule.html#DragonHoard_Core_CanisterModules_RegistrationModule_Order_
+  commentId: Overload:DragonHoard.Core.CanisterModules.RegistrationModule.Order
+  isSpec: "True"
+  fullName: DragonHoard.Core.CanisterModules.RegistrationModule.Order
+  nameWithType: RegistrationModule.Order
+- uid: DragonHoard.Core.Interfaces
+  name: DragonHoard.Core.Interfaces
+  href: api/DragonHoard.Core.Interfaces.html
+  commentId: N:DragonHoard.Core.Interfaces
+  fullName: DragonHoard.Core.Interfaces
+  nameWithType: DragonHoard.Core.Interfaces
+- uid: DragonHoard.Core.Interfaces.ICache
+  name: ICache
+  href: api/DragonHoard.Core.Interfaces.ICache.html
+  commentId: T:DragonHoard.Core.Interfaces.ICache
+  fullName: DragonHoard.Core.Interfaces.ICache
+  nameWithType: ICache
+- uid: DragonHoard.Core.Interfaces.ICache.Clone
+  name: Clone()
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Clone
+  commentId: M:DragonHoard.Core.Interfaces.ICache.Clone
+  fullName: DragonHoard.Core.Interfaces.ICache.Clone()
+  nameWithType: ICache.Clone()
+- uid: DragonHoard.Core.Interfaces.ICache.Clone*
+  name: Clone
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Clone_
+  commentId: Overload:DragonHoard.Core.Interfaces.ICache.Clone
+  isSpec: "True"
+  fullName: DragonHoard.Core.Interfaces.ICache.Clone
+  nameWithType: ICache.Clone
+- uid: DragonHoard.Core.Interfaces.ICache.Clone``1(``0)
+  name: Clone<TOption>(TOption)
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Clone__1___0_
+  commentId: M:DragonHoard.Core.Interfaces.ICache.Clone``1(``0)
+  name.vb: Clone(Of TOption)(TOption)
+  fullName: DragonHoard.Core.Interfaces.ICache.Clone<TOption>(TOption)
+  fullName.vb: DragonHoard.Core.Interfaces.ICache.Clone(Of TOption)(TOption)
+  nameWithType: ICache.Clone<TOption>(TOption)
+  nameWithType.vb: ICache.Clone(Of TOption)(TOption)
+- uid: DragonHoard.Core.Interfaces.ICache.Compact(System.Double)
+  name: Compact(double)
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Compact_System_Double_
+  commentId: M:DragonHoard.Core.Interfaces.ICache.Compact(System.Double)
+  name.vb: Compact(Double)
+  fullName: DragonHoard.Core.Interfaces.ICache.Compact(double)
+  fullName.vb: DragonHoard.Core.Interfaces.ICache.Compact(Double)
+  nameWithType: ICache.Compact(double)
+  nameWithType.vb: ICache.Compact(Double)
+- uid: DragonHoard.Core.Interfaces.ICache.Compact*
+  name: Compact
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Compact_
+  commentId: Overload:DragonHoard.Core.Interfaces.ICache.Compact
+  isSpec: "True"
+  fullName: DragonHoard.Core.Interfaces.ICache.Compact
+  nameWithType: ICache.Compact
+- uid: DragonHoard.Core.Interfaces.ICache.GetByTag*
+  name: GetByTag
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_GetByTag_
+  commentId: Overload:DragonHoard.Core.Interfaces.ICache.GetByTag
+  isSpec: "True"
+  fullName: DragonHoard.Core.Interfaces.ICache.GetByTag
+  nameWithType: ICache.GetByTag
+- uid: DragonHoard.Core.Interfaces.ICache.GetByTag``1(System.String)
+  name: GetByTag<TValue>(string)
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_GetByTag__1_System_String_
+  commentId: M:DragonHoard.Core.Interfaces.ICache.GetByTag``1(System.String)
+  name.vb: GetByTag(Of TValue)(String)
+  fullName: DragonHoard.Core.Interfaces.ICache.GetByTag<TValue>(string)
+  fullName.vb: DragonHoard.Core.Interfaces.ICache.GetByTag(Of TValue)(String)
+  nameWithType: ICache.GetByTag<TValue>(string)
+  nameWithType.vb: ICache.GetByTag(Of TValue)(String)
+- uid: DragonHoard.Core.Interfaces.ICache.Name
+  name: Name
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Name
+  commentId: P:DragonHoard.Core.Interfaces.ICache.Name
+  fullName: DragonHoard.Core.Interfaces.ICache.Name
+  nameWithType: ICache.Name
+- uid: DragonHoard.Core.Interfaces.ICache.Name*
+  name: Name
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Name_
+  commentId: Overload:DragonHoard.Core.Interfaces.ICache.Name
+  isSpec: "True"
+  fullName: DragonHoard.Core.Interfaces.ICache.Name
+  nameWithType: ICache.Name
+- uid: DragonHoard.Core.Interfaces.ICache.Remove(System.Object)
+  name: Remove(object)
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Remove_System_Object_
+  commentId: M:DragonHoard.Core.Interfaces.ICache.Remove(System.Object)
+  name.vb: Remove(Object)
+  fullName: DragonHoard.Core.Interfaces.ICache.Remove(object)
+  fullName.vb: DragonHoard.Core.Interfaces.ICache.Remove(Object)
+  nameWithType: ICache.Remove(object)
+  nameWithType.vb: ICache.Remove(Object)
+- uid: DragonHoard.Core.Interfaces.ICache.Remove*
+  name: Remove
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Remove_
+  commentId: Overload:DragonHoard.Core.Interfaces.ICache.Remove
+  isSpec: "True"
+  fullName: DragonHoard.Core.Interfaces.ICache.Remove
+  nameWithType: ICache.Remove
+- uid: DragonHoard.Core.Interfaces.ICache.RemoveByTag(System.String)
+  name: RemoveByTag(string)
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_RemoveByTag_System_String_
+  commentId: M:DragonHoard.Core.Interfaces.ICache.RemoveByTag(System.String)
+  name.vb: RemoveByTag(String)
+  fullName: DragonHoard.Core.Interfaces.ICache.RemoveByTag(string)
+  fullName.vb: DragonHoard.Core.Interfaces.ICache.RemoveByTag(String)
+  nameWithType: ICache.RemoveByTag(string)
+  nameWithType.vb: ICache.RemoveByTag(String)
+- uid: DragonHoard.Core.Interfaces.ICache.RemoveByTag*
+  name: RemoveByTag
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_RemoveByTag_
+  commentId: Overload:DragonHoard.Core.Interfaces.ICache.RemoveByTag
+  isSpec: "True"
+  fullName: DragonHoard.Core.Interfaces.ICache.RemoveByTag
+  nameWithType: ICache.RemoveByTag
+- uid: DragonHoard.Core.Interfaces.ICache.Set*
+  name: Set
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Set_
+  commentId: Overload:DragonHoard.Core.Interfaces.ICache.Set
+  isSpec: "True"
+  fullName: DragonHoard.Core.Interfaces.ICache.Set
+  nameWithType: ICache.Set
+- uid: DragonHoard.Core.Interfaces.ICache.Set``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
+  name: Set<TValue>(object, TValue, CacheEntryOptions)
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Set__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_
+  commentId: M:DragonHoard.Core.Interfaces.ICache.Set``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
+  name.vb: Set(Of TValue)(Object, TValue, CacheEntryOptions)
+  fullName: DragonHoard.Core.Interfaces.ICache.Set<TValue>(object, TValue, DragonHoard.Core.CacheEntryOptions)
+  fullName.vb: DragonHoard.Core.Interfaces.ICache.Set(Of TValue)(Object, TValue, DragonHoard.Core.CacheEntryOptions)
+  nameWithType: ICache.Set<TValue>(object, TValue, CacheEntryOptions)
+  nameWithType.vb: ICache.Set(Of TValue)(Object, TValue, CacheEntryOptions)
+- uid: DragonHoard.Core.Interfaces.ICache.Set``1(System.Object,``0,System.DateTimeOffset)
+  name: Set<TValue>(object, TValue, DateTimeOffset)
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Set__1_System_Object___0_System_DateTimeOffset_
+  commentId: M:DragonHoard.Core.Interfaces.ICache.Set``1(System.Object,``0,System.DateTimeOffset)
+  name.vb: Set(Of TValue)(Object, TValue, DateTimeOffset)
+  fullName: DragonHoard.Core.Interfaces.ICache.Set<TValue>(object, TValue, System.DateTimeOffset)
+  fullName.vb: DragonHoard.Core.Interfaces.ICache.Set(Of TValue)(Object, TValue, System.DateTimeOffset)
+  nameWithType: ICache.Set<TValue>(object, TValue, DateTimeOffset)
+  nameWithType.vb: ICache.Set(Of TValue)(Object, TValue, DateTimeOffset)
+- uid: DragonHoard.Core.Interfaces.ICache.Set``1(System.Object,``0,System.TimeSpan,System.Boolean)
+  name: Set<TValue>(object, TValue, TimeSpan, bool)
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Set__1_System_Object___0_System_TimeSpan_System_Boolean_
+  commentId: M:DragonHoard.Core.Interfaces.ICache.Set``1(System.Object,``0,System.TimeSpan,System.Boolean)
+  name.vb: Set(Of TValue)(Object, TValue, TimeSpan, Boolean)
+  fullName: DragonHoard.Core.Interfaces.ICache.Set<TValue>(object, TValue, System.TimeSpan, bool)
+  fullName.vb: DragonHoard.Core.Interfaces.ICache.Set(Of TValue)(Object, TValue, System.TimeSpan, Boolean)
+  nameWithType: ICache.Set<TValue>(object, TValue, TimeSpan, bool)
+  nameWithType.vb: ICache.Set(Of TValue)(Object, TValue, TimeSpan, Boolean)
+- uid: DragonHoard.Core.Interfaces.ICache.Set``1(System.Object,``0)
+  name: Set<TValue>(object, TValue)
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Set__1_System_Object___0_
+  commentId: M:DragonHoard.Core.Interfaces.ICache.Set``1(System.Object,``0)
+  name.vb: Set(Of TValue)(Object, TValue)
+  fullName: DragonHoard.Core.Interfaces.ICache.Set<TValue>(object, TValue)
+  fullName.vb: DragonHoard.Core.Interfaces.ICache.Set(Of TValue)(Object, TValue)
+  nameWithType: ICache.Set<TValue>(object, TValue)
+  nameWithType.vb: ICache.Set(Of TValue)(Object, TValue)
+- uid: DragonHoard.Core.Interfaces.ICache.TryGetValue*
+  name: TryGetValue
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_TryGetValue_
+  commentId: Overload:DragonHoard.Core.Interfaces.ICache.TryGetValue
+  isSpec: "True"
+  fullName: DragonHoard.Core.Interfaces.ICache.TryGetValue
+  nameWithType: ICache.TryGetValue
+- uid: DragonHoard.Core.Interfaces.ICache.TryGetValue``1(System.Object,``0@)
+  name: TryGetValue<TValue>(object, out TValue)
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_TryGetValue__1_System_Object___0__
+  commentId: M:DragonHoard.Core.Interfaces.ICache.TryGetValue``1(System.Object,``0@)
+  name.vb: TryGetValue(Of TValue)(Object, TValue)
+  fullName: DragonHoard.Core.Interfaces.ICache.TryGetValue<TValue>(object, out TValue)
+  fullName.vb: DragonHoard.Core.Interfaces.ICache.TryGetValue(Of TValue)(Object, TValue)
+  nameWithType: ICache.TryGetValue<TValue>(object, out TValue)
+  nameWithType.vb: ICache.TryGetValue(Of TValue)(Object, TValue)
+- uid: DragonHoard.InMemory
+  name: DragonHoard.InMemory
+  href: api/DragonHoard.InMemory.html
+  commentId: N:DragonHoard.InMemory
+  fullName: DragonHoard.InMemory
+  nameWithType: DragonHoard.InMemory
+- uid: DragonHoard.InMemory.InMemoryCache
+  name: InMemoryCache
+  href: api/DragonHoard.InMemory.InMemoryCache.html
+  commentId: T:DragonHoard.InMemory.InMemoryCache
+  fullName: DragonHoard.InMemory.InMemoryCache
+  nameWithType: InMemoryCache
+- uid: DragonHoard.InMemory.InMemoryCache.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Extensions.Options.IOptions{DragonHoard.InMemory.InMemoryCacheOptions}})
+  name: InMemoryCache(IEnumerable<IOptions<InMemoryCacheOptions>>)
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache__ctor_System_Collections_Generic_IEnumerable_Microsoft_Extensions_Options_IOptions_DragonHoard_InMemory_InMemoryCacheOptions___
+  commentId: M:DragonHoard.InMemory.InMemoryCache.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Extensions.Options.IOptions{DragonHoard.InMemory.InMemoryCacheOptions}})
+  name.vb: New(IEnumerable(Of IOptions(Of InMemoryCacheOptions)))
+  fullName: DragonHoard.InMemory.InMemoryCache.InMemoryCache(System.Collections.Generic.IEnumerable<Microsoft.Extensions.Options.IOptions<DragonHoard.InMemory.InMemoryCacheOptions>>)
+  fullName.vb: DragonHoard.InMemory.InMemoryCache.New(System.Collections.Generic.IEnumerable(Of Microsoft.Extensions.Options.IOptions(Of DragonHoard.InMemory.InMemoryCacheOptions)))
+  nameWithType: InMemoryCache.InMemoryCache(IEnumerable<IOptions<InMemoryCacheOptions>>)
+  nameWithType.vb: InMemoryCache.New(IEnumerable(Of IOptions(Of InMemoryCacheOptions)))
+- uid: DragonHoard.InMemory.InMemoryCache.#ctor*
+  name: InMemoryCache
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache__ctor_
+  commentId: Overload:DragonHoard.InMemory.InMemoryCache.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: DragonHoard.InMemory.InMemoryCache.InMemoryCache
+  fullName.vb: DragonHoard.InMemory.InMemoryCache.New
+  nameWithType: InMemoryCache.InMemoryCache
+  nameWithType.vb: InMemoryCache.New
+- uid: DragonHoard.InMemory.InMemoryCache.Clone
+  name: Clone()
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Clone
+  commentId: M:DragonHoard.InMemory.InMemoryCache.Clone
+  fullName: DragonHoard.InMemory.InMemoryCache.Clone()
+  nameWithType: InMemoryCache.Clone()
+- uid: DragonHoard.InMemory.InMemoryCache.Clone*
+  name: Clone
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Clone_
+  commentId: Overload:DragonHoard.InMemory.InMemoryCache.Clone
+  isSpec: "True"
+  fullName: DragonHoard.InMemory.InMemoryCache.Clone
+  nameWithType: InMemoryCache.Clone
+- uid: DragonHoard.InMemory.InMemoryCache.Clone``1(``0)
+  name: Clone<TOption>(TOption)
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Clone__1___0_
+  commentId: M:DragonHoard.InMemory.InMemoryCache.Clone``1(``0)
+  name.vb: Clone(Of TOption)(TOption)
+  fullName: DragonHoard.InMemory.InMemoryCache.Clone<TOption>(TOption)
+  fullName.vb: DragonHoard.InMemory.InMemoryCache.Clone(Of TOption)(TOption)
+  nameWithType: InMemoryCache.Clone<TOption>(TOption)
+  nameWithType.vb: InMemoryCache.Clone(Of TOption)(TOption)
+- uid: DragonHoard.InMemory.InMemoryCache.Compact(System.Double)
+  name: Compact(double)
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Compact_System_Double_
+  commentId: M:DragonHoard.InMemory.InMemoryCache.Compact(System.Double)
+  name.vb: Compact(Double)
+  fullName: DragonHoard.InMemory.InMemoryCache.Compact(double)
+  fullName.vb: DragonHoard.InMemory.InMemoryCache.Compact(Double)
+  nameWithType: InMemoryCache.Compact(double)
+  nameWithType.vb: InMemoryCache.Compact(Double)
+- uid: DragonHoard.InMemory.InMemoryCache.Compact*
+  name: Compact
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Compact_
+  commentId: Overload:DragonHoard.InMemory.InMemoryCache.Compact
+  isSpec: "True"
+  fullName: DragonHoard.InMemory.InMemoryCache.Compact
+  nameWithType: InMemoryCache.Compact
+- uid: DragonHoard.InMemory.InMemoryCache.Dispose
+  name: Dispose()
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Dispose
+  commentId: M:DragonHoard.InMemory.InMemoryCache.Dispose
+  fullName: DragonHoard.InMemory.InMemoryCache.Dispose()
+  nameWithType: InMemoryCache.Dispose()
+- uid: DragonHoard.InMemory.InMemoryCache.Dispose*
+  name: Dispose
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Dispose_
+  commentId: Overload:DragonHoard.InMemory.InMemoryCache.Dispose
+  isSpec: "True"
+  fullName: DragonHoard.InMemory.InMemoryCache.Dispose
+  nameWithType: InMemoryCache.Dispose
+- uid: DragonHoard.InMemory.InMemoryCache.Name
+  name: Name
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Name
+  commentId: P:DragonHoard.InMemory.InMemoryCache.Name
+  fullName: DragonHoard.InMemory.InMemoryCache.Name
+  nameWithType: InMemoryCache.Name
+- uid: DragonHoard.InMemory.InMemoryCache.Name*
+  name: Name
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Name_
+  commentId: Overload:DragonHoard.InMemory.InMemoryCache.Name
+  isSpec: "True"
+  fullName: DragonHoard.InMemory.InMemoryCache.Name
+  nameWithType: InMemoryCache.Name
+- uid: DragonHoard.InMemory.InMemoryCache.RemoveByKey(System.Object)
+  name: RemoveByKey(object)
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_RemoveByKey_System_Object_
+  commentId: M:DragonHoard.InMemory.InMemoryCache.RemoveByKey(System.Object)
+  name.vb: RemoveByKey(Object)
+  fullName: DragonHoard.InMemory.InMemoryCache.RemoveByKey(object)
+  fullName.vb: DragonHoard.InMemory.InMemoryCache.RemoveByKey(Object)
+  nameWithType: InMemoryCache.RemoveByKey(object)
+  nameWithType.vb: InMemoryCache.RemoveByKey(Object)
+- uid: DragonHoard.InMemory.InMemoryCache.RemoveByKey*
+  name: RemoveByKey
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_RemoveByKey_
+  commentId: Overload:DragonHoard.InMemory.InMemoryCache.RemoveByKey
+  isSpec: "True"
+  fullName: DragonHoard.InMemory.InMemoryCache.RemoveByKey
+  nameWithType: InMemoryCache.RemoveByKey
+- uid: DragonHoard.InMemory.InMemoryCache.Set*
+  name: Set
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Set_
+  commentId: Overload:DragonHoard.InMemory.InMemoryCache.Set
+  isSpec: "True"
+  fullName: DragonHoard.InMemory.InMemoryCache.Set
+  nameWithType: InMemoryCache.Set
+- uid: DragonHoard.InMemory.InMemoryCache.Set``1(System.Object,``0,System.DateTimeOffset)
+  name: Set<TValue>(object, TValue, DateTimeOffset)
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Set__1_System_Object___0_System_DateTimeOffset_
+  commentId: M:DragonHoard.InMemory.InMemoryCache.Set``1(System.Object,``0,System.DateTimeOffset)
+  name.vb: Set(Of TValue)(Object, TValue, DateTimeOffset)
+  fullName: DragonHoard.InMemory.InMemoryCache.Set<TValue>(object, TValue, System.DateTimeOffset)
+  fullName.vb: DragonHoard.InMemory.InMemoryCache.Set(Of TValue)(Object, TValue, System.DateTimeOffset)
+  nameWithType: InMemoryCache.Set<TValue>(object, TValue, DateTimeOffset)
+  nameWithType.vb: InMemoryCache.Set(Of TValue)(Object, TValue, DateTimeOffset)
+- uid: DragonHoard.InMemory.InMemoryCache.Set``1(System.Object,``0,System.TimeSpan,System.Boolean)
+  name: Set<TValue>(object, TValue, TimeSpan, bool)
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Set__1_System_Object___0_System_TimeSpan_System_Boolean_
+  commentId: M:DragonHoard.InMemory.InMemoryCache.Set``1(System.Object,``0,System.TimeSpan,System.Boolean)
+  name.vb: Set(Of TValue)(Object, TValue, TimeSpan, Boolean)
+  fullName: DragonHoard.InMemory.InMemoryCache.Set<TValue>(object, TValue, System.TimeSpan, bool)
+  fullName.vb: DragonHoard.InMemory.InMemoryCache.Set(Of TValue)(Object, TValue, System.TimeSpan, Boolean)
+  nameWithType: InMemoryCache.Set<TValue>(object, TValue, TimeSpan, bool)
+  nameWithType.vb: InMemoryCache.Set(Of TValue)(Object, TValue, TimeSpan, Boolean)
+- uid: DragonHoard.InMemory.InMemoryCache.Set``1(System.Object,``0)
+  name: Set<TValue>(object, TValue)
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Set__1_System_Object___0_
+  commentId: M:DragonHoard.InMemory.InMemoryCache.Set``1(System.Object,``0)
+  name.vb: Set(Of TValue)(Object, TValue)
+  fullName: DragonHoard.InMemory.InMemoryCache.Set<TValue>(object, TValue)
+  fullName.vb: DragonHoard.InMemory.InMemoryCache.Set(Of TValue)(Object, TValue)
+  nameWithType: InMemoryCache.Set<TValue>(object, TValue)
+  nameWithType.vb: InMemoryCache.Set(Of TValue)(Object, TValue)
+- uid: DragonHoard.InMemory.InMemoryCache.SetWithOptions*
+  name: SetWithOptions
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_SetWithOptions_
+  commentId: Overload:DragonHoard.InMemory.InMemoryCache.SetWithOptions
+  isSpec: "True"
+  fullName: DragonHoard.InMemory.InMemoryCache.SetWithOptions
+  nameWithType: InMemoryCache.SetWithOptions
+- uid: DragonHoard.InMemory.InMemoryCache.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
+  name: SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_SetWithOptions__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_
+  commentId: M:DragonHoard.InMemory.InMemoryCache.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
+  name.vb: SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
+  fullName: DragonHoard.InMemory.InMemoryCache.SetWithOptions<TValue>(object, TValue, DragonHoard.Core.CacheEntryOptions)
+  fullName.vb: DragonHoard.InMemory.InMemoryCache.SetWithOptions(Of TValue)(Object, TValue, DragonHoard.Core.CacheEntryOptions)
+  nameWithType: InMemoryCache.SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
+  nameWithType.vb: InMemoryCache.SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
+- uid: DragonHoard.InMemory.InMemoryCache.TryGetValue*
+  name: TryGetValue
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_TryGetValue_
+  commentId: Overload:DragonHoard.InMemory.InMemoryCache.TryGetValue
+  isSpec: "True"
+  fullName: DragonHoard.InMemory.InMemoryCache.TryGetValue
+  nameWithType: InMemoryCache.TryGetValue
+- uid: DragonHoard.InMemory.InMemoryCache.TryGetValue``1(System.Object,``0@)
+  name: TryGetValue<TValue>(object, out TValue)
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_TryGetValue__1_System_Object___0__
+  commentId: M:DragonHoard.InMemory.InMemoryCache.TryGetValue``1(System.Object,``0@)
+  name.vb: TryGetValue(Of TValue)(Object, TValue)
+  fullName: DragonHoard.InMemory.InMemoryCache.TryGetValue<TValue>(object, out TValue)
+  fullName.vb: DragonHoard.InMemory.InMemoryCache.TryGetValue(Of TValue)(Object, TValue)
+  nameWithType: InMemoryCache.TryGetValue<TValue>(object, out TValue)
+  nameWithType.vb: InMemoryCache.TryGetValue(Of TValue)(Object, TValue)
+- uid: DragonHoard.InMemory.InMemoryCacheOptions
+  name: InMemoryCacheOptions
+  href: api/DragonHoard.InMemory.InMemoryCacheOptions.html
+  commentId: T:DragonHoard.InMemory.InMemoryCacheOptions
+  fullName: DragonHoard.InMemory.InMemoryCacheOptions
+  nameWithType: InMemoryCacheOptions
+- uid: DragonHoard.InMemory.InMemoryCacheOptions.CompactionPercentage
+  name: CompactionPercentage
+  href: api/DragonHoard.InMemory.InMemoryCacheOptions.html#DragonHoard_InMemory_InMemoryCacheOptions_CompactionPercentage
+  commentId: P:DragonHoard.InMemory.InMemoryCacheOptions.CompactionPercentage
+  fullName: DragonHoard.InMemory.InMemoryCacheOptions.CompactionPercentage
+  nameWithType: InMemoryCacheOptions.CompactionPercentage
+- uid: DragonHoard.InMemory.InMemoryCacheOptions.CompactionPercentage*
+  name: CompactionPercentage
+  href: api/DragonHoard.InMemory.InMemoryCacheOptions.html#DragonHoard_InMemory_InMemoryCacheOptions_CompactionPercentage_
+  commentId: Overload:DragonHoard.InMemory.InMemoryCacheOptions.CompactionPercentage
+  isSpec: "True"
+  fullName: DragonHoard.InMemory.InMemoryCacheOptions.CompactionPercentage
+  nameWithType: InMemoryCacheOptions.CompactionPercentage
+- uid: DragonHoard.InMemory.InMemoryCacheOptions.Default
+  name: Default
+  href: api/DragonHoard.InMemory.InMemoryCacheOptions.html#DragonHoard_InMemory_InMemoryCacheOptions_Default
+  commentId: P:DragonHoard.InMemory.InMemoryCacheOptions.Default
+  fullName: DragonHoard.InMemory.InMemoryCacheOptions.Default
+  nameWithType: InMemoryCacheOptions.Default
+- uid: DragonHoard.InMemory.InMemoryCacheOptions.Default*
+  name: Default
+  href: api/DragonHoard.InMemory.InMemoryCacheOptions.html#DragonHoard_InMemory_InMemoryCacheOptions_Default_
+  commentId: Overload:DragonHoard.InMemory.InMemoryCacheOptions.Default
+  isSpec: "True"
+  fullName: DragonHoard.InMemory.InMemoryCacheOptions.Default
+  nameWithType: InMemoryCacheOptions.Default
+- uid: DragonHoard.InMemory.InMemoryCacheOptions.MaxCacheSize
+  name: MaxCacheSize
+  href: api/DragonHoard.InMemory.InMemoryCacheOptions.html#DragonHoard_InMemory_InMemoryCacheOptions_MaxCacheSize
+  commentId: P:DragonHoard.InMemory.InMemoryCacheOptions.MaxCacheSize
+  fullName: DragonHoard.InMemory.InMemoryCacheOptions.MaxCacheSize
+  nameWithType: InMemoryCacheOptions.MaxCacheSize
+- uid: DragonHoard.InMemory.InMemoryCacheOptions.MaxCacheSize*
+  name: MaxCacheSize
+  href: api/DragonHoard.InMemory.InMemoryCacheOptions.html#DragonHoard_InMemory_InMemoryCacheOptions_MaxCacheSize_
+  commentId: Overload:DragonHoard.InMemory.InMemoryCacheOptions.MaxCacheSize
+  isSpec: "True"
+  fullName: DragonHoard.InMemory.InMemoryCacheOptions.MaxCacheSize
+  nameWithType: InMemoryCacheOptions.MaxCacheSize
+- uid: DragonHoard.InMemory.InMemoryCacheOptions.ScanFrequency
+  name: ScanFrequency
+  href: api/DragonHoard.InMemory.InMemoryCacheOptions.html#DragonHoard_InMemory_InMemoryCacheOptions_ScanFrequency
+  commentId: P:DragonHoard.InMemory.InMemoryCacheOptions.ScanFrequency
+  fullName: DragonHoard.InMemory.InMemoryCacheOptions.ScanFrequency
+  nameWithType: InMemoryCacheOptions.ScanFrequency
+- uid: DragonHoard.InMemory.InMemoryCacheOptions.ScanFrequency*
+  name: ScanFrequency
+  href: api/DragonHoard.InMemory.InMemoryCacheOptions.html#DragonHoard_InMemory_InMemoryCacheOptions_ScanFrequency_
+  commentId: Overload:DragonHoard.InMemory.InMemoryCacheOptions.ScanFrequency
+  isSpec: "True"
+  fullName: DragonHoard.InMemory.InMemoryCacheOptions.ScanFrequency
+  nameWithType: InMemoryCacheOptions.ScanFrequency
+- uid: DragonHoard.InMemory.InMemoryCacheOptions.Value
+  name: Value
+  href: api/DragonHoard.InMemory.InMemoryCacheOptions.html#DragonHoard_InMemory_InMemoryCacheOptions_Value
+  commentId: P:DragonHoard.InMemory.InMemoryCacheOptions.Value
+  fullName: DragonHoard.InMemory.InMemoryCacheOptions.Value
+  nameWithType: InMemoryCacheOptions.Value
+- uid: DragonHoard.InMemory.InMemoryCacheOptions.Value*
+  name: Value
+  href: api/DragonHoard.InMemory.InMemoryCacheOptions.html#DragonHoard_InMemory_InMemoryCacheOptions_Value_
+  commentId: Overload:DragonHoard.InMemory.InMemoryCacheOptions.Value
+  isSpec: "True"
+  fullName: DragonHoard.InMemory.InMemoryCacheOptions.Value
+  nameWithType: InMemoryCacheOptions.Value
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory
+  name: DragonHoard.MicrosoftExtensionsCachingMemory
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.html
+  commentId: N:DragonHoard.MicrosoftExtensionsCachingMemory
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory
+  nameWithType: DragonHoard.MicrosoftExtensionsCachingMemory
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules
+  name: DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.html
+  commentId: N:DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules
+  nameWithType: DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration
+  name: MemoryRegistration
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.html
+  commentId: T:DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration
+  nameWithType: MemoryRegistration
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.Load(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: Load(IServiceCollection?)
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.html#DragonHoard_MicrosoftExtensionsCachingMemory_CanisterModules_MemoryRegistration_Load_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.Load(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: Load(IServiceCollection)
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.Load(Microsoft.Extensions.DependencyInjection.IServiceCollection?)
+  fullName.vb: DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.Load(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: MemoryRegistration.Load(IServiceCollection?)
+  nameWithType.vb: MemoryRegistration.Load(IServiceCollection)
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.Load*
+  name: Load
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.html#DragonHoard_MicrosoftExtensionsCachingMemory_CanisterModules_MemoryRegistration_Load_
+  commentId: Overload:DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.Load
+  isSpec: "True"
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.Load
+  nameWithType: MemoryRegistration.Load
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.Order
+  name: Order
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.html#DragonHoard_MicrosoftExtensionsCachingMemory_CanisterModules_MemoryRegistration_Order
+  commentId: P:DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.Order
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.Order
+  nameWithType: MemoryRegistration.Order
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.Order*
+  name: Order
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.html#DragonHoard_MicrosoftExtensionsCachingMemory_CanisterModules_MemoryRegistration_Order_
+  commentId: Overload:DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.Order
+  isSpec: "True"
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.Order
+  nameWithType: MemoryRegistration.Order
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache
+  name: MemoryCache
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html
+  commentId: T:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache
+  nameWithType: MemoryCache
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)
+  name: MemoryCache(IMemoryCache)
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache__ctor_Microsoft_Extensions_Caching_Memory_IMemoryCache_
+  commentId: M:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)
+  name.vb: New(IMemoryCache)
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.MemoryCache(Microsoft.Extensions.Caching.Memory.IMemoryCache)
+  fullName.vb: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.New(Microsoft.Extensions.Caching.Memory.IMemoryCache)
+  nameWithType: MemoryCache.MemoryCache(IMemoryCache)
+  nameWithType.vb: MemoryCache.New(IMemoryCache)
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.#ctor*
+  name: MemoryCache
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache__ctor_
+  commentId: Overload:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.MemoryCache
+  fullName.vb: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.New
+  nameWithType: MemoryCache.MemoryCache
+  nameWithType.vb: MemoryCache.New
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clone
+  name: Clone()
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Clone
+  commentId: M:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clone
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clone()
+  nameWithType: MemoryCache.Clone()
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clone*
+  name: Clone
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Clone_
+  commentId: Overload:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clone
+  isSpec: "True"
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clone
+  nameWithType: MemoryCache.Clone
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clone``1(``0)
+  name: Clone<TOption>(TOption)
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Clone__1___0_
+  commentId: M:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clone``1(``0)
+  name.vb: Clone(Of TOption)(TOption)
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clone<TOption>(TOption)
+  fullName.vb: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clone(Of TOption)(TOption)
+  nameWithType: MemoryCache.Clone<TOption>(TOption)
+  nameWithType.vb: MemoryCache.Clone(Of TOption)(TOption)
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Compact(System.Double)
+  name: Compact(double)
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Compact_System_Double_
+  commentId: M:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Compact(System.Double)
+  name.vb: Compact(Double)
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Compact(double)
+  fullName.vb: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Compact(Double)
+  nameWithType: MemoryCache.Compact(double)
+  nameWithType.vb: MemoryCache.Compact(Double)
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Compact*
+  name: Compact
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Compact_
+  commentId: Overload:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Compact
+  isSpec: "True"
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Compact
+  nameWithType: MemoryCache.Compact
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Dispose
+  name: Dispose()
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Dispose
+  commentId: M:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Dispose
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Dispose()
+  nameWithType: MemoryCache.Dispose()
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Dispose*
+  name: Dispose
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Dispose_
+  commentId: Overload:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Dispose
+  isSpec: "True"
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Dispose
+  nameWithType: MemoryCache.Dispose
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Name
+  name: Name
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Name
+  commentId: P:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Name
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Name
+  nameWithType: MemoryCache.Name
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Name*
+  name: Name
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Name_
+  commentId: Overload:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Name
+  isSpec: "True"
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Name
+  nameWithType: MemoryCache.Name
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.RemoveByKey(System.Object)
+  name: RemoveByKey(object)
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_RemoveByKey_System_Object_
+  commentId: M:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.RemoveByKey(System.Object)
+  name.vb: RemoveByKey(Object)
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.RemoveByKey(object)
+  fullName.vb: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.RemoveByKey(Object)
+  nameWithType: MemoryCache.RemoveByKey(object)
+  nameWithType.vb: MemoryCache.RemoveByKey(Object)
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.RemoveByKey*
+  name: RemoveByKey
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_RemoveByKey_
+  commentId: Overload:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.RemoveByKey
+  isSpec: "True"
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.RemoveByKey
+  nameWithType: MemoryCache.RemoveByKey
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set*
+  name: Set
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Set_
+  commentId: Overload:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set
+  isSpec: "True"
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set
+  nameWithType: MemoryCache.Set
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set``1(System.Object,``0,System.DateTimeOffset)
+  name: Set<TValue>(object, TValue, DateTimeOffset)
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Set__1_System_Object___0_System_DateTimeOffset_
+  commentId: M:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set``1(System.Object,``0,System.DateTimeOffset)
+  name.vb: Set(Of TValue)(Object, TValue, DateTimeOffset)
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set<TValue>(object, TValue, System.DateTimeOffset)
+  fullName.vb: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set(Of TValue)(Object, TValue, System.DateTimeOffset)
+  nameWithType: MemoryCache.Set<TValue>(object, TValue, DateTimeOffset)
+  nameWithType.vb: MemoryCache.Set(Of TValue)(Object, TValue, DateTimeOffset)
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set``1(System.Object,``0,System.TimeSpan,System.Boolean)
+  name: Set<TValue>(object, TValue, TimeSpan, bool)
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Set__1_System_Object___0_System_TimeSpan_System_Boolean_
+  commentId: M:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set``1(System.Object,``0,System.TimeSpan,System.Boolean)
+  name.vb: Set(Of TValue)(Object, TValue, TimeSpan, Boolean)
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set<TValue>(object, TValue, System.TimeSpan, bool)
+  fullName.vb: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set(Of TValue)(Object, TValue, System.TimeSpan, Boolean)
+  nameWithType: MemoryCache.Set<TValue>(object, TValue, TimeSpan, bool)
+  nameWithType.vb: MemoryCache.Set(Of TValue)(Object, TValue, TimeSpan, Boolean)
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set``1(System.Object,``0)
+  name: Set<TValue>(object, TValue)
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Set__1_System_Object___0_
+  commentId: M:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set``1(System.Object,``0)
+  name.vb: Set(Of TValue)(Object, TValue)
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set<TValue>(object, TValue)
+  fullName.vb: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set(Of TValue)(Object, TValue)
+  nameWithType: MemoryCache.Set<TValue>(object, TValue)
+  nameWithType.vb: MemoryCache.Set(Of TValue)(Object, TValue)
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions*
+  name: SetWithOptions
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_SetWithOptions_
+  commentId: Overload:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions
+  isSpec: "True"
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions
+  nameWithType: MemoryCache.SetWithOptions
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
+  name: SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_SetWithOptions__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_
+  commentId: M:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
+  name.vb: SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions<TValue>(object, TValue, DragonHoard.Core.CacheEntryOptions)
+  fullName.vb: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions(Of TValue)(Object, TValue, DragonHoard.Core.CacheEntryOptions)
+  nameWithType: MemoryCache.SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
+  nameWithType.vb: MemoryCache.SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.TryGetValue*
+  name: TryGetValue
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_TryGetValue_
+  commentId: Overload:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.TryGetValue
+  isSpec: "True"
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.TryGetValue
+  nameWithType: MemoryCache.TryGetValue
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.TryGetValue``1(System.Object,``0@)
+  name: TryGetValue<TValue>(object, out TValue)
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_TryGetValue__1_System_Object___0__
+  commentId: M:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.TryGetValue``1(System.Object,``0@)
+  name.vb: TryGetValue(Of TValue)(Object, TValue)
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.TryGetValue<TValue>(object, out TValue)
+  fullName.vb: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.TryGetValue(Of TValue)(Object, TValue)
+  nameWithType: MemoryCache.TryGetValue<TValue>(object, out TValue)
+  nameWithType.vb: MemoryCache.TryGetValue(Of TValue)(Object, TValue)
+- uid: Microsoft.Extensions.DependencyInjection
+  name: Microsoft.Extensions.DependencyInjection
+  href: api/Microsoft.Extensions.DependencyInjection.html
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions
+  name: DragonHoardInMemoryRegistrationExtensions
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.html
+  commentId: T:Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions
+  nameWithType: DragonHoardInMemoryRegistrationExtensions
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{DragonHoard.InMemory.InMemoryCacheOptions})
+  name: AddInMemoryHoard(IServiceCollection?, Action<InMemoryCacheOptions>)
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardInMemoryRegistrationExtensions_AddInMemoryHoard_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_DragonHoard_InMemory_InMemoryCacheOptions__
+  commentId: M:Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{DragonHoard.InMemory.InMemoryCacheOptions})
+  name.vb: AddInMemoryHoard(IServiceCollection, Action(Of InMemoryCacheOptions))
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection?, System.Action<DragonHoard.InMemory.InMemoryCacheOptions>)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of DragonHoard.InMemory.InMemoryCacheOptions))
+  nameWithType: DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(IServiceCollection?, Action<InMemoryCacheOptions>)
+  nameWithType.vb: DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(IServiceCollection, Action(Of InMemoryCacheOptions))
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddInMemoryHoard(IServiceCollection?)
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardInMemoryRegistrationExtensions_AddInMemoryHoard_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: AddInMemoryHoard(IServiceCollection)
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection?)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(IServiceCollection?)
+  nameWithType.vb: DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(IServiceCollection)
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard*
+  name: AddInMemoryHoard
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardInMemoryRegistrationExtensions_AddInMemoryHoard_
+  commentId: Overload:Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard
+  isSpec: "True"
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard
+  nameWithType: DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.RegisterInMemoryHoard(Canister.Interfaces.ICanisterConfiguration)
+  name: RegisterInMemoryHoard(ICanisterConfiguration?)
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardInMemoryRegistrationExtensions_RegisterInMemoryHoard_Canister_Interfaces_ICanisterConfiguration_
+  commentId: M:Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.RegisterInMemoryHoard(Canister.Interfaces.ICanisterConfiguration)
+  name.vb: RegisterInMemoryHoard(ICanisterConfiguration)
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.RegisterInMemoryHoard(Canister.Interfaces.ICanisterConfiguration?)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.RegisterInMemoryHoard(Canister.Interfaces.ICanisterConfiguration)
+  nameWithType: DragonHoardInMemoryRegistrationExtensions.RegisterInMemoryHoard(ICanisterConfiguration?)
+  nameWithType.vb: DragonHoardInMemoryRegistrationExtensions.RegisterInMemoryHoard(ICanisterConfiguration)
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.RegisterInMemoryHoard*
+  name: RegisterInMemoryHoard
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardInMemoryRegistrationExtensions_RegisterInMemoryHoard_
+  commentId: Overload:Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.RegisterInMemoryHoard
+  isSpec: "True"
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.RegisterInMemoryHoard
+  nameWithType: DragonHoardInMemoryRegistrationExtensions.RegisterInMemoryHoard
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions
+  name: DragonHoardMemoryRegistrationExtensions
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.html
+  commentId: T:Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions
+  nameWithType: DragonHoardMemoryRegistrationExtensions
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Caching.Memory.MemoryCacheOptions})
+  name: AddMemoryCacheHoard(IServiceCollection?, Action<MemoryCacheOptions>)
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardMemoryRegistrationExtensions_AddMemoryCacheHoard_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Microsoft_Extensions_Caching_Memory_MemoryCacheOptions__
+  commentId: M:Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Caching.Memory.MemoryCacheOptions})
+  name.vb: AddMemoryCacheHoard(IServiceCollection, Action(Of MemoryCacheOptions))
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection?, System.Action<Microsoft.Extensions.Caching.Memory.MemoryCacheOptions>)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of Microsoft.Extensions.Caching.Memory.MemoryCacheOptions))
+  nameWithType: DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(IServiceCollection?, Action<MemoryCacheOptions>)
+  nameWithType.vb: DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(IServiceCollection, Action(Of MemoryCacheOptions))
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddMemoryCacheHoard(IServiceCollection?)
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardMemoryRegistrationExtensions_AddMemoryCacheHoard_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: AddMemoryCacheHoard(IServiceCollection)
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection?)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(IServiceCollection?)
+  nameWithType.vb: DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(IServiceCollection)
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard*
+  name: AddMemoryCacheHoard
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardMemoryRegistrationExtensions_AddMemoryCacheHoard_
+  commentId: Overload:Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard
+  isSpec: "True"
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard
+  nameWithType: DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.RegisterMemoryCacheHoard(Canister.Interfaces.ICanisterConfiguration)
+  name: RegisterMemoryCacheHoard(ICanisterConfiguration?)
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardMemoryRegistrationExtensions_RegisterMemoryCacheHoard_Canister_Interfaces_ICanisterConfiguration_
+  commentId: M:Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.RegisterMemoryCacheHoard(Canister.Interfaces.ICanisterConfiguration)
+  name.vb: RegisterMemoryCacheHoard(ICanisterConfiguration)
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.RegisterMemoryCacheHoard(Canister.Interfaces.ICanisterConfiguration?)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.RegisterMemoryCacheHoard(Canister.Interfaces.ICanisterConfiguration)
+  nameWithType: DragonHoardMemoryRegistrationExtensions.RegisterMemoryCacheHoard(ICanisterConfiguration?)
+  nameWithType.vb: DragonHoardMemoryRegistrationExtensions.RegisterMemoryCacheHoard(ICanisterConfiguration)
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.RegisterMemoryCacheHoard*
+  name: RegisterMemoryCacheHoard
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardMemoryRegistrationExtensions_RegisterMemoryCacheHoard_
+  commentId: Overload:Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.RegisterMemoryCacheHoard
+  isSpec: "True"
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.RegisterMemoryCacheHoard
+  nameWithType: DragonHoardMemoryRegistrationExtensions.RegisterMemoryCacheHoard
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions
+  name: DragonHoardRegistrationExtensions
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.html
+  commentId: T:Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions
+  nameWithType: DragonHoardRegistrationExtensions
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.AddDragonHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddDragonHoard(IServiceCollection?)
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardRegistrationExtensions_AddDragonHoard_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.AddDragonHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: AddDragonHoard(IServiceCollection)
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.AddDragonHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection?)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.AddDragonHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: DragonHoardRegistrationExtensions.AddDragonHoard(IServiceCollection?)
+  nameWithType.vb: DragonHoardRegistrationExtensions.AddDragonHoard(IServiceCollection)
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.AddDragonHoard*
+  name: AddDragonHoard
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardRegistrationExtensions_AddDragonHoard_
+  commentId: Overload:Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.AddDragonHoard
+  isSpec: "True"
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.AddDragonHoard
+  nameWithType: DragonHoardRegistrationExtensions.AddDragonHoard
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.RegisterDragonHoard(Canister.Interfaces.ICanisterConfiguration)
+  name: RegisterDragonHoard(ICanisterConfiguration?)
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardRegistrationExtensions_RegisterDragonHoard_Canister_Interfaces_ICanisterConfiguration_
+  commentId: M:Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.RegisterDragonHoard(Canister.Interfaces.ICanisterConfiguration)
+  name.vb: RegisterDragonHoard(ICanisterConfiguration)
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.RegisterDragonHoard(Canister.Interfaces.ICanisterConfiguration?)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.RegisterDragonHoard(Canister.Interfaces.ICanisterConfiguration)
+  nameWithType: DragonHoardRegistrationExtensions.RegisterDragonHoard(ICanisterConfiguration?)
+  nameWithType.vb: DragonHoardRegistrationExtensions.RegisterDragonHoard(ICanisterConfiguration)
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.RegisterDragonHoard*
+  name: RegisterDragonHoard
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardRegistrationExtensions_RegisterDragonHoard_
+  commentId: Overload:Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.RegisterDragonHoard
+  isSpec: "True"
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.RegisterDragonHoard
+  nameWithType: DragonHoardRegistrationExtensions.RegisterDragonHoard

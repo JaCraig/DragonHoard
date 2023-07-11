@@ -1,0 +1,1065 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class CacheBaseClass
+ | DragonHoard API Reference </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class CacheBaseClass
+ | DragonHoard API Reference ">
+      <meta name="generator" content="docfx ">
+  
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../styles/config.css">
+      <link rel="stylesheet" href="../styles/discord.css">
+      <link rel="stylesheet" href="../styles/singulink.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+
+            <a class="brand" href="../index.html">
+              <img src="../images/icon.png" alt="DragonHoard" class="logomark">
+              <span class="brand-title">DragonHoard</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+
+                    <div>
+                      <div class="mobile-hide">
+
+                        <a class="brand" href="../index.html">
+                          <img src="../images/icon.png" alt="DragonHoard" class="logomark">
+                          <span class="brand-title">DragonHoard</span>
+                        </a>                      </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+  <strong><a href='https://github.com/JaCraig/DragonHoard'>Open in Github</a></strong>
+  
+                </div>            </nav>
+
+            <main class="main-panel">
+
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+ 
+
+                <div role="main" class="hide-when-search">
+
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                         <div id="contribution">
+                               <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                         </div>
+
+                    <article class="content wrap" id="_content" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass">
+
+
+
+  <h1 id="DragonHoard_Core_BaseClasses_CacheBaseClass" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass" class="text-break">Class CacheBaseClass
+</h1>
+  <div class="markdown level0 summary"><p>Cache base class</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">CacheBaseClass</span></div>
+      <div class="level2"><a class="xref" href="DragonHoard.InMemory.InMemoryCache.html">InMemoryCache</a></div>
+      <div class="level2"><a class="xref" href="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html">MemoryCache</a></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="DragonHoard.Core.Interfaces.ICache.html">ICache</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="DragonHoard.html">DragonHoard</a>.<a class="xref" href="DragonHoard.Core.html">Core</a>.<a class="xref" href="DragonHoard.Core.BaseClasses.html">BaseClasses</a></h6>
+  <h6><strong>Assembly</strong>: DragonHoard.Core.dll</h6>
+  <h5 id="DragonHoard_Core_BaseClasses_CacheBaseClass_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class CacheBaseClass : ICache, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass__ctor.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass.%23ctor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Core/BaseClasses/CacheBaseClass.cs/#L33">View Source</a>
+  </span>
+  <a id="DragonHoard_Core_BaseClasses_CacheBaseClass__ctor_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.#ctor*"></a>
+  <h4 id="DragonHoard_Core_BaseClasses_CacheBaseClass__ctor" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.#ctor">CacheBaseClass()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="DragonHoard.Core.BaseClasses.CacheBaseClass.html">CacheBaseClass</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected CacheBaseClass()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass_Name.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass.Name%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Core/BaseClasses/CacheBaseClass.cs/#L41">View Source</a>
+  </span>
+  <a id="DragonHoard_Core_BaseClasses_CacheBaseClass_Name_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Name*"></a>
+  <h4 id="DragonHoard_Core_BaseClasses_CacheBaseClass_Name" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Gets the name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>The name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass_Clone.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass.Clone%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Core/BaseClasses/CacheBaseClass.cs/#L58">View Source</a>
+  </span>
+  <a id="DragonHoard_Core_BaseClasses_CacheBaseClass_Clone_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Clone*"></a>
+  <h4 id="DragonHoard_Core_BaseClasses_CacheBaseClass_Clone" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Clones this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract ICache Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DragonHoard.Core.Interfaces.ICache.html">ICache</a></td>
+        <td><p>A copy of this cache.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass_Clone__1___0_.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass.Clone%60%601(%60%600)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Core/BaseClasses/CacheBaseClass.cs/#L66">View Source</a>
+  </span>
+  <a id="DragonHoard_Core_BaseClasses_CacheBaseClass_Clone_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Clone*"></a>
+  <h4 id="DragonHoard_Core_BaseClasses_CacheBaseClass_Clone__1___0_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Clone``1(``0)">Clone&lt;TOption&gt;(TOption)</h4>
+  <div class="markdown level1 summary"><p>Clones this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract ICache Clone&lt;TOption&gt;(TOption options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TOption</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options to use for the cache.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DragonHoard.Core.Interfaces.ICache.html">ICache</a></td>
+        <td><p>A copy of this cache.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TOption</span></td>
+        <td><p>The type of the option.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass_Compact_System_Double_.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass.Compact(System.Double)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Core/BaseClasses/CacheBaseClass.cs/#L72">View Source</a>
+  </span>
+  <a id="DragonHoard_Core_BaseClasses_CacheBaseClass_Compact_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Compact*"></a>
+  <h4 id="DragonHoard_Core_BaseClasses_CacheBaseClass_Compact_System_Double_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Compact(System.Double)">Compact(double)</h4>
+  <div class="markdown level1 summary"><p>Compacts the cache by the specified percentage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Compact(double percentage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">percentage</span></td>
+        <td><p>The percentage.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass_Dispose.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass.Dispose%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Core/BaseClasses/CacheBaseClass.cs/#L78">View Source</a>
+  </span>
+  <a id="DragonHoard_Core_BaseClasses_CacheBaseClass_Dispose_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Dispose*"></a>
+  <h4 id="DragonHoard_Core_BaseClasses_CacheBaseClass_Dispose" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting
+unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass_EvictionCallback_System_Object_System_Object_Microsoft_Extensions_Caching_Memory_EvictionReason_System_Object_.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass.EvictionCallback(System.Object%2CSystem.Object%2CMicrosoft.Extensions.Caching.Memory.EvictionReason%2CSystem.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Core/BaseClasses/CacheBaseClass.cs/#L211">View Source</a>
+  </span>
+  <a id="DragonHoard_Core_BaseClasses_CacheBaseClass_EvictionCallback_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.EvictionCallback*"></a>
+  <h4 id="DragonHoard_Core_BaseClasses_CacheBaseClass_EvictionCallback_System_Object_System_Object_Microsoft_Extensions_Caching_Memory_EvictionReason_System_Object_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.EvictionCallback(System.Object,System.Object,Microsoft.Extensions.Caching.Memory.EvictionReason,System.Object)">EvictionCallback(object, object?, EvictionReason, object)</h4>
+  <div class="markdown level1 summary"><p>Called when an item is removed from the index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void EvictionCallback(object key, object? value, EvictionReason reason, object state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.caching.memory.evictionreason">EvictionReason</a></td>
+        <td><span class="parametername">reason</span></td>
+        <td><p>The reason.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The state.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass_GetByTag__1_System_String_.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass.GetByTag%60%601(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Core/BaseClasses/CacheBaseClass.cs/#L86">View Source</a>
+  </span>
+  <a id="DragonHoard_Core_BaseClasses_CacheBaseClass_GetByTag_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.GetByTag*"></a>
+  <h4 id="DragonHoard_Core_BaseClasses_CacheBaseClass_GetByTag__1_System_String_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.GetByTag``1(System.String)">GetByTag&lt;TValue&gt;(string)</h4>
+  <div class="markdown level1 summary"><p>Gets the by tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TValue[] GetByTag&lt;TValue&gt;(string tag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>The tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TValue[]</td>
+        <td><p>The IEnumerable of items associated with the tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass_Remove_System_Object_.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass.Remove(System.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Core/BaseClasses/CacheBaseClass.cs/#L109">View Source</a>
+  </span>
+  <a id="DragonHoard_Core_BaseClasses_CacheBaseClass_Remove_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Remove*"></a>
+  <h4 id="DragonHoard_Core_BaseClasses_CacheBaseClass_Remove_System_Object_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Remove(System.Object)">Remove(object)</h4>
+  <div class="markdown level1 summary"><p>Removes the object associated with the specified key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Remove(object key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass_RemoveByKey_System_Object_.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByKey(System.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Core/BaseClasses/CacheBaseClass.cs/#L221">View Source</a>
+  </span>
+  <a id="DragonHoard_Core_BaseClasses_CacheBaseClass_RemoveByKey_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByKey*"></a>
+  <h4 id="DragonHoard_Core_BaseClasses_CacheBaseClass_RemoveByKey_System_Object_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByKey(System.Object)">RemoveByKey(object)</h4>
+  <div class="markdown level1 summary"><p>Removes the items by the key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void RemoveByKey(object key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass_RemoveByTag_System_String_.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByTag(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Core/BaseClasses/CacheBaseClass.cs/#L122">View Source</a>
+  </span>
+  <a id="DragonHoard_Core_BaseClasses_CacheBaseClass_RemoveByTag_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByTag*"></a>
+  <h4 id="DragonHoard_Core_BaseClasses_CacheBaseClass_RemoveByTag_System_String_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.RemoveByTag(System.String)">RemoveByTag(string)</h4>
+  <div class="markdown level1 summary"><p>Removes the by tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveByTag(string tag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>The tag.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass_SetWithOptions__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions%60%601(System.Object%2C%60%600%2CDragonHoard.Core.CacheEntryOptions)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Core/BaseClasses/CacheBaseClass.cs/#L231">View Source</a>
+  </span>
+  <a id="DragonHoard_Core_BaseClasses_CacheBaseClass_SetWithOptions_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions*"></a>
+  <h4 id="DragonHoard_Core_BaseClasses_CacheBaseClass_SetWithOptions__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)">SetWithOptions&lt;TValue&gt;(object, TValue, CacheEntryOptions)</h4>
+  <div class="markdown level1 summary"><p>Sets the value with the options sent in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract TValue SetWithOptions&lt;TValue&gt;(object key, TValue value, CacheEntryOptions cacheEntryOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DragonHoard.Core.CacheEntryOptions.html">CacheEntryOptions</a></td>
+        <td><span class="parametername">cacheEntryOptions</span></td>
+        <td><p>The cache entry options.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><p>The value sent in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass_Set__1_System_Object___0_.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass.Set%60%601(System.Object%2C%60%600)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Core/BaseClasses/CacheBaseClass.cs/#L150">View Source</a>
+  </span>
+  <a id="DragonHoard_Core_BaseClasses_CacheBaseClass_Set_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Set*"></a>
+  <h4 id="DragonHoard_Core_BaseClasses_CacheBaseClass_Set__1_System_Object___0_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Set``1(System.Object,``0)">Set&lt;TValue&gt;(object, TValue)</h4>
+  <div class="markdown level1 summary"><p>Sets the specified key/value pair in the cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract TValue Set&lt;TValue&gt;(object key, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><p>The value sent in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass_Set__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass.Set%60%601(System.Object%2C%60%600%2CDragonHoard.Core.CacheEntryOptions)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Core/BaseClasses/CacheBaseClass.cs/#L181">View Source</a>
+  </span>
+  <a id="DragonHoard_Core_BaseClasses_CacheBaseClass_Set_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Set*"></a>
+  <h4 id="DragonHoard_Core_BaseClasses_CacheBaseClass_Set__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Set``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)">Set&lt;TValue&gt;(object, TValue, CacheEntryOptions)</h4>
+  <div class="markdown level1 summary"><p>Sets the specified key/value pair in the cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TValue Set&lt;TValue&gt;(object key, TValue value, CacheEntryOptions cacheEntryOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DragonHoard.Core.CacheEntryOptions.html">CacheEntryOptions</a></td>
+        <td><span class="parametername">cacheEntryOptions</span></td>
+        <td><p>The cache entry options.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><p>The value sent in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass_Set__1_System_Object___0_System_DateTimeOffset_.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass.Set%60%601(System.Object%2C%60%600%2CSystem.DateTimeOffset)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Core/BaseClasses/CacheBaseClass.cs/#L160">View Source</a>
+  </span>
+  <a id="DragonHoard_Core_BaseClasses_CacheBaseClass_Set_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Set*"></a>
+  <h4 id="DragonHoard_Core_BaseClasses_CacheBaseClass_Set__1_System_Object___0_System_DateTimeOffset_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Set``1(System.Object,``0,System.DateTimeOffset)">Set&lt;TValue&gt;(object, TValue, DateTimeOffset)</h4>
+  <div class="markdown level1 summary"><p>Sets the specified key/value pair in the cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract TValue Set&lt;TValue&gt;(object key, TValue value, DateTimeOffset absoluteExpiration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+        <td><span class="parametername">absoluteExpiration</span></td>
+        <td><p>The absolute expiration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><p>The value sent in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass_Set__1_System_Object___0_System_TimeSpan_System_Boolean_.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass.Set%60%601(System.Object%2C%60%600%2CSystem.TimeSpan%2CSystem.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Core/BaseClasses/CacheBaseClass.cs/#L171">View Source</a>
+  </span>
+  <a id="DragonHoard_Core_BaseClasses_CacheBaseClass_Set_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Set*"></a>
+  <h4 id="DragonHoard_Core_BaseClasses_CacheBaseClass_Set__1_System_Object___0_System_TimeSpan_System_Boolean_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.Set``1(System.Object,``0,System.TimeSpan,System.Boolean)">Set&lt;TValue&gt;(object, TValue, TimeSpan, bool)</h4>
+  <div class="markdown level1 summary"><p>Sets the specified key/value pair in the cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract TValue Set&lt;TValue&gt;(object key, TValue value, TimeSpan expirationRelativeToNow, bool sliding = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">expirationRelativeToNow</span></td>
+        <td><p>The expiration relative to now.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">sliding</span></td>
+        <td><p>if set to <code>true</code> [sliding] expiration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><p>The value sent in.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JaCraig/DragonHoard/new/main/apiSpec/new?filename=DragonHoard_Core_BaseClasses_CacheBaseClass_TryGetValue__1_System_Object___0__.md&amp;value=---%0Auid%3A%20DragonHoard.Core.BaseClasses.CacheBaseClass.TryGetValue%60%601(System.Object%2C%60%600%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Core/BaseClasses/CacheBaseClass.cs/#L202">View Source</a>
+  </span>
+  <a id="DragonHoard_Core_BaseClasses_CacheBaseClass_TryGetValue_" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.TryGetValue*"></a>
+  <h4 id="DragonHoard_Core_BaseClasses_CacheBaseClass_TryGetValue__1_System_Object___0__" data-uid="DragonHoard.Core.BaseClasses.CacheBaseClass.TryGetValue``1(System.Object,``0@)">TryGetValue&lt;TValue&gt;(object, out TValue)</h4>
+  <div class="markdown level1 summary"><p>Tries to get the value based on the key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool TryGetValue&lt;TValue&gt;(object key, out TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>True if it is successful, false otherwise</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>The type of the value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="DragonHoard.Core.Interfaces.ICache.html">ICache</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
+  </div>
+
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>&#169; James Craig. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+        <script type="text/javascript" src="../styles/jquery.twbsPagination.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
+        <script type="text/javascript" src="../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
+        <script type="text/javascript" src="../styles/docfx.js"></script>
+        <script type="text/javascript" src="../styles/main.js"></script>
+        <script type="text/javascript" src="../styles/singulink.js"></script>    </body>
+</html>

@@ -12,11 +12,231 @@
       }
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DragonHoard.Core.BaseClasses.CacheBaseClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DragonHoard.Core.BaseClasses.CacheBaseClass.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DragonHoard.Core.BaseClasses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DragonHoard.Core.BaseClasses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DragonHoard.Core.Cache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DragonHoard.Core.Cache.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DragonHoard.Core.CacheEntryOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DragonHoard.Core.CacheEntryOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DragonHoard.Core.CachePriority.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DragonHoard.Core.CachePriority.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DragonHoard.Core.CanisterModules.RegistrationModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DragonHoard.Core.CanisterModules.RegistrationModule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DragonHoard.Core.CanisterModules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DragonHoard.Core.CanisterModules.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DragonHoard.Core.Interfaces.ICache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DragonHoard.Core.Interfaces.ICache.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DragonHoard.Core.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DragonHoard.Core.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DragonHoard.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DragonHoard.Core.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DragonHoard.InMemory.InMemoryCache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DragonHoard.InMemory.InMemoryCache.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DragonHoard.InMemory.InMemoryCacheOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DragonHoard.InMemory.InMemoryCacheOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DragonHoard.InMemory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DragonHoard.InMemory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DragonHoard.MicrosoftExtensionsCachingMemory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DragonHoard.MicrosoftExtensionsCachingMemory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
           "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
         }
       },
       "version": ""
