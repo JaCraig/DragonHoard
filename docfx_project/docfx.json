@@ -3,7 +3,7 @@
     {
       "src": [
         {
-          "files": ["DragonHoard/DragonHoard.csproj"],
+          "files": ["DragonHoard/DragonHoard.Core.csproj","DragonHoard/DragonHoard.InMemory.csproj","DragonHoard/DragonHoard.Microsoft.Extensions.Caching.Memory.csproj"],
           "src": "../"
         }
       ],
