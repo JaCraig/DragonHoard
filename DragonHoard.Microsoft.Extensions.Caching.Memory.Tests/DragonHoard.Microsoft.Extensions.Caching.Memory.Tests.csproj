@@ -21,7 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DragonHoard.Microsoft.Extensions.Caching.Memory\DragonHoard.Microsoft.Extensions.Caching.Memory.csproj" />
-    <ProjectReference Include="..\TestHelpers\UtilsHelpers.csproj" />
+    <ProjectReference Include="..\UtilsHelpers\UtilsHelpers.csproj" />
   </ItemGroup>
 
 </Project>

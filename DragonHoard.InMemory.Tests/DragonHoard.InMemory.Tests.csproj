@@ -21,7 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DragonHoard.InMemory\DragonHoard.InMemory.csproj" />
-    <ProjectReference Include="..\TestHelpers\UtilsHelpers.csproj" />
+    <ProjectReference Include="..\UtilsHelpers\UtilsHelpers.csproj" />
   </ItemGroup>
 
 </Project>

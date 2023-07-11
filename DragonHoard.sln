@@ -15,8 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1FBE64CA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonHoard.Microsoft.Extensions.Caching.Memory.Tests", "DragonHoard.Microsoft.Extensions.Caching.Memory.Tests\DragonHoard.Microsoft.Extensions.Caching.Memory.Tests.csproj", "{DC6483EF-C9B4-4552-8938-FBBF25C1FA50}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtilsHelpers", "TestHelpers\UtilsHelpers.csproj", "{31761402-44D2-4F28-AAFF-C15811C2F17D}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DragonHoard.Benchmarks", "DragonHoard.Benchmarks\DragonHoard.Benchmarks.csproj", "{3BDD150F-69E8-4C8A-B436-72ABBF38F9C4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C2B35A40-5574-45B5-83B4-FCE7FFF94CDC}"
@@ -25,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonHoard.Example", "DragonHoard.Example\DragonHoard.Example.csproj", "{85FD549B-6F60-4864-A651-094F8EAC20C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtilsHelpers", "UtilsHelpers\UtilsHelpers.csproj", "{A1627526-D5F1-4805-BB72-EA1B4B0B87CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,10 +52,6 @@ Global
 		{DC6483EF-C9B4-4552-8938-FBBF25C1FA50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC6483EF-C9B4-4552-8938-FBBF25C1FA50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC6483EF-C9B4-4552-8938-FBBF25C1FA50}.Release|Any CPU.Build.0 = Release|Any CPU
-		{31761402-44D2-4F28-AAFF-C15811C2F17D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{31761402-44D2-4F28-AAFF-C15811C2F17D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{31761402-44D2-4F28-AAFF-C15811C2F17D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{31761402-44D2-4F28-AAFF-C15811C2F17D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3BDD150F-69E8-4C8A-B436-72ABBF38F9C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3BDD150F-69E8-4C8A-B436-72ABBF38F9C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BDD150F-69E8-4C8A-B436-72ABBF38F9C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -64,6 +60,10 @@ Global
 		{85FD549B-6F60-4864-A651-094F8EAC20C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85FD549B-6F60-4864-A651-094F8EAC20C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85FD549B-6F60-4864-A651-094F8EAC20C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1627526-D5F1-4805-BB72-EA1B4B0B87CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1627526-D5F1-4805-BB72-EA1B4B0B87CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1627526-D5F1-4805-BB72-EA1B4B0B87CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1627526-D5F1-4805-BB72-EA1B4B0B87CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,8 +71,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{AC85275C-C429-44B2-9C0F-22E6E0F83AE1} = {1FBE64CA-5292-4909-B102-F1EA7E7DE506}
 		{DC6483EF-C9B4-4552-8938-FBBF25C1FA50} = {1FBE64CA-5292-4909-B102-F1EA7E7DE506}
-		{31761402-44D2-4F28-AAFF-C15811C2F17D} = {1FBE64CA-5292-4909-B102-F1EA7E7DE506}
 		{3BDD150F-69E8-4C8A-B436-72ABBF38F9C4} = {1FBE64CA-5292-4909-B102-F1EA7E7DE506}
+		{A1627526-D5F1-4805-BB72-EA1B4B0B87CF} = {1FBE64CA-5292-4909-B102-F1EA7E7DE506}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52161188-1AF3-40C3-BC40-90D78DC1C55B}
