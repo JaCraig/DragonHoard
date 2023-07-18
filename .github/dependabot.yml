@@ -13,3 +13,17 @@ updates:
       prefix: "fix"
     ignore:
       - dependency-name: "Mecha.xUnit"
+    groups:
+      dependencies:
+        patterns: 
+          - "*"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "chore"
+    groups:
+      dependencies:
+        patterns: 
+          - "*"

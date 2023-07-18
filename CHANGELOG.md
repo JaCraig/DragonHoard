@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.5"></a>
+## [2.0.5](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.5) (2023-7-13)
+
+### Bug Fixes
+
+* bump Canister.IoC from 5.1.3 to 5.1.4 ([5c3e944](https://www.github.com/JaCraig/DragonHoard/commit/5c3e944cc65c7995934ab8d6ed8df3ca61dc46e6))
+
+### Other
+
+* Merge pull request #3 from JaCraig/dependabot/nuget/Canister.IoC-5.1.4 ([2365a0e](https://www.github.com/JaCraig/DragonHoard/commit/2365a0e0f599480051fd53a5b91e7f6ff9bfbd9e))
+
+<a name="2.0.4"></a>
+## [2.0.4](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.4) (2023-7-12)
+
+### Bug Fixes
+
+* bump Canister.IoC from 5.1.2 to 5.1.3 ([294cf66](https://www.github.com/JaCraig/DragonHoard/commit/294cf668de004288762c27c437d295ed59a7c073))
+
+### Other
+
+* Merge pull request #2 from JaCraig/dependabot/nuget/Canister.IoC-5.1.3 ([815b722](https://www.github.com/JaCraig/DragonHoard/commit/815b7229c3433534f4c61d82b32da2a10bbe001d))
+* Another attempt at doc update ([2430929](https://www.github.com/JaCraig/DragonHoard/commit/2430929abccae5657ce1dc5e5e16a5d03f46bbca))
+* Merge branch 'main' of https://github.com/JaCraig/DragonHoard ([009e678](https://www.github.com/JaCraig/DragonHoard/commit/009e67891e21ef772e5058fb2a13be7b7a442fbb))
+* Update README.md ([4a0a4fa](https://www.github.com/JaCraig/DragonHoard/commit/4a0a4fa42f0e1035ea1d4b82d47ad843515d0f0e))
+* Updating documentation ([090f006](https://www.github.com/JaCraig/DragonHoard/commit/090f0065412f251ed2273e7f35db9d86aa1e3f82))
+
 <a name="2.0.3"></a>
 ## [2.0.3](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.3) (2023-7-11)
 
