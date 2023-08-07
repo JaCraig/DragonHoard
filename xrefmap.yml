@@ -189,6 +189,31 @@ references:
   isSpec: "True"
   fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Set
   nameWithType: CacheBaseClass.Set
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions*
+  name: SetWithOptions
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_SetWithOptions_
+  commentId: Overload:DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions
+  isSpec: "True"
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions
+  nameWithType: CacheBaseClass.SetWithOptions
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
+  name: SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_SetWithOptions__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
+  name.vb: SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions<TValue>(object, TValue, DragonHoard.Core.CacheEntryOptions)
+  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions(Of TValue)(Object, TValue, DragonHoard.Core.CacheEntryOptions)
+  nameWithType: CacheBaseClass.SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
+  nameWithType.vb: CacheBaseClass.SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Set``1(System.Object,``0)
+  name: Set<TValue>(object, TValue)
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Set__1_System_Object___0_
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.Set``1(System.Object,``0)
+  name.vb: Set(Of TValue)(Object, TValue)
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Set<TValue>(object, TValue)
+  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.Set(Of TValue)(Object, TValue)
+  nameWithType: CacheBaseClass.Set<TValue>(object, TValue)
+  nameWithType.vb: CacheBaseClass.Set(Of TValue)(Object, TValue)
 - uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Set``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
   name: Set<TValue>(object, TValue, CacheEntryOptions)
   href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Set__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_
@@ -216,31 +241,6 @@ references:
   fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.Set(Of TValue)(Object, TValue, System.TimeSpan, Boolean)
   nameWithType: CacheBaseClass.Set<TValue>(object, TValue, TimeSpan, bool)
   nameWithType.vb: CacheBaseClass.Set(Of TValue)(Object, TValue, TimeSpan, Boolean)
-- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Set``1(System.Object,``0)
-  name: Set<TValue>(object, TValue)
-  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Set__1_System_Object___0_
-  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.Set``1(System.Object,``0)
-  name.vb: Set(Of TValue)(Object, TValue)
-  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Set<TValue>(object, TValue)
-  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.Set(Of TValue)(Object, TValue)
-  nameWithType: CacheBaseClass.Set<TValue>(object, TValue)
-  nameWithType.vb: CacheBaseClass.Set(Of TValue)(Object, TValue)
-- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions*
-  name: SetWithOptions
-  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_SetWithOptions_
-  commentId: Overload:DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions
-  isSpec: "True"
-  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions
-  nameWithType: CacheBaseClass.SetWithOptions
-- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
-  name: SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
-  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_SetWithOptions__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_
-  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
-  name.vb: SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
-  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions<TValue>(object, TValue, DragonHoard.Core.CacheEntryOptions)
-  fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.SetWithOptions(Of TValue)(Object, TValue, DragonHoard.Core.CacheEntryOptions)
-  nameWithType: CacheBaseClass.SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
-  nameWithType.vb: CacheBaseClass.SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
 - uid: DragonHoard.Core.BaseClasses.CacheBaseClass.TryGetValue*
   name: TryGetValue
   href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_TryGetValue_
@@ -596,6 +596,15 @@ references:
   isSpec: "True"
   fullName: DragonHoard.Core.Interfaces.ICache.Set
   nameWithType: ICache.Set
+- uid: DragonHoard.Core.Interfaces.ICache.Set``1(System.Object,``0)
+  name: Set<TValue>(object, TValue)
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Set__1_System_Object___0_
+  commentId: M:DragonHoard.Core.Interfaces.ICache.Set``1(System.Object,``0)
+  name.vb: Set(Of TValue)(Object, TValue)
+  fullName: DragonHoard.Core.Interfaces.ICache.Set<TValue>(object, TValue)
+  fullName.vb: DragonHoard.Core.Interfaces.ICache.Set(Of TValue)(Object, TValue)
+  nameWithType: ICache.Set<TValue>(object, TValue)
+  nameWithType.vb: ICache.Set(Of TValue)(Object, TValue)
 - uid: DragonHoard.Core.Interfaces.ICache.Set``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
   name: Set<TValue>(object, TValue, CacheEntryOptions)
   href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Set__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_
@@ -623,15 +632,6 @@ references:
   fullName.vb: DragonHoard.Core.Interfaces.ICache.Set(Of TValue)(Object, TValue, System.TimeSpan, Boolean)
   nameWithType: ICache.Set<TValue>(object, TValue, TimeSpan, bool)
   nameWithType.vb: ICache.Set(Of TValue)(Object, TValue, TimeSpan, Boolean)
-- uid: DragonHoard.Core.Interfaces.ICache.Set``1(System.Object,``0)
-  name: Set<TValue>(object, TValue)
-  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Set__1_System_Object___0_
-  commentId: M:DragonHoard.Core.Interfaces.ICache.Set``1(System.Object,``0)
-  name.vb: Set(Of TValue)(Object, TValue)
-  fullName: DragonHoard.Core.Interfaces.ICache.Set<TValue>(object, TValue)
-  fullName.vb: DragonHoard.Core.Interfaces.ICache.Set(Of TValue)(Object, TValue)
-  nameWithType: ICache.Set<TValue>(object, TValue)
-  nameWithType.vb: ICache.Set(Of TValue)(Object, TValue)
 - uid: DragonHoard.Core.Interfaces.ICache.TryGetValue*
   name: TryGetValue
   href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_TryGetValue_
@@ -766,6 +766,31 @@ references:
   isSpec: "True"
   fullName: DragonHoard.InMemory.InMemoryCache.Set
   nameWithType: InMemoryCache.Set
+- uid: DragonHoard.InMemory.InMemoryCache.SetWithOptions*
+  name: SetWithOptions
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_SetWithOptions_
+  commentId: Overload:DragonHoard.InMemory.InMemoryCache.SetWithOptions
+  isSpec: "True"
+  fullName: DragonHoard.InMemory.InMemoryCache.SetWithOptions
+  nameWithType: InMemoryCache.SetWithOptions
+- uid: DragonHoard.InMemory.InMemoryCache.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
+  name: SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_SetWithOptions__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_
+  commentId: M:DragonHoard.InMemory.InMemoryCache.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
+  name.vb: SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
+  fullName: DragonHoard.InMemory.InMemoryCache.SetWithOptions<TValue>(object, TValue, DragonHoard.Core.CacheEntryOptions)
+  fullName.vb: DragonHoard.InMemory.InMemoryCache.SetWithOptions(Of TValue)(Object, TValue, DragonHoard.Core.CacheEntryOptions)
+  nameWithType: InMemoryCache.SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
+  nameWithType.vb: InMemoryCache.SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
+- uid: DragonHoard.InMemory.InMemoryCache.Set``1(System.Object,``0)
+  name: Set<TValue>(object, TValue)
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Set__1_System_Object___0_
+  commentId: M:DragonHoard.InMemory.InMemoryCache.Set``1(System.Object,``0)
+  name.vb: Set(Of TValue)(Object, TValue)
+  fullName: DragonHoard.InMemory.InMemoryCache.Set<TValue>(object, TValue)
+  fullName.vb: DragonHoard.InMemory.InMemoryCache.Set(Of TValue)(Object, TValue)
+  nameWithType: InMemoryCache.Set<TValue>(object, TValue)
+  nameWithType.vb: InMemoryCache.Set(Of TValue)(Object, TValue)
 - uid: DragonHoard.InMemory.InMemoryCache.Set``1(System.Object,``0,System.DateTimeOffset)
   name: Set<TValue>(object, TValue, DateTimeOffset)
   href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Set__1_System_Object___0_System_DateTimeOffset_
@@ -784,31 +809,6 @@ references:
   fullName.vb: DragonHoard.InMemory.InMemoryCache.Set(Of TValue)(Object, TValue, System.TimeSpan, Boolean)
   nameWithType: InMemoryCache.Set<TValue>(object, TValue, TimeSpan, bool)
   nameWithType.vb: InMemoryCache.Set(Of TValue)(Object, TValue, TimeSpan, Boolean)
-- uid: DragonHoard.InMemory.InMemoryCache.Set``1(System.Object,``0)
-  name: Set<TValue>(object, TValue)
-  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Set__1_System_Object___0_
-  commentId: M:DragonHoard.InMemory.InMemoryCache.Set``1(System.Object,``0)
-  name.vb: Set(Of TValue)(Object, TValue)
-  fullName: DragonHoard.InMemory.InMemoryCache.Set<TValue>(object, TValue)
-  fullName.vb: DragonHoard.InMemory.InMemoryCache.Set(Of TValue)(Object, TValue)
-  nameWithType: InMemoryCache.Set<TValue>(object, TValue)
-  nameWithType.vb: InMemoryCache.Set(Of TValue)(Object, TValue)
-- uid: DragonHoard.InMemory.InMemoryCache.SetWithOptions*
-  name: SetWithOptions
-  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_SetWithOptions_
-  commentId: Overload:DragonHoard.InMemory.InMemoryCache.SetWithOptions
-  isSpec: "True"
-  fullName: DragonHoard.InMemory.InMemoryCache.SetWithOptions
-  nameWithType: InMemoryCache.SetWithOptions
-- uid: DragonHoard.InMemory.InMemoryCache.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
-  name: SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
-  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_SetWithOptions__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_
-  commentId: M:DragonHoard.InMemory.InMemoryCache.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
-  name.vb: SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
-  fullName: DragonHoard.InMemory.InMemoryCache.SetWithOptions<TValue>(object, TValue, DragonHoard.Core.CacheEntryOptions)
-  fullName.vb: DragonHoard.InMemory.InMemoryCache.SetWithOptions(Of TValue)(Object, TValue, DragonHoard.Core.CacheEntryOptions)
-  nameWithType: InMemoryCache.SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
-  nameWithType.vb: InMemoryCache.SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
 - uid: DragonHoard.InMemory.InMemoryCache.TryGetValue*
   name: TryGetValue
   href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_TryGetValue_
@@ -1055,6 +1055,31 @@ references:
   isSpec: "True"
   fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set
   nameWithType: MemoryCache.Set
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions*
+  name: SetWithOptions
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_SetWithOptions_
+  commentId: Overload:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions
+  isSpec: "True"
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions
+  nameWithType: MemoryCache.SetWithOptions
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
+  name: SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_SetWithOptions__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_
+  commentId: M:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
+  name.vb: SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions<TValue>(object, TValue, DragonHoard.Core.CacheEntryOptions)
+  fullName.vb: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions(Of TValue)(Object, TValue, DragonHoard.Core.CacheEntryOptions)
+  nameWithType: MemoryCache.SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
+  nameWithType.vb: MemoryCache.SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set``1(System.Object,``0)
+  name: Set<TValue>(object, TValue)
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Set__1_System_Object___0_
+  commentId: M:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set``1(System.Object,``0)
+  name.vb: Set(Of TValue)(Object, TValue)
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set<TValue>(object, TValue)
+  fullName.vb: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set(Of TValue)(Object, TValue)
+  nameWithType: MemoryCache.Set<TValue>(object, TValue)
+  nameWithType.vb: MemoryCache.Set(Of TValue)(Object, TValue)
 - uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set``1(System.Object,``0,System.DateTimeOffset)
   name: Set<TValue>(object, TValue, DateTimeOffset)
   href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Set__1_System_Object___0_System_DateTimeOffset_
@@ -1073,31 +1098,6 @@ references:
   fullName.vb: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set(Of TValue)(Object, TValue, System.TimeSpan, Boolean)
   nameWithType: MemoryCache.Set<TValue>(object, TValue, TimeSpan, bool)
   nameWithType.vb: MemoryCache.Set(Of TValue)(Object, TValue, TimeSpan, Boolean)
-- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set``1(System.Object,``0)
-  name: Set<TValue>(object, TValue)
-  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Set__1_System_Object___0_
-  commentId: M:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set``1(System.Object,``0)
-  name.vb: Set(Of TValue)(Object, TValue)
-  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set<TValue>(object, TValue)
-  fullName.vb: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set(Of TValue)(Object, TValue)
-  nameWithType: MemoryCache.Set<TValue>(object, TValue)
-  nameWithType.vb: MemoryCache.Set(Of TValue)(Object, TValue)
-- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions*
-  name: SetWithOptions
-  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_SetWithOptions_
-  commentId: Overload:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions
-  isSpec: "True"
-  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions
-  nameWithType: MemoryCache.SetWithOptions
-- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
-  name: SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
-  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_SetWithOptions__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_
-  commentId: M:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)
-  name.vb: SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
-  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions<TValue>(object, TValue, DragonHoard.Core.CacheEntryOptions)
-  fullName.vb: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions(Of TValue)(Object, TValue, DragonHoard.Core.CacheEntryOptions)
-  nameWithType: MemoryCache.SetWithOptions<TValue>(object, TValue, CacheEntryOptions)
-  nameWithType.vb: MemoryCache.SetWithOptions(Of TValue)(Object, TValue, CacheEntryOptions)
 - uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.TryGetValue*
   name: TryGetValue
   href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_TryGetValue_
@@ -1126,15 +1126,6 @@ references:
   commentId: T:Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions
   fullName: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions
   nameWithType: DragonHoardInMemoryRegistrationExtensions
-- uid: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{DragonHoard.InMemory.InMemoryCacheOptions})
-  name: AddInMemoryHoard(IServiceCollection?, Action<InMemoryCacheOptions>)
-  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardInMemoryRegistrationExtensions_AddInMemoryHoard_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_DragonHoard_InMemory_InMemoryCacheOptions__
-  commentId: M:Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{DragonHoard.InMemory.InMemoryCacheOptions})
-  name.vb: AddInMemoryHoard(IServiceCollection, Action(Of InMemoryCacheOptions))
-  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection?, System.Action<DragonHoard.InMemory.InMemoryCacheOptions>)
-  fullName.vb: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of DragonHoard.InMemory.InMemoryCacheOptions))
-  nameWithType: DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(IServiceCollection?, Action<InMemoryCacheOptions>)
-  nameWithType.vb: DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(IServiceCollection, Action(Of InMemoryCacheOptions))
 - uid: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   name: AddInMemoryHoard(IServiceCollection?)
   href: api/Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardInMemoryRegistrationExtensions_AddInMemoryHoard_Microsoft_Extensions_DependencyInjection_IServiceCollection_
@@ -1144,6 +1135,15 @@ references:
   fullName.vb: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   nameWithType: DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(IServiceCollection?)
   nameWithType.vb: DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(IServiceCollection)
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{DragonHoard.InMemory.InMemoryCacheOptions})
+  name: AddInMemoryHoard(IServiceCollection?, Action<InMemoryCacheOptions>)
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardInMemoryRegistrationExtensions_AddInMemoryHoard_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_DragonHoard_InMemory_InMemoryCacheOptions__
+  commentId: M:Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{DragonHoard.InMemory.InMemoryCacheOptions})
+  name.vb: AddInMemoryHoard(IServiceCollection, Action(Of InMemoryCacheOptions))
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection?, System.Action<DragonHoard.InMemory.InMemoryCacheOptions>)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of DragonHoard.InMemory.InMemoryCacheOptions))
+  nameWithType: DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(IServiceCollection?, Action<InMemoryCacheOptions>)
+  nameWithType.vb: DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard(IServiceCollection, Action(Of InMemoryCacheOptions))
 - uid: Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.AddInMemoryHoard*
   name: AddInMemoryHoard
   href: api/Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardInMemoryRegistrationExtensions_AddInMemoryHoard_
@@ -1173,15 +1173,6 @@ references:
   commentId: T:Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions
   fullName: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions
   nameWithType: DragonHoardMemoryRegistrationExtensions
-- uid: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Caching.Memory.MemoryCacheOptions})
-  name: AddMemoryCacheHoard(IServiceCollection?, Action<MemoryCacheOptions>)
-  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardMemoryRegistrationExtensions_AddMemoryCacheHoard_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Microsoft_Extensions_Caching_Memory_MemoryCacheOptions__
-  commentId: M:Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Caching.Memory.MemoryCacheOptions})
-  name.vb: AddMemoryCacheHoard(IServiceCollection, Action(Of MemoryCacheOptions))
-  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection?, System.Action<Microsoft.Extensions.Caching.Memory.MemoryCacheOptions>)
-  fullName.vb: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of Microsoft.Extensions.Caching.Memory.MemoryCacheOptions))
-  nameWithType: DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(IServiceCollection?, Action<MemoryCacheOptions>)
-  nameWithType.vb: DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(IServiceCollection, Action(Of MemoryCacheOptions))
 - uid: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   name: AddMemoryCacheHoard(IServiceCollection?)
   href: api/Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardMemoryRegistrationExtensions_AddMemoryCacheHoard_Microsoft_Extensions_DependencyInjection_IServiceCollection_
@@ -1191,6 +1182,15 @@ references:
   fullName.vb: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   nameWithType: DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(IServiceCollection?)
   nameWithType.vb: DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(IServiceCollection)
+- uid: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Caching.Memory.MemoryCacheOptions})
+  name: AddMemoryCacheHoard(IServiceCollection?, Action<MemoryCacheOptions>)
+  href: api/Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardMemoryRegistrationExtensions_AddMemoryCacheHoard_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Microsoft_Extensions_Caching_Memory_MemoryCacheOptions__
+  commentId: M:Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Caching.Memory.MemoryCacheOptions})
+  name.vb: AddMemoryCacheHoard(IServiceCollection, Action(Of MemoryCacheOptions))
+  fullName: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection?, System.Action<Microsoft.Extensions.Caching.Memory.MemoryCacheOptions>)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of Microsoft.Extensions.Caching.Memory.MemoryCacheOptions))
+  nameWithType: DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(IServiceCollection?, Action<MemoryCacheOptions>)
+  nameWithType.vb: DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard(IServiceCollection, Action(Of MemoryCacheOptions))
 - uid: Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.AddMemoryCacheHoard*
   name: AddMemoryCacheHoard
   href: api/Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.html#Microsoft_Extensions_DependencyInjection_DragonHoardMemoryRegistrationExtensions_AddMemoryCacheHoard_

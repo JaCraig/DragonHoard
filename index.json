@@ -24,35 +24,30 @@
     "title": "Enum CachePriority | DragonHoard API Reference",
     "keywords": "Enum CachePriority Cache priority Namespace: DragonHoard.Core Assembly: DragonHoard.Core.dll Syntax public enum CachePriority Fields Name Description High The high priority Low The low priority Normal The normal priority"
   },
-  "api/DragonHoard.Core.CanisterModules.html": {
-    "href": "api/DragonHoard.Core.CanisterModules.html",
-    "title": "Namespace DragonHoard.Core.CanisterModules | DragonHoard API Reference",
-    "keywords": "Namespace DragonHoard.Core.CanisterModules Classes RegistrationModule Registration module"
-  },
   "api/DragonHoard.Core.CanisterModules.RegistrationModule.html": {
     "href": "api/DragonHoard.Core.CanisterModules.RegistrationModule.html",
     "title": "Class RegistrationModule | DragonHoard API Reference",
     "keywords": "Class RegistrationModule Registration module Inheritance object RegistrationModule Implements IModule Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: DragonHoard.Core.CanisterModules Assembly: DragonHoard.Core.dll Syntax public class RegistrationModule : IModule Properties | Improve this Doc View Source Order Order to run this in Declaration public int Order { get; } Property Value Type Description int See Also IModule Methods | Improve this Doc View Source Load(IServiceCollection?) Loads the module using the bootstrapper Declaration public void Load(IServiceCollection? bootstrapper) Parameters Type Name Description IServiceCollection bootstrapper The bootstrapper. See Also IModule Implements IModule See Also IModule"
   },
-  "api/DragonHoard.Core.html": {
-    "href": "api/DragonHoard.Core.html",
-    "title": "Namespace DragonHoard.Core | DragonHoard API Reference",
-    "keywords": "Namespace DragonHoard.Core Classes Cache Cache manager class CacheEntryOptions Cache entry options Enums CachePriority Cache priority"
-  },
-  "api/DragonHoard.Core.Interfaces.html": {
-    "href": "api/DragonHoard.Core.Interfaces.html",
-    "title": "Namespace DragonHoard.Core.Interfaces | DragonHoard API Reference",
-    "keywords": "Namespace DragonHoard.Core.Interfaces Interfaces ICache Cache interface"
+  "api/DragonHoard.Core.CanisterModules.html": {
+    "href": "api/DragonHoard.Core.CanisterModules.html",
+    "title": "Namespace DragonHoard.Core.CanisterModules | DragonHoard API Reference",
+    "keywords": "Namespace DragonHoard.Core.CanisterModules Classes RegistrationModule Registration module"
   },
   "api/DragonHoard.Core.Interfaces.ICache.html": {
     "href": "api/DragonHoard.Core.Interfaces.ICache.html",
     "title": "Interface ICache | DragonHoard API Reference",
     "keywords": "Interface ICache Cache interface Inherited Members IDisposable.Dispose() Namespace: DragonHoard.Core.Interfaces Assembly: DragonHoard.Core.dll Syntax public interface ICache : IDisposable Properties | Improve this Doc View Source Name Gets the name. Declaration string Name { get; } Property Value Type Description string The name. See Also IDisposable Methods | Improve this Doc View Source Clone() Clones this instance. Declaration ICache Clone() Returns Type Description ICache A copy of this cache. See Also IDisposable | Improve this Doc View Source Clone<TOption>(TOption) Clones this instance. Declaration ICache Clone<TOption>(TOption options) Parameters Type Name Description TOption options The options to use for the cache. Returns Type Description ICache A copy of this cache. Type Parameters Name Description TOption The type of the option. See Also IDisposable | Improve this Doc View Source Compact(double) Compacts the cache by the specified percentage. Declaration void Compact(double percentage) Parameters Type Name Description double percentage The percentage. See Also IDisposable | Improve this Doc View Source GetByTag<TValue>(string) Gets the by tag. Declaration TValue[] GetByTag<TValue>(string tag) Parameters Type Name Description string tag The tag. Returns Type Description TValue[] The IEnumerable of items associated with the tag. Type Parameters Name Description TValue The type of the value. See Also IDisposable | Improve this Doc View Source Remove(object) Removes the object associated with the specified key. Declaration void Remove(object key) Parameters Type Name Description object key The key. See Also IDisposable | Improve this Doc View Source RemoveByTag(string) Removes the by tag. Declaration void RemoveByTag(string tag) Parameters Type Name Description string tag The tag. See Also IDisposable | Improve this Doc View Source Set<TValue>(object, TValue) Sets the specified key/value pair in the cache. Declaration TValue Set<TValue>(object key, TValue value) Parameters Type Name Description object key The key. TValue value The value. Returns Type Description TValue The value sent in. Type Parameters Name Description TValue The type of the value. See Also IDisposable | Improve this Doc View Source Set<TValue>(object, TValue, CacheEntryOptions) Sets the specified key/value pair in the cache. Declaration TValue Set<TValue>(object key, TValue value, CacheEntryOptions cacheEntryOptions) Parameters Type Name Description object key The key. TValue value The value. CacheEntryOptions cacheEntryOptions The cache entry options. Returns Type Description TValue The value sent in. Type Parameters Name Description TValue The type of the value. See Also IDisposable | Improve this Doc View Source Set<TValue>(object, TValue, DateTimeOffset) Sets the specified key/value pair in the cache. Declaration TValue Set<TValue>(object key, TValue value, DateTimeOffset absoluteExpiration) Parameters Type Name Description object key The key. TValue value The value. DateTimeOffset absoluteExpiration The absolute expiration. Returns Type Description TValue The value sent in. Type Parameters Name Description TValue The type of the value. See Also IDisposable | Improve this Doc View Source Set<TValue>(object, TValue, TimeSpan, bool) Sets the specified key/value pair in the cache. Declaration TValue Set<TValue>(object key, TValue value, TimeSpan expirationRelativeToNow, bool sliding = false) Parameters Type Name Description object key The key. TValue value The value. TimeSpan expirationRelativeToNow The expiration relative to now. bool sliding if set to true [sliding] expiration. Returns Type Description TValue The value sent in. Type Parameters Name Description TValue The type of the value. See Also IDisposable | Improve this Doc View Source TryGetValue<TValue>(object, out TValue) Tries to get the value based on the key. Declaration bool TryGetValue<TValue>(object key, out TValue value) Parameters Type Name Description object key The key. TValue value The value. Returns Type Description bool True if it is successful, false otherwise Type Parameters Name Description TValue The type of the value. See Also IDisposable See Also IDisposable"
   },
-  "api/DragonHoard.InMemory.html": {
-    "href": "api/DragonHoard.InMemory.html",
-    "title": "Namespace DragonHoard.InMemory | DragonHoard API Reference",
-    "keywords": "Namespace DragonHoard.InMemory Classes InMemoryCache In memory cache InMemoryCacheOptions In memory cache options"
+  "api/DragonHoard.Core.Interfaces.html": {
+    "href": "api/DragonHoard.Core.Interfaces.html",
+    "title": "Namespace DragonHoard.Core.Interfaces | DragonHoard API Reference",
+    "keywords": "Namespace DragonHoard.Core.Interfaces Interfaces ICache Cache interface"
+  },
+  "api/DragonHoard.Core.html": {
+    "href": "api/DragonHoard.Core.html",
+    "title": "Namespace DragonHoard.Core | DragonHoard API Reference",
+    "keywords": "Namespace DragonHoard.Core Classes Cache Cache manager class CacheEntryOptions Cache entry options Enums CachePriority Cache priority"
   },
   "api/DragonHoard.InMemory.InMemoryCache.html": {
     "href": "api/DragonHoard.InMemory.InMemoryCache.html",
@@ -64,30 +59,30 @@
     "title": "Class InMemoryCacheOptions | DragonHoard API Reference",
     "keywords": "Class InMemoryCacheOptions In memory cache options Inheritance object InMemoryCacheOptions Implements IOptions<InMemoryCacheOptions> Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: DragonHoard.InMemory Assembly: DragonHoard.InMemory.dll Syntax public class InMemoryCacheOptions : IOptions<InMemoryCacheOptions> Properties | Improve this Doc View Source CompactionPercentage Gets or sets the compaction percentage. Declaration public double? CompactionPercentage { get; set; } Property Value Type Description double? The compaction percentage. See Also IOptions<TOptions> | Improve this Doc View Source Default Gets the default. Declaration public static InMemoryCacheOptions Default { get; } Property Value Type Description InMemoryCacheOptions The default. See Also IOptions<TOptions> | Improve this Doc View Source MaxCacheSize Gets or sets the maximum size. Declaration public long? MaxCacheSize { get; set; } Property Value Type Description long? The maximum size. See Also IOptions<TOptions> | Improve this Doc View Source ScanFrequency Gets or sets the scan frequency. Declaration public TimeSpan ScanFrequency { get; set; } Property Value Type Description TimeSpan The scan frequency. See Also IOptions<TOptions> | Improve this Doc View Source Value Gets the default configured Options instance. Declaration public InMemoryCacheOptions Value { get; } Property Value Type Description InMemoryCacheOptions See Also IOptions<TOptions> Implements IOptions<TOptions> See Also IOptions<TOptions>"
   },
-  "api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.html": {
-    "href": "api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.html",
-    "title": "Namespace DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules | DragonHoard API Reference",
-    "keywords": "Namespace DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules Classes MemoryRegistration Memory reg module"
+  "api/DragonHoard.InMemory.html": {
+    "href": "api/DragonHoard.InMemory.html",
+    "title": "Namespace DragonHoard.InMemory | DragonHoard API Reference",
+    "keywords": "Namespace DragonHoard.InMemory Classes InMemoryCache In memory cache InMemoryCacheOptions In memory cache options"
   },
   "api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.html": {
     "href": "api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.html",
     "title": "Class MemoryRegistration | DragonHoard API Reference",
     "keywords": "Class MemoryRegistration Memory reg module Inheritance object MemoryRegistration Implements IModule Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules Assembly: DragonHoard.Microsoft.Extensions.Caching.Memory.dll Syntax public class MemoryRegistration : IModule Properties | Improve this Doc View Source Order Order to run this in Declaration public int Order { get; } Property Value Type Description int See Also IModule Methods | Improve this Doc View Source Load(IServiceCollection?) Loads the module using the bootstrapper Declaration public void Load(IServiceCollection? bootstrapper) Parameters Type Name Description IServiceCollection bootstrapper The bootstrapper. See Also IModule Implements IModule See Also IModule"
   },
-  "api/DragonHoard.MicrosoftExtensionsCachingMemory.html": {
-    "href": "api/DragonHoard.MicrosoftExtensionsCachingMemory.html",
-    "title": "Namespace DragonHoard.MicrosoftExtensionsCachingMemory | DragonHoard API Reference",
-    "keywords": "Namespace DragonHoard.MicrosoftExtensionsCachingMemory Classes MemoryCache In memory cache"
+  "api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.html": {
+    "href": "api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.html",
+    "title": "Namespace DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules | DragonHoard API Reference",
+    "keywords": "Namespace DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules Classes MemoryRegistration Memory reg module"
   },
   "api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html": {
     "href": "api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html",
     "title": "Class MemoryCache | DragonHoard API Reference",
     "keywords": "Class MemoryCache In memory cache Inheritance object CacheBaseClass MemoryCache Implements ICache IDisposable Inherited Members CacheBaseClass.GetByTag<TValue>(string) CacheBaseClass.Remove(object) CacheBaseClass.RemoveByTag(string) CacheBaseClass.Set<TValue>(object, TValue, CacheEntryOptions) CacheBaseClass.EvictionCallback(object, object, EvictionReason, object) object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: DragonHoard.MicrosoftExtensionsCachingMemory Assembly: DragonHoard.Microsoft.Extensions.Caching.Memory.dll Syntax public class MemoryCache : CacheBaseClass, ICache, IDisposable Constructors | Improve this Doc View Source MemoryCache(IMemoryCache) Initializes a new instance of the MemoryCache class. Declaration public MemoryCache(IMemoryCache memoryCache) Parameters Type Name Description IMemoryCache memoryCache The memory cache. See Also ICache Properties | Improve this Doc View Source Name Gets the name. Declaration public override string Name { get; } Property Value Type Description string The name. Overrides CacheBaseClass.Name See Also ICache Methods | Improve this Doc View Source Clone() Clones this instance. Declaration public override ICache Clone() Returns Type Description ICache A copy of this cache. Overrides CacheBaseClass.Clone() See Also ICache | Improve this Doc View Source Clone<TOption>(TOption) Clones this instance. Declaration public override ICache Clone<TOption>(TOption options) Parameters Type Name Description TOption options The options to use for the cache. Returns Type Description ICache A copy of this cache. Type Parameters Name Description TOption The type of the option. Overrides CacheBaseClass.Clone<TOption>(TOption) See Also ICache | Improve this Doc View Source Compact(double) Compacts the cache by the specified percentage. Declaration public override void Compact(double percentage) Parameters Type Name Description double percentage The percentage. Overrides CacheBaseClass.Compact(double) See Also ICache | Improve this Doc View Source Dispose() Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources. Declaration public override void Dispose() Overrides CacheBaseClass.Dispose() See Also ICache | Improve this Doc View Source RemoveByKey(object) Removes the items by the key. Declaration protected override void RemoveByKey(object key) Parameters Type Name Description object key The key. Overrides CacheBaseClass.RemoveByKey(object) See Also ICache | Improve this Doc View Source SetWithOptions<TValue>(object, TValue, CacheEntryOptions) Sets the value with the options sent in. Declaration protected override TValue SetWithOptions<TValue>(object key, TValue value, CacheEntryOptions cacheEntryOptions) Parameters Type Name Description object key The key. TValue value The value. CacheEntryOptions cacheEntryOptions The cache entry options. Returns Type Description TValue The value sent in. Type Parameters Name Description TValue The type of the value. Overrides CacheBaseClass.SetWithOptions<TValue>(object, TValue, CacheEntryOptions) See Also ICache | Improve this Doc View Source Set<TValue>(object, TValue) Sets the specified key/value pair in the cache. Declaration public override TValue Set<TValue>(object key, TValue value) Parameters Type Name Description object key The key. TValue value The value. Returns Type Description TValue The value sent in. Type Parameters Name Description TValue The type of the value. Overrides CacheBaseClass.Set<TValue>(object, TValue) See Also ICache | Improve this Doc View Source Set<TValue>(object, TValue, DateTimeOffset) Sets the specified key/value pair in the cache. Declaration public override TValue Set<TValue>(object key, TValue value, DateTimeOffset absoluteExpiration) Parameters Type Name Description object key The key. TValue value The value. DateTimeOffset absoluteExpiration The absolute expiration. Returns Type Description TValue The value sent in. Type Parameters Name Description TValue The type of the value. Overrides CacheBaseClass.Set<TValue>(object, TValue, DateTimeOffset) See Also ICache | Improve this Doc View Source Set<TValue>(object, TValue, TimeSpan, bool) Sets the specified key/value pair in the cache. Declaration public override TValue Set<TValue>(object key, TValue value, TimeSpan expirationRelativeToNow, bool sliding = false) Parameters Type Name Description object key The key. TValue value The value. TimeSpan expirationRelativeToNow The expiration relative to now. bool sliding if set to true [sliding] expiration. Returns Type Description TValue The value sent in. Type Parameters Name Description TValue The type of the value. Overrides CacheBaseClass.Set<TValue>(object, TValue, TimeSpan, bool) See Also ICache | Improve this Doc View Source TryGetValue<TValue>(object, out TValue) Tries to get the value based on the key. Declaration public override bool TryGetValue<TValue>(object key, out TValue value) Parameters Type Name Description object key The key. TValue value The value. Returns Type Description bool True if it is successful, false otherwise Type Parameters Name Description TValue The type of the value. Overrides CacheBaseClass.TryGetValue<TValue>(object, out TValue) See Also ICache Implements ICache IDisposable See Also ICache"
   },
-  "api/index.html": {
-    "href": "api/index.html",
-    "title": "Welcome | DragonHoard API Reference",
-    "keywords": "Welcome Welcome to the API browser."
+  "api/DragonHoard.MicrosoftExtensionsCachingMemory.html": {
+    "href": "api/DragonHoard.MicrosoftExtensionsCachingMemory.html",
+    "title": "Namespace DragonHoard.MicrosoftExtensionsCachingMemory | DragonHoard API Reference",
+    "keywords": "Namespace DragonHoard.MicrosoftExtensionsCachingMemory Classes MemoryCache In memory cache"
   },
   "api/Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.html": {
     "href": "api/Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.html",
@@ -108,6 +103,11 @@
     "href": "api/Microsoft.Extensions.DependencyInjection.html",
     "title": "Namespace Microsoft.Extensions.DependencyInjection | DragonHoard API Reference",
     "keywords": "Namespace Microsoft.Extensions.DependencyInjection Classes DragonHoardInMemoryRegistrationExtensions Reg extensions DragonHoardMemoryRegistrationExtensions Reg extensions DragonHoardRegistrationExtensions Reg extensions"
+  },
+  "api/index.html": {
+    "href": "api/index.html",
+    "title": "Welcome | DragonHoard API Reference",
+    "keywords": "Welcome Welcome to the API browser."
   },
   "articles/intro.html": {
     "href": "articles/intro.html",
