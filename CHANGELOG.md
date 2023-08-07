@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.6"></a>
+## [2.0.6](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.6) (2023-8-7)
+
+### Bug Fixes
+
+* bump the dependencies group with 3 updates ([8edd784](https://www.github.com/JaCraig/DragonHoard/commit/8edd7849a968a67784d5f83a36a0f2ca53236c8b))
+
+### Other
+
+* Merge pull request #4 from JaCraig/dependabot/github_actions/dependencies-0717129e0a ([96b9572](https://www.github.com/JaCraig/DragonHoard/commit/96b957285c424e6071cf5c5390adc615660c13fe))
+* Merge pull request #5 from JaCraig/dependabot/nuget/dependencies-95231629a4 ([7dc1ecc](https://www.github.com/JaCraig/DragonHoard/commit/7dc1ecc7481efe1e380a47bc621ce8fd638847b0))
+* bump the dependencies group with 2 updates ([5510747](https://www.github.com/JaCraig/DragonHoard/commit/55107474a3f640568b96625137213e1f712188d8))
+* dependabot update ([1fbe4df](https://www.github.com/JaCraig/DragonHoard/commit/1fbe4df4103435fda692fc76d55646f7f4e17a43))
+* Merge branch 'main' of https://github.com/JaCraig/DragonHoard ([0fc728e](https://www.github.com/JaCraig/DragonHoard/commit/0fc728e909a107de8996ee079b8960fc1e0a50be))
+* Update dependabot.yml ([a6efcb4](https://www.github.com/JaCraig/DragonHoard/commit/a6efcb4a7ea3f199dcbc60b30fe50e2a69b521f5))
+* updating editorconfig ([978dff3](https://www.github.com/JaCraig/DragonHoard/commit/978dff3a034da82d4031d1bc270d2cb388368204))
+
 <a name="2.0.5"></a>
 ## [2.0.5](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.5) (2023-7-13)
 
