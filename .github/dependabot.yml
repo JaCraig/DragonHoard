@@ -6,7 +6,7 @@
 version: 2
 updates:
   - package-ecosystem: "nuget" # See documentation for possible values
-    directory: "/DragonHoard.Core/../" # Location of package manifests
+    directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
     commit-message:
@@ -23,7 +23,24 @@ updates:
       - dependency-name: "xunit.runner.visualstudio"
 
   - package-ecosystem: "nuget" # See documentation for possible values
-    directory: "/DragonHaord.InMemory.Tests/../" # Location of package manifests
+    directory: "/DragonHaord.InMemory.Tests/" # Location of package manifests
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "chore"
+    groups:
+      dependencies:
+        patterns: 
+          - "*"
+    allow:
+      - dependency-name: "coverlet.collector"
+      - dependency-name: "Mecha.xUnit"
+      - dependency-name: "Microsoft.NET.Test.Sdk"
+      - dependency-name: "xunit"
+      - dependency-name: "xunit.runner.visualstudio"
+
+  - package-ecosystem: "nuget" # See documentation for possible values
+    directory: "/DragonHaord.Microsoft.Extensions.Caching.Memory.Tests/" # Location of package manifests
     schedule:
       interval: "daily"
     commit-message:
