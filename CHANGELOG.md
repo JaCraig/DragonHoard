@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.8"></a>
+## [2.0.8](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.8) (2023-8-29)
+
+### Bug Fixes
+
+* bump the dependencies group with 2 updates ([4b789d5](https://www.github.com/JaCraig/DragonHoard/commit/4b789d5a11d4050cc0c0c57278d03896c8f7516e))
+
+### Other
+
+* Merge pull request #10 from JaCraig/dependabot/nuget/dependencies-55af4f8ed6 ([4b69c62](https://www.github.com/JaCraig/DragonHoard/commit/4b69c6221ebe0df3ffeb29a8ba5eaaf52d9ecab2))
+* Merge pull request #7 from JaCraig/dependabot/nuget/dependencies-416c6046e2 ([dce7ccf](https://www.github.com/JaCraig/DragonHoard/commit/dce7ccfd41f696b862feff0d29b9da7df81e7107))
+* Merge pull request #8 from JaCraig/dependabot/nuget/dependencies-8eeb925c6b ([319b160](https://www.github.com/JaCraig/DragonHoard/commit/319b160b3ae95f5a325f2eb2acb1ff753b727bb1))
+* Merge pull request #9 from JaCraig/dependabot/nuget/dependencies-d09fbb6553 ([e12b3b1](https://www.github.com/JaCraig/DragonHoard/commit/e12b3b105ff01102e9223820248fb798c0e043ee))
+* Update dependabot.yml ([cc56796](https://www.github.com/JaCraig/DragonHoard/commit/cc567966c32f3cb23b91dc054d408c2ff2feed8b))
+* bump the dependencies group with 1 update ([217f3c0](https://www.github.com/JaCraig/DragonHoard/commit/217f3c0b913d8d1efe99ee825481ef92d494903f))
+* bump the dependencies group with 1 update ([bd6875b](https://www.github.com/JaCraig/DragonHoard/commit/bd6875b68e32e74f170f4cde11583d7d5f846dc9))
+* bump the dependencies group with 1 update ([44b50f1](https://www.github.com/JaCraig/DragonHoard/commit/44b50f1e8e07d5615c524a5bc1cd154794e916a8))
+* Update dependabot.yml ([891a196](https://www.github.com/JaCraig/DragonHoard/commit/891a196bd17f3df401e42a345ca0ff7fc4a773a4))
+
 <a name="2.0.7"></a>
 ## [2.0.7](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.7) (2023-8-8)
 
