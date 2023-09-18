@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.14"></a>
+## [2.0.14](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.14) (2023-09-18)
+
+### Bug Fixes
+
+* bump the dependencies group with 2 updates ([290eebe](https://www.github.com/JaCraig/DragonHoard/commit/290eebee1a136818a3eadeac7f2f329fb8ba9877))
+
+### Other
+
+* Merge pull request #17 from JaCraig/dependabot/nuget/dependencies-382053586f ([524d34a](https://www.github.com/JaCraig/DragonHoard/commit/524d34a19f7f6a5eeaec79481574c8f8e921eb5e))
+* Update dependabot.yml ([8dcab58](https://www.github.com/JaCraig/DragonHoard/commit/8dcab58e915dd9cb149e6f9e088c5bc0fd7e81f9))
+
 <a name="2.0.13"></a>
 ## [2.0.13](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.13) (2023-9-11)
 
