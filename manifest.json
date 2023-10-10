@@ -1,5 +1,4 @@
 {
-  "homepages": [],
   "source_base_path": "/home/runner/work/DragonHoard/DragonHoard/docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
@@ -292,7 +291,6 @@
       "version": ""
     }
   ],
-  "version_info": {},
   "groups": [
     {
       "xrefmap": "xrefmap.yml"
