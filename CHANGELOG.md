@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.19"></a>
+## [2.0.19](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.19) (2023-12-11)
+
+### Bug Fixes
+
+* bump the dependencies group with 1 update ([5525bdb](https://www.github.com/JaCraig/DragonHoard/commit/5525bdbc9d78b7e692c3f18375d784a0da815748))
+
+### Other
+
+* Merge pull request #23 from JaCraig/dependabot/github_actions/dependencies-9d15ffb50c ([ef36d1f](https://www.github.com/JaCraig/DragonHoard/commit/ef36d1f968143dc4c467f740a2aa2275007672ef))
+* Merge pull request #24 from JaCraig/dependabot/nuget/dependencies-24b5a6751e ([daa97bb](https://www.github.com/JaCraig/DragonHoard/commit/daa97bbc97b1e5163df94c769ec65d9926b568f4))
+* bump the dependencies group with 1 update ([031b17d](https://www.github.com/JaCraig/DragonHoard/commit/031b17d515990ffc54c0932ec2a8dbafba8d9b50))
+* fixing doc gen ([474cd0d](https://www.github.com/JaCraig/DragonHoard/commit/474cd0daa19e37592dd0c94842348426b8ad0fa5))
+
 <a name="2.0.18"></a>
 ## [2.0.18](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.18) (2023-11-17)
 
