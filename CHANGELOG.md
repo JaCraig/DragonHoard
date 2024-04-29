@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.32"></a>
+## [2.0.32](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.32) (2024-04-29)
+
+### Bug Fixes
+
+* bump versionize from 1.22.0 to 1.23.0 in the dependencies group ([85a655d](https://www.github.com/JaCraig/DragonHoard/commit/85a655d982b65af66f4124164a427b89e95beb68))
+
+### Other
+
+* Merge pull request #40 from JaCraig/dependabot/github_actions/dependencies-45223d3826 ([f4094a9](https://www.github.com/JaCraig/DragonHoard/commit/f4094a9f9cfa6d9069724cf59517471be78a8514))
+* Merge pull request #41 from JaCraig/dependabot/github_actions/dependencies-67cf71b959 ([78f7b7a](https://www.github.com/JaCraig/DragonHoard/commit/78f7b7a2f2952bfbcdfda7ccccde5138951da76c))
+* Merge pull request #42 from JaCraig/dependabot/nuget/dependencies-6d2d24f1fd ([4f5f3bc](https://www.github.com/JaCraig/DragonHoard/commit/4f5f3bc1cb5440e60924b1aac32040e8b0163165))
+* bump dependabot/fetch-metadata in the dependencies group ([00ac35a](https://www.github.com/JaCraig/DragonHoard/commit/00ac35a714d81e25200ce84dc813916a7ae782d6))
+* bump peaceiris/actions-gh-pages in the dependencies group ([0a38370](https://www.github.com/JaCraig/DragonHoard/commit/0a3837021268cb88f86949e697ab7b1d3fce3be4))
+
 <a name="2.0.31"></a>
 ## [2.0.31](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.31) (2024-03-28)
 
