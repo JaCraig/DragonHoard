@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.38"></a>
+## [2.0.38](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.38) (2024-08-01)
+
+### Bug Fixes
+
+* bump Canister.IoC from 5.3.11 to 5.3.12 in the dependencies group ([d82e648](https://www.github.com/JaCraig/DragonHoard/commit/d82e648818ffa9d873b71f10122624c19f07c962))
+
+### Other
+
+* Merge pull request #48 from JaCraig/dependabot/github_actions/dependencies-c44bf69c3e ([6f730ac](https://www.github.com/JaCraig/DragonHoard/commit/6f730ac4ee29dc22e998e0df2628ceff9dcd73f5))
+* Merge pull request #49 from JaCraig/dependabot/github_actions/dependencies-be62d4486d ([aa3b4e0](https://www.github.com/JaCraig/DragonHoard/commit/aa3b4e01bb750c5ce1cdee541939b03aae873eaf))
+* Merge pull request #50 from JaCraig/dependabot/nuget/dependencies-63ca897048 ([6979179](https://www.github.com/JaCraig/DragonHoard/commit/69791790efbdd55f70ed57e9e12baf6b58f430ff))
+* bump actions/setup-dotnet in the dependencies group ([f99392e](https://www.github.com/JaCraig/DragonHoard/commit/f99392e5bc863b3843d9f1064d6e06dfd5cf575f))
+* bump dependabot/fetch-metadata in the dependencies group ([c298b5f](https://www.github.com/JaCraig/DragonHoard/commit/c298b5fb825c64287972edf629a08c51d461b0f8))
+
 <a name="2.0.37"></a>
 ## [2.0.37](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.37) (2024-06-25)
 
