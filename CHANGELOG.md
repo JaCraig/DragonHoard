@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.41"></a>
+## [2.0.41](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.41) (2024-10-14)
+
+### Bug Fixes
+
+* bump Canister.IoC from 5.3.14 to 5.3.15 in the dependencies group ([f257a71](https://www.github.com/JaCraig/DragonHoard/commit/f257a718d2b2bddcae4e007a316c1209e58754a6))
+
+### Other
+
+* Merge pull request #53 from JaCraig/dependabot/nuget/dependencies-cadb4fe95d ([6cce88e](https://www.github.com/JaCraig/DragonHoard/commit/6cce88ebfd936864e4bedfd950d024a80e90010c))
+
 <a name="2.0.40"></a>
 ## [2.0.40](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.40) (2024-10-09)
 
