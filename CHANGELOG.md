@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.42"></a>
+## [2.0.42](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.42) (2024-10-29)
+
+### Bug Fixes
+
+* bump versionize from 1.27.0 to 2.0.0 in the dependencies group ([f5cf13c](https://www.github.com/JaCraig/DragonHoard/commit/f5cf13c44bd67c3a712747a4fe529060b35a28a4))
+* bump versionize from 2.0.0 to 2.1.0 in the dependencies group ([f331f5e](https://www.github.com/JaCraig/DragonHoard/commit/f331f5e6d9042bf6fa2cf173ce23191587c9d51b))
+
+### Other
+
+* Merge pull request #54 from JaCraig/dependabot/nuget/dependencies-9c36df7c76 ([4d0bd55](https://www.github.com/JaCraig/DragonHoard/commit/4d0bd5510abea3ff32d65c8a8a07f43f800a2f68))
+* Merge pull request #55 from JaCraig/dependabot/nuget/dependencies-3894128c1d ([3549ceb](https://www.github.com/JaCraig/DragonHoard/commit/3549ceb0a933cd38776955df0b5b876e2d262951))
+* Merge pull request #56 from JaCraig/dependabot/github_actions/dependencies-18190d55f2 ([b87bd03](https://www.github.com/JaCraig/DragonHoard/commit/b87bd03fdb484080d15ffd92fb420d04c77247ba))
+* bump actions/setup-dotnet in the dependencies group ([417e7e3](https://www.github.com/JaCraig/DragonHoard/commit/417e7e3ca2fb8f8efd92a636d9c9c68889dede4c))
+* Refactor versionize command in dotnet-publish workflow ([ec8d936](https://www.github.com/JaCraig/DragonHoard/commit/ec8d9366744415c210aa9c7772e06f37b14fb7c1))
+
 <a name="2.0.41"></a>
 ## [2.0.41](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.41) (2024-10-14)
 
