@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.45"></a>
+## [2.0.45](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.45) (2024-11-11)
+
+### Bug Fixes
+
+* bump the dependencies group with 2 updates ([ccbce8b](https://www.github.com/JaCraig/DragonHoard/commit/ccbce8b03305bcb85c348d12b06a572b19c8c308))
+
+### Other
+
+* Merge pull request #59 from JaCraig/dependabot/nuget/dependencies-49fcd014de ([cca169b](https://www.github.com/JaCraig/DragonHoard/commit/cca169bc1a6c936d82edaf008a206f455c12928e))
+
 <a name="2.0.44"></a>
 ## [2.0.44](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.44) (2024-11-04)
 
