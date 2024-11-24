@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.1.0"></a>
+## [2.1.0](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.1.0) (2024-11-24)
+
+### Features
+
+* Update to .NET 8/9, centralized workflows, and refactoring ([8b8ff99](https://www.github.com/JaCraig/DragonHoard/commit/8b8ff99a030bf5f764bea6ffbcd1d7f08bdd7707))
+
 <a name="2.0.45"></a>
 ## [2.0.45](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.0.45) (2024-11-11)
 
