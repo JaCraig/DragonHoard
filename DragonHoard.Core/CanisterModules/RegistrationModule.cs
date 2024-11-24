@@ -15,7 +15,6 @@ limitations under the License.
 */
 
 using Canister.Interfaces;
-using DragonHoard.Core.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DragonHoard.Core.CanisterModules
@@ -35,10 +34,6 @@ namespace DragonHoard.Core.CanisterModules
         /// Loads the module using the bootstrapper
         /// </summary>
         /// <param name="bootstrapper">The bootstrapper.</param>
-        public void Load(IServiceCollection? bootstrapper)
-        {
-            bootstrapper?.AddSingleton<Cache>()
-                .AddAllSingleton<ICache>();
-        }
+        public void Load(IServiceCollection? bootstrapper) => bootstrapper?.AddDragonHoard();
     }
 }

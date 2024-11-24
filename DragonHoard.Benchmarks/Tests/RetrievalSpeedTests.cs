@@ -16,29 +16,23 @@ namespace DragonHoard.Benchmarks.Tests
         private ICache InMemoryCache { get; set; }
 
         [Benchmark(Baseline = true)]
-        public void InMemory()
-        {
-            InMemoryCache.TryGetValue("Testing", out object _);
-        }
+        public void InMemory() => InMemoryCache.TryGetValue("Testing", out object _);
 
         [Benchmark]
-        public void MicrosoftMemory()
-        {
-            IMemoryCacheCache.TryGetValue("Testing", out object _);
-        }
+        public void MicrosoftMemory() => IMemoryCacheCache.TryGetValue("Testing", out object _);
 
         [GlobalSetup]
         public void Setup()
         {
-            var Services = new ServiceCollection().AddOptions()
+            IServiceCollection Services = new ServiceCollection().AddOptions()
                 .Configure<InMemoryCacheOptions>(options => options.ScanFrequency = TimeSpan.FromSeconds(10))
                 .Configure<MemoryCacheOptions>(options => options.ExpirationScanFrequency = TimeSpan.FromSeconds(10));
-            var ServiceProvider = Services.AddCanisterModules(x => x.RegisterInMemoryHoard().RegisterMemoryCacheHoard()).BuildServiceProvider();
+            ServiceProvider ServiceProvider = Services.AddCanisterModules(x => x.RegisterInMemoryHoard().RegisterMemoryCacheHoard()).BuildServiceProvider();
             InMemoryCache = ServiceProvider.GetService<Cache>().GetOrAddCache("In Memory");
             IMemoryCacheCache = ServiceProvider.GetService<Cache>().GetOrAddCache("Microsoft.Extensions.Caching.Memory");
 
-            InMemoryCache.Set("Testing", new { A = 1 });
-            IMemoryCacheCache.Set("Testing", new { A = 1 });
+            _ = InMemoryCache.Set("Testing", new { A = 1 });
+            _ = IMemoryCacheCache.Set("Testing", new { A = 1 });
         }
     }
 }

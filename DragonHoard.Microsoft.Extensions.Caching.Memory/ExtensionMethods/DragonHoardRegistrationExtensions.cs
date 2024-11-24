@@ -30,16 +30,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         /// <param name="services">The services.</param>
         /// <returns>The service collection</returns>
-        public static IServiceCollection? AddMemoryCacheHoard(this IServiceCollection? services)
-        {
-            if (services is null)
-                return services;
-            services.AddDragonHoard();
-            services.AddOptions();
-            services.AddSingleton<DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache>();
-            services.AddMemoryCache();
-            return services;
-        }
+        public static IServiceCollection? AddMemoryCacheHoard(this IServiceCollection? services) => services.AddMemoryCacheHoard(options => options.ExpirationScanFrequency = TimeSpan.FromMinutes(1));
 
         /// <summary>
         /// Adds the dragon hoard.
@@ -49,14 +40,13 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <returns>The service collection</returns>
         public static IServiceCollection? AddMemoryCacheHoard(this IServiceCollection? services, Action<MemoryCacheOptions> setupAction)
         {
-            if (services is null)
+            if (services.Exists<MemoryCache>())
                 return services;
-            services.AddDragonHoard();
-            services.AddOptions();
-            services.AddSingleton<DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache>();
-            services.AddMemoryCache();
-            services.Configure(setupAction);
-            return services;
+            return services?.AddDragonHoard()
+                ?.AddOptions()
+                ?.AddSingleton<MemoryCache>()
+                ?.AddMemoryCache()
+                ?.Configure(setupAction);
         }
 
         /// <summary>
@@ -64,9 +54,6 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         /// <param name="bootstrapper">The bootstrapper.</param>
         /// <returns>The configuration object.</returns>
-        public static ICanisterConfiguration? RegisterMemoryCacheHoard(this ICanisterConfiguration? bootstrapper)
-        {
-            return bootstrapper?.AddAssembly(typeof(DragonHoardMemoryRegistrationExtensions).Assembly).RegisterDragonHoard();
-        }
+        public static ICanisterConfiguration? RegisterMemoryCacheHoard(this ICanisterConfiguration? bootstrapper) => bootstrapper?.AddAssembly(typeof(DragonHoardMemoryRegistrationExtensions).Assembly).RegisterDragonHoard();
     }
 }

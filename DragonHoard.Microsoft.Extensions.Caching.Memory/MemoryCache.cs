@@ -54,10 +54,7 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
         /// Clones this instance.
         /// </summary>
         /// <returns>A copy of this cache.</returns>
-        public override ICache Clone()
-        {
-            return new MemoryCache(InternalCache ?? new Microsoft.Extensions.Caching.Memory.MemoryCache(null));
-        }
+        public override ICache Clone() => new MemoryCache(InternalCache ?? new Microsoft.Extensions.Caching.Memory.MemoryCache(new MemoryCacheOptions()));
 
         /// <summary>
         /// Clones this instance.
@@ -67,17 +64,16 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
         /// <returns>A copy of this cache.</returns>
         public override ICache Clone<TOption>(TOption options)
         {
-            return new MemoryCache(InternalCache ?? new Microsoft.Extensions.Caching.Memory.MemoryCache(options as IOptions<MemoryCacheOptions>));
+            if (options is not IOptions<MemoryCacheOptions> MemOptions)
+                return Clone();
+            return new MemoryCache(InternalCache ?? new Microsoft.Extensions.Caching.Memory.MemoryCache(MemOptions));
         }
 
         /// <summary>
         /// Compacts the cache by the specified percentage.
         /// </summary>
         /// <param name="percentage">The percentage.</param>
-        public override void Compact(double percentage)
-        {
-            (InternalCache as Microsoft.Extensions.Caching.Memory.MemoryCache)?.Compact(percentage);
-        }
+        public override void Compact(double percentage) => (InternalCache as Microsoft.Extensions.Caching.Memory.MemoryCache)?.Compact(percentage);
 
         /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting
@@ -102,8 +98,8 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
             if (InternalCache is null)
                 return value;
             var Options = new MemoryCacheEntryOptions();
-            Options.RegisterPostEvictionCallback(EvictionCallback);
-            InternalCache.Set(key, value, Options);
+            _ = Options.RegisterPostEvictionCallback(EvictionCallback);
+            _ = InternalCache.Set(key, value, Options);
             return value;
         }
 
@@ -123,8 +119,8 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
             {
                 AbsoluteExpiration = absoluteExpiration
             };
-            Options.RegisterPostEvictionCallback(EvictionCallback);
-            InternalCache.Set(key, value, Options);
+            _ = Options.RegisterPostEvictionCallback(EvictionCallback);
+            _ = InternalCache.Set(key, value, Options);
             return value;
         }
 
@@ -142,12 +138,12 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
             if (InternalCache is null)
                 return value;
             var Options = new MemoryCacheEntryOptions();
-            Options.RegisterPostEvictionCallback(EvictionCallback);
+            _ = Options.RegisterPostEvictionCallback(EvictionCallback);
             if (sliding)
                 Options.SlidingExpiration = expirationRelativeToNow;
             else
                 Options.AbsoluteExpirationRelativeToNow = expirationRelativeToNow;
-            InternalCache.Set(key, value, Options);
+            _ = InternalCache.Set(key, value, Options);
             return value;
         }
 
@@ -192,7 +188,7 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
             if (InternalCache is null)
                 return value;
             var Options = new MemoryCacheEntryOptions();
-            Options.RegisterPostEvictionCallback(EvictionCallback);
+            _ = Options.RegisterPostEvictionCallback(EvictionCallback);
             if (cacheEntryOptions.AbsoluteExpiration.HasValue)
                 Options.AbsoluteExpiration = cacheEntryOptions.AbsoluteExpiration;
             if (cacheEntryOptions.AbsoluteExpirationRelativeToNow.HasValue)
@@ -219,7 +215,7 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
                     break;
                 }
             }
-            InternalCache.Set(key, value, Options);
+            _ = InternalCache.Set(key, value, Options);
             return value;
         }
     }

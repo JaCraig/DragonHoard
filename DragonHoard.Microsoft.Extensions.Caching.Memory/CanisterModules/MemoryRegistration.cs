@@ -1,5 +1,4 @@
 ﻿using Canister.Interfaces;
-using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules
@@ -19,9 +18,6 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules
         /// Loads the module using the bootstrapper
         /// </summary>
         /// <param name="bootstrapper">The bootstrapper.</param>
-        public void Load(IServiceCollection? bootstrapper)
-        {
-            bootstrapper?.AddSingleton<IMemoryCache, Microsoft.Extensions.Caching.Memory.MemoryCache>();
-        }
+        public void Load(IServiceCollection? bootstrapper) => bootstrapper?.AddMemoryCacheHoard();
     }
 }

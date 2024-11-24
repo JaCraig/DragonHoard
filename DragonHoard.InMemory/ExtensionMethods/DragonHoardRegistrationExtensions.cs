@@ -15,6 +15,7 @@ limitations under the License.
 */
 
 using Canister.Interfaces;
+using DragonHoard.Core;
 using DragonHoard.InMemory;
 using System;
 
@@ -30,10 +31,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         /// <param name="services">The services.</param>
         /// <returns>The service collection</returns>
-        public static IServiceCollection? AddInMemoryHoard(this IServiceCollection? services)
-        {
-            return services.AddInMemoryHoard(options => options.ScanFrequency = TimeSpan.FromMinutes(1));
-        }
+        public static IServiceCollection? AddInMemoryHoard(this IServiceCollection? services) => services.AddInMemoryHoard(options => options.ScanFrequency = TimeSpan.FromMinutes(1));
 
         /// <summary>
         /// Adds the in memory hoard.
@@ -43,12 +41,10 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <returns>The service collection</returns>
         public static IServiceCollection? AddInMemoryHoard(this IServiceCollection? services, Action<InMemoryCacheOptions> setupAction)
         {
-            if (services is null)
-                return services;
-            services.AddDragonHoard();
-            services.AddSingleton<InMemoryCache>();
-            services.Configure(setupAction);
-            return services;
+            if (services.Exists<Cache>())
+                return services?.Configure(setupAction);
+            return services?.AddDragonHoard()
+                    ?.Configure(setupAction);
         }
 
         /// <summary>
@@ -56,9 +52,6 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         /// <param name="bootstrapper">The bootstrapper.</param>
         /// <returns>The configuration object.</returns>
-        public static ICanisterConfiguration? RegisterInMemoryHoard(this ICanisterConfiguration? bootstrapper)
-        {
-            return bootstrapper?.AddAssembly(typeof(DragonHoardInMemoryRegistrationExtensions).Assembly).RegisterDragonHoard();
-        }
+        public static ICanisterConfiguration? RegisterInMemoryHoard(this ICanisterConfiguration? bootstrapper) => bootstrapper?.AddAssembly(typeof(DragonHoardInMemoryRegistrationExtensions).Assembly).RegisterDragonHoard();
     }
 }

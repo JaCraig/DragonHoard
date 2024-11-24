@@ -21,7 +21,7 @@ namespace DragonHoard.Benchmarks.Tests
         public void InMemory()
         {
             var Key = Rand.Next();
-            InMemoryCache.Set(Key, new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
+            _ = InMemoryCache.Set(Key, new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
             InMemoryCache.Remove(Key);
         }
 
@@ -29,7 +29,7 @@ namespace DragonHoard.Benchmarks.Tests
         public void MicrosoftMemory()
         {
             var Key = Rand.Next();
-            IMemoryCacheCache.Set(Key, new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
+            _ = IMemoryCacheCache.Set(Key, new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
             IMemoryCacheCache.Remove(Key);
         }
 
@@ -37,10 +37,10 @@ namespace DragonHoard.Benchmarks.Tests
         public void Setup()
         {
             Rand = new Random();
-            var Services = new ServiceCollection().AddOptions()
+            IServiceCollection Services = new ServiceCollection().AddOptions()
                 .Configure<InMemoryCacheOptions>(options => options.ScanFrequency = TimeSpan.FromSeconds(10))
                 .Configure<MemoryCacheOptions>(options => options.ExpirationScanFrequency = TimeSpan.FromSeconds(10));
-            var ServiceProvider = Services.AddCanisterModules(x => x.RegisterInMemoryHoard().RegisterMemoryCacheHoard()).BuildServiceProvider();
+            ServiceProvider ServiceProvider = Services.AddCanisterModules(x => x.RegisterInMemoryHoard().RegisterMemoryCacheHoard()).BuildServiceProvider();
             InMemoryCache = ServiceProvider.GetService<Cache>().GetOrAddCache("In Memory");
             IMemoryCacheCache = ServiceProvider.GetService<Cache>().GetOrAddCache("Microsoft.Extensions.Caching.Memory");
         }

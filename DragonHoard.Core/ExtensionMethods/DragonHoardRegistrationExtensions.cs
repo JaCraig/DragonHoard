@@ -16,6 +16,7 @@ limitations under the License.
 
 using Canister.Interfaces;
 using DragonHoard.Core;
+using DragonHoard.Core.Interfaces;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -31,10 +32,10 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <returns>The service collection</returns>
         public static IServiceCollection? AddDragonHoard(this IServiceCollection? services)
         {
-            if (services is null)
+            if (services.Exists<Cache>())
                 return services;
-            services.AddSingleton<Cache>();
-            return services;
+            return services?.AddSingleton<Cache>()
+                .AddAllSingleton<ICache>();
         }
 
         /// <summary>
@@ -42,9 +43,6 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         /// <param name="bootstrapper">The bootstrapper.</param>
         /// <returns>The configuration object.</returns>
-        public static ICanisterConfiguration? RegisterDragonHoard(this ICanisterConfiguration? bootstrapper)
-        {
-            return bootstrapper?.AddAssembly(typeof(DragonHoardRegistrationExtensions).Assembly);
-        }
+        public static ICanisterConfiguration? RegisterDragonHoard(this ICanisterConfiguration? bootstrapper) => bootstrapper?.AddAssembly(typeof(DragonHoardRegistrationExtensions).Assembly);
     }
 }

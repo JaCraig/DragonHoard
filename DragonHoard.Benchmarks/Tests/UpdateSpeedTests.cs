@@ -18,30 +18,24 @@ namespace DragonHoard.Benchmarks.Tests
         private Random Rand { get; set; }
 
         [Benchmark(Baseline = true)]
-        public void InMemory()
-        {
-            InMemoryCache.Set("Update", new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
-        }
+        public void InMemory() => InMemoryCache.Set("Update", new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
 
         [Benchmark]
-        public void MicrosoftMemory()
-        {
-            IMemoryCacheCache.Set("Update", new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
-        }
+        public void MicrosoftMemory() => IMemoryCacheCache.Set("Update", new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
 
         [GlobalSetup]
         public void Setup()
         {
             Rand = new Random();
-            var Services = new ServiceCollection().AddOptions()
+            IServiceCollection Services = new ServiceCollection().AddOptions()
                 .Configure<InMemoryCacheOptions>(options => { options.ScanFrequency = TimeSpan.FromSeconds(10); })
                 .Configure<MemoryCacheOptions>(options => { options.ExpirationScanFrequency = TimeSpan.FromSeconds(10); });
-            var ServiceProvider = Services.AddCanisterModules(x => x.RegisterInMemoryHoard().RegisterMemoryCacheHoard()).BuildServiceProvider();
+            ServiceProvider ServiceProvider = Services.AddCanisterModules(x => x.RegisterInMemoryHoard().RegisterMemoryCacheHoard()).BuildServiceProvider();
             InMemoryCache = ServiceProvider.GetService<Cache>().GetOrAddCache("In Memory");
             IMemoryCacheCache = ServiceProvider.GetService<Cache>().GetOrAddCache("Microsoft.Extensions.Caching.Memory");
 
-            InMemoryCache.Set("Update", new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
-            IMemoryCacheCache.Set("Update", new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
+            _ = InMemoryCache.Set("Update", new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
+            _ = IMemoryCacheCache.Set("Update", new { A = 1 }, new CacheEntryOptions() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(1) });
         }
     }
 }
