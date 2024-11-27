@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.1.1"></a>
+## [2.1.1](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.1.1) (2024-11-27)
+
+### Bug Fixes
+
+* update husky and versionize tool versions to 0.7.1 and 2.3.0 respectively ([51d042b](https://www.github.com/JaCraig/DragonHoard/commit/51d042b0d702cbcc14cefb8de9bf7e404db79023))
+
+### Other
+
+* Merge branch 'main' of https://github.com/JaCraig/DragonHoard ([6b3dc5a](https://www.github.com/JaCraig/DragonHoard/commit/6b3dc5aa3a9ddc5a438f8e6ec66d8356ad74ad2e))
+
 <a name="2.1.0"></a>
 ## [2.1.0](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.1.0) (2024-11-24)
 
