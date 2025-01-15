@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.1.3"></a>
+## [2.1.3](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.1.3) (2025-01-15)
+
+### Bug Fixes
+
+* bump Microsoft.Extensions.Options ([4500e3a](https://www.github.com/JaCraig/DragonHoard/commit/4500e3a93a68c2f6d29d37a2d86ad1f9f0597785))
+* bump the dependencies group ([1c8ddcc](https://www.github.com/JaCraig/DragonHoard/commit/1c8ddcc4b8e90c71b40372cb566cdf21ae04d587))
+* bump the dependencies group in /DragonHoard.Core with 2 updates ([9930b73](https://www.github.com/JaCraig/DragonHoard/commit/9930b739019b97ee30d174be93a1dc8972bffc2f))
+
+### Other
+
+* Merge pull request #63 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-af1112d6b8 ([1ebf1b0](https://www.github.com/JaCraig/DragonHoard/commit/1ebf1b0596ffb44cc34bf64022e272892a87bfa8))
+* Merge pull request #64 from JaCraig/dependabot/nuget/DragonHoard.Microsoft.Extensions.Caching.Memory/dependencies-22aee47be3 ([0dbfb62](https://www.github.com/JaCraig/DragonHoard/commit/0dbfb6262a8c6dcfc9734e3d0508a1e18b013aea))
+* Merge pull request #65 from JaCraig/dependabot/nuget/DragonHoard.InMemory/dependencies-155759e76f ([20b125c](https://www.github.com/JaCraig/DragonHoard/commit/20b125c3a639ba916fcda2d024ee313f884aba15))
+
 <a name="2.1.2"></a>
 ## [2.1.2](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.1.2) (2024-12-09)
 
