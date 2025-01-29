@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.1.4"></a>
+## [2.1.4](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.1.4) (2025-01-29)
+
+### Bug Fixes
+
+* bump versionize in /DragonHoard.Core in the dependencies group ([c903644](https://www.github.com/JaCraig/DragonHoard/commit/c9036447444251a86f70b3d093062185ddfd5fd7))
+
+### Other
+
+* Merge pull request #66 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-836e21bf11 ([af4e233](https://www.github.com/JaCraig/DragonHoard/commit/af4e233e0a6c65420b02cf1a015fa96d2cac696c))
+* **dependencies:** update project dependencies ([f78e7b0](https://www.github.com/JaCraig/DragonHoard/commit/f78e7b0624908a4bd7ea8dab5cd329483527318d))
+
 <a name="2.1.3"></a>
 ## [2.1.3](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.1.3) (2025-01-15)
 
