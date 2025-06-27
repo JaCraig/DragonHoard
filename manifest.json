@@ -18,7 +18,11 @@
           "relative_path": "api/DragonHoard.Core.BaseClasses.CacheBaseClass.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DragonHoard.Core.BaseClasses.CacheBaseClass",
+      "Summary": "<p sourcefile=\"api/DragonHoard.Core.BaseClasses.CacheBaseClass.yml\" sourcestartlinenumber=\"1\">Cache base class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -28,7 +32,11 @@
           "relative_path": "api/DragonHoard.Core.BaseClasses.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DragonHoard.Core.BaseClasses",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -38,7 +46,11 @@
           "relative_path": "api/DragonHoard.Core.Cache.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DragonHoard.Core.Cache",
+      "Summary": "<p sourcefile=\"api/DragonHoard.Core.Cache.yml\" sourcestartlinenumber=\"1\">Cache manager class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -48,7 +60,11 @@
           "relative_path": "api/DragonHoard.Core.CacheEntryOptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DragonHoard.Core.CacheEntryOptions",
+      "Summary": "<p sourcefile=\"api/DragonHoard.Core.CacheEntryOptions.yml\" sourcestartlinenumber=\"1\">Cache entry options</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -58,7 +74,11 @@
           "relative_path": "api/DragonHoard.Core.CachePriority.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DragonHoard.Core.CachePriority",
+      "Summary": "<p sourcefile=\"api/DragonHoard.Core.CachePriority.yml\" sourcestartlinenumber=\"1\">Cache priority</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -68,7 +88,11 @@
           "relative_path": "api/DragonHoard.Core.CanisterModules.RegistrationModule.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DragonHoard.Core.CanisterModules.RegistrationModule",
+      "Summary": "<p sourcefile=\"api/DragonHoard.Core.CanisterModules.RegistrationModule.yml\" sourcestartlinenumber=\"1\">Registration module</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -78,7 +102,11 @@
           "relative_path": "api/DragonHoard.Core.CanisterModules.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DragonHoard.Core.CanisterModules",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -88,7 +116,11 @@
           "relative_path": "api/DragonHoard.Core.Interfaces.ICache.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DragonHoard.Core.Interfaces.ICache",
+      "Summary": "<p sourcefile=\"api/DragonHoard.Core.Interfaces.ICache.yml\" sourcestartlinenumber=\"1\">Cache interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -98,7 +130,11 @@
           "relative_path": "api/DragonHoard.Core.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DragonHoard.Core.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -108,7 +144,11 @@
           "relative_path": "api/DragonHoard.Core.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DragonHoard.Core",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -118,7 +158,11 @@
           "relative_path": "api/DragonHoard.InMemory.InMemoryCache.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DragonHoard.InMemory.InMemoryCache",
+      "Summary": "<p sourcefile=\"api/DragonHoard.InMemory.InMemoryCache.yml\" sourcestartlinenumber=\"1\">In memory cache</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -128,7 +172,11 @@
           "relative_path": "api/DragonHoard.InMemory.InMemoryCacheOptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DragonHoard.InMemory.InMemoryCacheOptions",
+      "Summary": "<p sourcefile=\"api/DragonHoard.InMemory.InMemoryCacheOptions.yml\" sourcestartlinenumber=\"1\">In memory cache options</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -138,7 +186,11 @@
           "relative_path": "api/DragonHoard.InMemory.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DragonHoard.InMemory",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -148,7 +200,11 @@
           "relative_path": "api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration",
+      "Summary": "<p sourcefile=\"api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.MemoryRegistration.yml\" sourcestartlinenumber=\"1\">Memory reg module</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -158,7 +214,11 @@
           "relative_path": "api/DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DragonHoard.MicrosoftExtensionsCachingMemory.CanisterModules",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -168,7 +228,11 @@
           "relative_path": "api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache",
+      "Summary": "<p sourcefile=\"api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.yml\" sourcestartlinenumber=\"1\">In memory cache</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -178,7 +242,11 @@
           "relative_path": "api/DragonHoard.MicrosoftExtensionsCachingMemory.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "DragonHoard.MicrosoftExtensionsCachingMemory",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -188,7 +256,11 @@
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions",
+      "Summary": "<p sourcefile=\"api/Microsoft.Extensions.DependencyInjection.DragonHoardInMemoryRegistrationExtensions.yml\" sourcestartlinenumber=\"1\">Reg extensions</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -198,7 +270,11 @@
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions",
+      "Summary": "<p sourcefile=\"api/Microsoft.Extensions.DependencyInjection.DragonHoardMemoryRegistrationExtensions.yml\" sourcestartlinenumber=\"1\">Reg extensions</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -208,7 +284,11 @@
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions",
+      "Summary": "<p sourcefile=\"api/Microsoft.Extensions.DependencyInjection.DragonHoardRegistrationExtensions.yml\" sourcestartlinenumber=\"1\">Reg extensions</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -218,7 +298,11 @@
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Microsoft.Extensions.DependencyInjection",
+      "Summary": null
     },
     {
       "type": "Conceptual",
