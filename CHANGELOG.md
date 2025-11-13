@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.2.0"></a>
+## [2.2.0](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.2.0) (2025-11-13)
+
+### Features
+
+* **deps:** update package dependencies ([2b91c42](https://www.github.com/JaCraig/DragonHoard/commit/2b91c422db48d5e146b6dd40dd4a71d297a7cd55))
+
 <a name="2.1.14"></a>
 ## [2.1.14](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.1.14) (2025-10-16)
 
