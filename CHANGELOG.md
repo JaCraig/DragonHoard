@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.2.3"></a>
+## [2.2.3](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.2.3) (2025-12-10)
+
+### Bug Fixes
+
+* Bump the dependencies group with 3 updates ([0001c35](https://www.github.com/JaCraig/DragonHoard/commit/0001c358bce099bee789788d916d47cdacf221bb))
+* Bump the dependencies group with 4 updates ([30c15fe](https://www.github.com/JaCraig/DragonHoard/commit/30c15fe7dfedb564f3471eef82b3f2a789b29127))
+* **deps:** update NuGet package versions ([fbb083b](https://www.github.com/JaCraig/DragonHoard/commit/fbb083be93bd80c14a5aa529f14f60ae43c3c18e))
+
+### Other
+
+* Merge pull request #89 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-6b0efeba0a ([1a41368](https://www.github.com/JaCraig/DragonHoard/commit/1a4136853c17ee8a4ef3582768bfcc86b2129777))
+* Merge pull request #91 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-94103114ef ([525e44d](https://www.github.com/JaCraig/DragonHoard/commit/525e44d23a146c5f92fc9fde6d06b810880c6498))
+* Specify languages for CodeQL analysis ([35a9668](https://www.github.com/JaCraig/DragonHoard/commit/35a9668996fa35ddb0b60f15aced68074e409ffa))
+
 <a name="2.2.2"></a>
 ## [2.2.2](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.2.2) (2025-11-14)
 
