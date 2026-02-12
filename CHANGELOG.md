@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.3.0"></a>
+## [2.3.0](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.3.0) (2026-02-12)
+
+### Features
+
+* **projects:** add net10.0 support and update test deps ([2f01228](https://www.github.com/JaCraig/DragonHoard/commit/2f01228c590f2a992553665e6db7a8a20405baea))
+
 <a name="2.2.7"></a>
 ## [2.2.7](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.2.7) (2026-02-12)
 
