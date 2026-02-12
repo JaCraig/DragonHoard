@@ -4,7 +4,7 @@
     <Description>DragonHoard's fast in memory cache.</Description>
     <AssemblyTitle>DragonHoard.InMemory</AssemblyTitle>
     <Authors>James Craig</Authors>
-    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>DragonHoard.InMemory</AssemblyName>
     <PackageId>DragonHoard.InMemory</PackageId>
