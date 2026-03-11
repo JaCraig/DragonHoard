@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.3.5"></a>
+## [2.3.5](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.3.5) (2026-03-11)
+
+### Bug Fixes
+
+* **core:** adopt C# 12 collection expressions ([a887e0e](https://www.github.com/JaCraig/DragonHoard/commit/a887e0ee5b38a0d96a10affaddde3b5847b24d5f))
+
+### Other
+
+* **release:** bump version to 2.3.4 and update changelog ([4c96de3](https://www.github.com/JaCraig/DragonHoard/commit/4c96de35d5eb578634e0ae303728935f882c1510))
+
 <a name="2.3.4"></a>
 ## [2.3.4](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.3.4) (2026-03-11)
 
