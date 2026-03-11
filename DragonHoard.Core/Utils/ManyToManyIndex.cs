@@ -42,7 +42,7 @@ namespace DragonHoard.Core.Utils
         /// <param name="list">The list.</param>
         public void Add(object key, params int[] list)
         {
-            list ??= Array.Empty<int>();
+            list ??= [];
             KeyToTagMapping.Replace(key, list);
             for (int i = 0; i < list.Length; i++)
             {

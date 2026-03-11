@@ -86,11 +86,11 @@ namespace DragonHoard.Core.BaseClasses
         public TValue[] GetByTag<TValue>(string tag)
         {
             if (tag is null)
-                return Array.Empty<TValue>();
+                return [];
             lock (LockObject)
             {
                 if (!TagIndex.TryGetValue(tag.GetHashCode(StringComparison.Ordinal), out var Keys))
-                    return Array.Empty<TValue>();
+                    return [];
 
                 var ReturnValues = new TValue[Keys.Length];
                 for (int i = 0; i < Keys.Length; i++)
@@ -180,13 +180,13 @@ namespace DragonHoard.Core.BaseClasses
         /// <returns>The value sent in.</returns>
         public TValue Set<TValue>(object key, TValue value, CacheEntryOptions cacheEntryOptions)
         {
-            cacheEntryOptions.Tags ??= Array.Empty<string>();
+            cacheEntryOptions.Tags ??= [];
             lock (LockObject)
             {
                 if (cacheEntryOptions.Tags.Length > 0)
                 {
                     TagIndex.Remove(key);
-                    TagIndex.Add(key, cacheEntryOptions.Tags.Select(tag => tag.GetHashCode(StringComparison.Ordinal)).ToArray());
+                    TagIndex.Add(key, [.. cacheEntryOptions.Tags.Select(tag => tag.GetHashCode(StringComparison.Ordinal))]);
                 }
                 return SetWithOptions(key, value, cacheEntryOptions);
             }

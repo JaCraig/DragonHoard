@@ -18,6 +18,7 @@ using DragonHoard.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace DragonHoard.Core
 {
@@ -28,6 +29,11 @@ namespace DragonHoard.Core
     public class Cache : IDisposable
     {
         /// <summary>
+        /// The cache creation lock
+        /// </summary>
+        private static readonly object _CacheCreationLock = new();
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="Cache"/> class.
         /// </summary>
         /// <param name="caches">The caches.</param>
@@ -36,13 +42,13 @@ namespace DragonHoard.Core
         /// </exception>
         public Cache(IEnumerable<ICache> caches)
         {
-            caches ??= Array.Empty<ICache>();
+            caches ??= [];
             if (!caches.Any())
                 throw new ArgumentException("No caches were found in the system. Please register one prior to initializing.");
-            var CacheAssembly = typeof(Cache).Assembly;
+            Assembly CacheAssembly = typeof(Cache).Assembly;
             Caches = caches.Where(x => x.GetType().Assembly != CacheAssembly).ToDictionary(x => GetKey(x.Name));
             var DefaultKey = GetKey("Default");
-            if (!Caches.TryGetValue(DefaultKey, out var TempCache))
+            if (!Caches.TryGetValue(DefaultKey, out ICache? TempCache))
             {
                 Caches.Add(DefaultKey, caches.First().Clone());
             }
@@ -52,11 +58,6 @@ namespace DragonHoard.Core
         /// Caches
         /// </summary>
         private Dictionary<int, ICache>? Caches { get; set; }
-
-        /// <summary>
-        /// The cache creation lock
-        /// </summary>
-        private static readonly object CacheCreationLock = new object();
 
         /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting
@@ -79,16 +80,16 @@ namespace DragonHoard.Core
                 return null;
 
             var CacheKey = GetKey(name);
-            if (Caches.TryGetValue(CacheKey, out var ReturnValue))
+            if (Caches.TryGetValue(CacheKey, out ICache? ReturnValue))
                 return ReturnValue;
-            lock (CacheCreationLock)
+            lock (_CacheCreationLock)
             {
                 if (Caches.TryGetValue(CacheKey, out ReturnValue))
                     return ReturnValue;
 
                 var DefaultKey = GetKey("Default");
-                Caches.TryGetValue(DefaultKey, out ReturnValue);
-                ReturnValue = ReturnValue.Clone();
+                _ = Caches.TryGetValue(DefaultKey, out ReturnValue);
+                ReturnValue = ReturnValue?.Clone();
                 if (ReturnValue is null)
                     return null;
 
@@ -110,16 +111,16 @@ namespace DragonHoard.Core
                 return null;
 
             var CacheKey = GetKey(name);
-            if (Caches.TryGetValue(CacheKey, out var ReturnValue))
+            if (Caches.TryGetValue(CacheKey, out ICache? ReturnValue))
                 return ReturnValue;
-            lock (CacheCreationLock)
+            lock (_CacheCreationLock)
             {
                 if (Caches.TryGetValue(CacheKey, out ReturnValue))
                     return ReturnValue;
 
                 var DefaultKey = GetKey("Default");
-                Caches.TryGetValue(DefaultKey, out ReturnValue);
-                ReturnValue = ReturnValue.Clone(options);
+                _ = Caches.TryGetValue(DefaultKey, out ReturnValue);
+                ReturnValue = ReturnValue?.Clone(options);
                 if (ReturnValue is null)
                     return null;
 
@@ -139,7 +140,7 @@ namespace DragonHoard.Core
         {
             if (Caches is null)
                 return;
-            foreach (var Cache in Caches)
+            foreach (KeyValuePair<int, ICache> Cache in Caches)
             {
                 Cache.Value.Dispose();
             }
@@ -151,9 +152,6 @@ namespace DragonHoard.Core
         /// </summary>
         /// <param name="value">The value.</param>
         /// <returns>The hashed key.</returns>
-        private static int GetKey(string? value)
-        {
-            return value?.GetHashCode(StringComparison.Ordinal) ?? 0;
-        }
+        private static int GetKey(string? value) => value?.GetHashCode(StringComparison.Ordinal) ?? 0;
     }
 }

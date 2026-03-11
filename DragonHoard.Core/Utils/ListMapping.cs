@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace DragonHoard.Core.Utils
 {
@@ -7,16 +6,17 @@ namespace DragonHoard.Core.Utils
     /// Maps a key to a list of data
     /// </summary>
     internal class ListMapping<TKey, TValue>
+        where TKey : notnull
     {
-        /// <summary>
-        /// Container holding the data
-        /// </summary>
-        private Dictionary<TKey, List<TValue>> Items { get; } = new Dictionary<TKey, List<TValue>>();
-
         /// <summary>
         /// The lock object
         /// </summary>
-        private readonly object LockObject = new object();
+        private readonly object _LockObject = new();
+
+        /// <summary>
+        /// Container holding the data
+        /// </summary>
+        private Dictionary<TKey, List<TValue>> Items { get; } = [];
 
         /// <summary>
         /// Adds an item to the mapping
@@ -25,14 +25,14 @@ namespace DragonHoard.Core.Utils
         /// <param name="values">The values.</param>
         public void Add(TKey key, params TValue[] values)
         {
-            values ??= Array.Empty<TValue>();
+            values ??= [];
             if (values.Length == 0)
                 return;
-            lock (LockObject)
+            lock (_LockObject)
             {
-                if (!Items.TryGetValue(key, out var ReturnValues))
+                if (!Items.TryGetValue(key, out List<TValue>? ReturnValues))
                 {
-                    ReturnValues = new List<TValue>();
+                    ReturnValues = [];
                     Items.Add(key, ReturnValues);
                 }
                 ReturnValues.AddRange(values);
@@ -44,7 +44,7 @@ namespace DragonHoard.Core.Utils
         /// </summary>
         public void Clear()
         {
-            lock (LockObject)
+            lock (_LockObject)
             {
                 Items.Clear();
             }
@@ -57,7 +57,7 @@ namespace DragonHoard.Core.Utils
         /// <returns>True if the key is found, false otherwise</returns>
         public bool Remove(TKey key)
         {
-            lock (LockObject)
+            lock (_LockObject)
             {
                 return Items.Remove(key);
             }
@@ -71,20 +71,20 @@ namespace DragonHoard.Core.Utils
         /// <returns>True if it is removed, false otherwise</returns>
         public bool Remove(TKey key, params TValue[] values)
         {
-            values ??= Array.Empty<TValue>();
+            values ??= [];
             if (values.Length == 0)
                 return false;
-            lock (LockObject)
+            lock (_LockObject)
             {
-                if (!Items.TryGetValue(key, out var TempItems))
+                if (!Items.TryGetValue(key, out List<TValue>? TempItems))
                     return false;
                 var ReturnValue = false;
-                for (var x = 0; x < values.Length; ++x)
+                for (var X = 0; X < values.Length; ++X)
                 {
-                    ReturnValue |= TempItems.Remove(values[x]);
+                    ReturnValue |= TempItems.Remove(values[X]);
                 }
                 if (TempItems.Count == 0)
-                    Items.Remove(key);
+                    _ = Items.Remove(key);
                 return ReturnValue;
             }
         }
@@ -96,10 +96,10 @@ namespace DragonHoard.Core.Utils
         /// <param name="values">The values.</param>
         public void Replace(TKey key, params TValue[] values)
         {
-            values ??= Array.Empty<TValue>();
+            values ??= [];
             if (values.Length == 0)
                 return;
-            lock (LockObject)
+            lock (_LockObject)
             {
                 var ReturnValues = new List<TValue>();
                 Items[key] = ReturnValues;
@@ -115,14 +115,14 @@ namespace DragonHoard.Core.Utils
         /// <returns>True if it was able to get the value, false otherwise</returns>
         public bool TryGetValue(TKey key, out TValue[] value)
         {
-            lock (LockObject)
+            lock (_LockObject)
             {
-                if (Items.TryGetValue(key, out var TempValue))
+                if (Items.TryGetValue(key, out List<TValue>? TempValue))
                 {
-                    value = TempValue.ToArray();
+                    value = [.. TempValue];
                     return true;
                 }
-                value = Array.Empty<TValue>();
+                value = [];
                 return false;
             }
         }
