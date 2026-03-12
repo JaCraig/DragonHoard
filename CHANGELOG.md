@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.3.6"></a>
+## [2.3.6](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.3.6) (2026-03-12)
+
+### Bug Fixes
+
+* Bump the dependencies group with 1 update ([e54cd2f](https://www.github.com/JaCraig/DragonHoard/commit/e54cd2f0cd556ae8e573ae25bf73765c2655a5f0))
+
+### Other
+
+* Merge pull request #111 from JaCraig/dependabot/nuget/dot-config/dependencies-ef2d746a42 ([7e1b16d](https://www.github.com/JaCraig/DragonHoard/commit/7e1b16df7dcf2f08288750130c16cbc8df961239))
+
 <a name="2.3.5"></a>
 ## [2.3.5](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.3.5) (2026-03-11)
 
