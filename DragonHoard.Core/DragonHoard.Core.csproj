@@ -46,11 +46,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Canister.IoC" Version="6.4.0" />
-    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="10.0.4" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.4" />
-	  <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.200" PrivateAssets="all" />
-	  <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="10.0.200">
+    <PackageReference Include="Canister.IoC" Version="6.4.1" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="10.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.5" />
+	  <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.201" PrivateAssets="all" />
+	  <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="10.0.201">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 	  </PackageReference>
