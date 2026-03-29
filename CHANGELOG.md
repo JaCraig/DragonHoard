@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.3.9"></a>
+## [2.3.9](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.3.9) (2026-03-29)
+
+### Bug Fixes
+
+* update project configurations and dependencies ([3b6b8d7](https://www.github.com/JaCraig/DragonHoard/commit/3b6b8d75685c93e8c0b6666b0b940f81804e1d38))
+
 <a name="2.3.8"></a>
 ## [2.3.8](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.3.8) (2026-03-16)
 
