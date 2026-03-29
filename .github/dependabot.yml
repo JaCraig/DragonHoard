@@ -41,7 +41,7 @@ updates:
   - package-ecosystem: "nuget" # See documentation for possible values
     directory: "/DragonHaord.InMemory.Tests/" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "weekly"
     commit-message:
       prefix: "chore"
     groups:
@@ -52,7 +52,7 @@ updates:
   - package-ecosystem: "nuget" # See documentation for possible values
     directory: "/DragonHaord.Microsoft.Extensions.Caching.Memory.Tests/" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "weekly"
     commit-message:
       prefix: "chore"
     groups:
@@ -63,7 +63,7 @@ updates:
   - package-ecosystem: "nuget" # See documentation for possible values
     directory: "/DragonHaord.Example/" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "weekly"
     commit-message:
       prefix: "chore"
     groups:
@@ -74,7 +74,7 @@ updates:
   - package-ecosystem: "nuget" # See documentation for possible values
     directory: "/DragonHaord.Benchmarks/" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "weekly"
     commit-message:
       prefix: "chore"
     groups:
@@ -85,7 +85,7 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     commit-message:
       prefix: "chore"
     groups:
