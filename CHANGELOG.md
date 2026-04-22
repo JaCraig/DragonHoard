@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.3.15"></a>
+## [2.3.15](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.3.15) (2026-04-22)
+
+### Bug Fixes
+
+* **deps:** update NuGet packages in project files ([a8313e9](https://www.github.com/JaCraig/DragonHoard/commit/a8313e925570cca630fc1bc2556ae22ec3fffe40))
+
 <a name="2.3.14"></a>
 ## [2.3.14](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.3.14) (2026-04-22)
 
