@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.3.20"></a>
+## [2.3.20](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.3.20) (2026-05-14)
+
+### Bug Fixes
+
+* Bump the dependencies group with 1 update ([0f1e3d1](https://www.github.com/JaCraig/DragonHoard/commit/0f1e3d1c32407eefc9d5a80370f92dc51a44de7e))
+
+### Other
+
+* Merge pull request #134 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-2ccfba0df5 ([164c6ac](https://www.github.com/JaCraig/DragonHoard/commit/164c6ac9fd45b0fa29ba14a7a2ecf1aaa3b72846))
+* **deps:** update Mecha.xUnit and Test SDK versions ([50207c5](https://www.github.com/JaCraig/DragonHoard/commit/50207c549197f3aa877431cee84b5d3f14322540))
+
 <a name="2.3.19"></a>
 ## [2.3.19](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.3.19) (2026-05-13)
 
