@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.3.21"></a>
+## [2.3.21](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.3.21) (2026-05-27)
+
+### Bug Fixes
+
+* **workflows:** remove PERSONAL_ACCESS_TOKEN from workflows ([4f8d97e](https://www.github.com/JaCraig/DragonHoard/commit/4f8d97e5cfb359e75e0a5d9b4d5a06c8927c1b22))
+
+### Other
+
+* Merge branch 'main' of https://github.com/JaCraig/DragonHoard ([f5258c0](https://www.github.com/JaCraig/DragonHoard/commit/f5258c09006a3f40560fa5f1807eb8b19ea1ec1c))
+* **copilot:** add instructions for commit message formatting ([5c6a0cf](https://www.github.com/JaCraig/DragonHoard/commit/5c6a0cf8fd70e3e626457e742ef0d107bb09a2ac))
+
 <a name="2.3.20"></a>
 ## [2.3.20](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.3.20) (2026-05-14)
 
