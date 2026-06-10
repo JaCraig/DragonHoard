@@ -1,5 +1,23 @@
 # Copilot Instructions
 
+## General C# Guidance
+
+- Follow the repository's existing C# conventions first, then common C# conventions when the repo is silent.
+- Check the local `.editorconfig` file before making style assumptions.
+- Keep naming consistent with surrounding code, even when it differs from default .NET style guidance.
+- Use `var` for local variables when the type is obvious from the right-hand side.
+- Use explicit types for public properties and method parameters.
+- Use `readonly` for fields that do not change after initialization.
+- Use `const` for compile-time constants and `static` for utility members that do not need instance state.
+- Prefer `async`/`await` for asynchronous work and avoid blocking calls like `.Result`, `.Wait()`, or `GetAwaiter().GetResult()`.
+- Accept and propagate `CancellationToken` on cancellable operations.
+- Keep nullable reference types enabled and resolve nullability warnings instead of suppressing them.
+- Validate public inputs with clear guard clauses and throw specific exceptions such as `ArgumentNullException`, `ArgumentException`, or `ArgumentOutOfRangeException` when appropriate.
+- Use `using` or `await using` for disposable resources and dispose timers, streams, and subscriptions deterministically.
+- Prefer readable LINQ and avoid multiple enumeration when cost or side effects matter.
+- Use xUnit for tests and NSubstitute for mocking unless the repository already uses a different established pattern.
+- Prefer `dotnet format` when a formatting pass is needed.
+
 ## Commit Messages
 
 - Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) message format. Format: `<type>(<scope>): <description>`
