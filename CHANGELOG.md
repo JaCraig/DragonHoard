@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.3.23"></a>
+## [2.3.23](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.3.23) (2026-06-10)
+
+### Bug Fixes
+
+* **copilot:** update C# guidance in Copilot instructions ([62de21c](https://www.github.com/JaCraig/DragonHoard/commit/62de21c60361556db185a4f4d97471ec14194220))
+
+### Other
+
+* Merge branch 'main' of https://github.com/JaCraig/DragonHoard ([8a90160](https://www.github.com/JaCraig/DragonHoard/commit/8a90160db423a2fcbebb7c5715ad019b4dd77ab4))
+
 <a name="2.3.22"></a>
 ## [2.3.22](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.3.22) (2026-06-10)
 
