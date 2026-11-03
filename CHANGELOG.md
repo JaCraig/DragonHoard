@@ -2,6 +2,51 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.4.0"></a>
+## [2.4.0](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.4.0) (2026-11-03)
+
+### Features
+
+* **cache:** add cache clearing support ([2e6e567](https://www.github.com/JaCraig/DragonHoard/commit/2e6e567ef9ec813c8d0e2e1793f98daf280f8427))
+
+### Bug Fixes
+
+* Bump the dependencies group with 1 update ([ff7592a](https://www.github.com/JaCraig/DragonHoard/commit/ff7592ac9daaf9f5f89a3ea377ebcb11913b07a0))
+* Bump the dependencies group with 1 update ([a4f178d](https://www.github.com/JaCraig/DragonHoard/commit/a4f178df45f42c8553645a6eb8a8ca7d9d29f7a4))
+* Bump the dependencies group with 1 update ([49e7a5e](https://www.github.com/JaCraig/DragonHoard/commit/49e7a5ee1797e66ebe7dc245e9eaa7160965162c))
+* Bump the dependencies group with 1 update ([13a9dbf](https://www.github.com/JaCraig/DragonHoard/commit/13a9dbf292aa591a634074009bc440aecbf94383))
+* Bump the dependencies group with 4 updates ([f113723](https://www.github.com/JaCraig/DragonHoard/commit/f113723eb0f9e0f1a5d2f70b574a08d14503a5c6))
+* Bump the dependencies group with 4 updates ([259dd65](https://www.github.com/JaCraig/DragonHoard/commit/259dd659dd4e1e6e6eafbee81b2d17d3a283ec72))
+* Bump the dependencies group with 4 updates ([088b7ae](https://www.github.com/JaCraig/DragonHoard/commit/088b7ae105419ecfd0c9e3bdbfe78178967c93e3))
+* Bump the dependencies group with 4 updates ([43b7489](https://www.github.com/JaCraig/DragonHoard/commit/43b74893a5d3d484e52dacff6e6ac0a8468a9014))
+* Bump the dependencies group with 4 updates ([09a7d37](https://www.github.com/JaCraig/DragonHoard/commit/09a7d3743b16d0fe866c46a99f7d2723a954009c))
+* Bump the dependencies group with 4 updates ([4a8646d](https://www.github.com/JaCraig/DragonHoard/commit/4a8646d6cf3dcffb7f7153d1ef43d6d48c27220a))
+* Bump the dependencies group with 4 updates ([27f883b](https://www.github.com/JaCraig/DragonHoard/commit/27f883b7d204ec7428ff88a2d60da6b53e60b982))
+* Bump the dependencies group with 4 updates ([85f01c3](https://www.github.com/JaCraig/DragonHoard/commit/85f01c329c17f219b77e245463b3cdb97e2892e5))
+* Bump the dependencies group with 5 updates ([bac2ec2](https://www.github.com/JaCraig/DragonHoard/commit/bac2ec2ff66a49bc7c5a31e48ae36284b5f82c6a))
+* Bump the dependencies group with 5 updates ([db7aed9](https://www.github.com/JaCraig/DragonHoard/commit/db7aed94955559a5bd329c95a860a84ed20744ce))
+* Bump the dependencies group with 5 updates ([3bc71e4](https://www.github.com/JaCraig/DragonHoard/commit/3bc71e445baeeebd8fabc453eb10e590462dc0f3))
+* Bump the dependencies group with 5 updates ([df0070c](https://www.github.com/JaCraig/DragonHoard/commit/df0070c8313d8a07f48f9ad39f86e7f8d090fa93))
+
+### Other
+
+* Merge pull request #142 from JaCraig/dependabot/nuget/dot-config/dependencies-d580172a4f ([2f1595f](https://www.github.com/JaCraig/DragonHoard/commit/2f1595fb2d3c9280360a6c6a0b21b293ddf3633a))
+* Merge pull request #143 from JaCraig/dependabot/nuget/dot-config/dependencies-d580172a4f ([52a0969](https://www.github.com/JaCraig/DragonHoard/commit/52a096988b356bacb5b2adb7ef43191ebf4c04f0))
+* Merge pull request #144 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-8b3ebe273f ([e686c77](https://www.github.com/JaCraig/DragonHoard/commit/e686c77deac5086f1069d049c8788832b0e9eeec))
+* Merge pull request #145 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-6072cd7c3f ([950fa5c](https://www.github.com/JaCraig/DragonHoard/commit/950fa5cda6dc4313d4c4eccb076fac956d2c36c9))
+* Merge pull request #146 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-bdcd877506 ([9731b82](https://www.github.com/JaCraig/DragonHoard/commit/9731b827c717ffbdc14e92da7d4bfc0f306aa05b))
+* Merge pull request #147 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-0f43b74034 ([1bf997a](https://www.github.com/JaCraig/DragonHoard/commit/1bf997a7a87acbba017d91aef5086766024582a8))
+* Merge pull request #148 from JaCraig/dependabot/nuget/dot-config/dependencies-87dec4854d ([715f669](https://www.github.com/JaCraig/DragonHoard/commit/715f6690452c4823c2d5f391e5aa6164f761e7ad))
+* Merge pull request #149 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-1356c6c7db ([ee52ea1](https://www.github.com/JaCraig/DragonHoard/commit/ee52ea1de307ce84f3344551d335f1e444dc0729))
+* Merge pull request #150 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-9ea8d53c38 ([724eb28](https://www.github.com/JaCraig/DragonHoard/commit/724eb28b777b4ad72a9a34baee2bb3233b4f4e8f))
+* Merge pull request #151 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-58730bda88 ([a2e240b](https://www.github.com/JaCraig/DragonHoard/commit/a2e240bf2cc6875d68a728be3e1c72cf7238a69b))
+* Merge pull request #152 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-1d3f622115 ([5dd9b76](https://www.github.com/JaCraig/DragonHoard/commit/5dd9b76cb72ca0b25d11d3698ff2bc31f5bf9d72))
+* Merge pull request #153 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-fa0c2bf608 ([de4fff6](https://www.github.com/JaCraig/DragonHoard/commit/de4fff6864c2ca4b0c5b4ed25bc7fc8dd1f48b7a))
+* Merge pull request #154 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-699e773993 ([95466b6](https://www.github.com/JaCraig/DragonHoard/commit/95466b632d9b3a54897b8a0d5cfe1f88469eeb00))
+* Merge pull request #155 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-37afce480f ([2e55dfe](https://www.github.com/JaCraig/DragonHoard/commit/2e55dfe5f9b7ae682a9b5afda7596fbef8d11ec5))
+* Merge pull request #156 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-e1e82a1cf6 ([b766a34](https://www.github.com/JaCraig/DragonHoard/commit/b766a34f8927477d3b40560cd27d766e9f38418a))
+* Merge pull request #157 from JaCraig/dependabot/nuget/DragonHoard.Core/dependencies-0fbfe1e500 ([5ec83cb](https://www.github.com/JaCraig/DragonHoard/commit/5ec83cbd35ef90dcac35ef1994d5782346123d8f))
+
 <a name="2.3.24"></a>
 ## [2.3.24](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.3.24) (2026-07-16)
 
