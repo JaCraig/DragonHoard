@@ -84,8 +84,8 @@ namespace DragonHoard.InMemory
         {
             if (Value is null)
                 return;
-            if (Value is IDisposable disposable)
-                disposable.Dispose();
+            if (Value is IDisposable Disposable)
+                Disposable.Dispose();
             Value = null;
         }
     }
