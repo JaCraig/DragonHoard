@@ -30,7 +30,7 @@ namespace DragonHoard.Core.BaseClasses
         /// <summary>
         /// The lock object
         /// </summary>
-        private readonly object LockObject = new object();
+        private readonly object LockObject = new();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CacheBaseClass"/> class.
@@ -98,9 +98,9 @@ namespace DragonHoard.Core.BaseClasses
                     return [];
 
                 var ReturnValues = new TValue[Keys.Length];
-                for (int i = 0; i < Keys.Length; i++)
+                for (var i = 0; i < Keys.Length; i++)
                 {
-                    if (TryGetValue<TValue>(Keys[i], out var ReturnValue))
+                    if (TryGetValue<TValue>(Keys[i], out TValue? ReturnValue))
                         ReturnValues[i] = ReturnValue;
                 }
                 return ReturnValues;
@@ -115,7 +115,7 @@ namespace DragonHoard.Core.BaseClasses
         {
             lock (LockObject)
             {
-                TagIndex.Remove(key);
+                _ = TagIndex.Remove(key);
                 RemoveByKey(key);
             }
         }
@@ -135,13 +135,13 @@ namespace DragonHoard.Core.BaseClasses
             {
                 if (!TagIndex.TryGetValue(TagHashCode, out var Keys))
                     return;
-                for (int i = 0; i < Keys.Length; i++)
+                for (var i = 0; i < Keys.Length; i++)
                 {
                     var Key = Keys[i];
                     RemoveByKey(Key);
-                    TagIndex.Remove(Key);
+                    _ = TagIndex.Remove(Key);
                 }
-                TagIndex.Remove(TagHashCode);
+                _ = TagIndex.Remove(TagHashCode);
             }
         }
 
@@ -190,7 +190,7 @@ namespace DragonHoard.Core.BaseClasses
             {
                 if (cacheEntryOptions.Tags.Length > 0)
                 {
-                    TagIndex.Remove(key);
+                    _ = TagIndex.Remove(key);
                     TagIndex.Add(key, [.. cacheEntryOptions.Tags.Select(tag => tag.GetHashCode(StringComparison.Ordinal))]);
                 }
                 return SetWithOptions(key, value, cacheEntryOptions);
@@ -215,8 +215,8 @@ namespace DragonHoard.Core.BaseClasses
         /// <param name="state">The state.</param>
         protected void EvictionCallback(object key, object? value, EvictionReason reason, object state)
         {
-            if (EvictionReason.Expired == reason || reason == EvictionReason.Capacity || reason == EvictionReason.TokenExpired)
-                TagIndex.Remove(key);
+            if (reason is EvictionReason.Expired or EvictionReason.Capacity or EvictionReason.TokenExpired)
+                _ = TagIndex.Remove(key);
         }
 
         /// <summary>

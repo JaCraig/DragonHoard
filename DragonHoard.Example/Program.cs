@@ -1,4 +1,5 @@
 ﻿using DragonHoard.Core;
+using DragonHoard.Core.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DragonHoard.Example
@@ -29,22 +30,22 @@ namespace DragonHoard.Example
         private static void Main(string[] args)
         {
             // Create our service provider.
-            var ServiceProvider = new ServiceCollection().AddCanisterModules()?.BuildServiceProvider();
+            ServiceProvider? ServiceProvider = new ServiceCollection().AddCanisterModules()?.BuildServiceProvider();
 
             // Get our cache provider.
-            var CacheProvider = ServiceProvider?.GetService<Cache>();
+            Cache? CacheProvider = ServiceProvider?.GetService<Cache>();
 
             if (CacheProvider is null)
                 return;
 
             // Get our cache. This will create a new cache if one doesn't exist with the name "Default".
-            var Cache = CacheProvider.GetOrAddCache();
+            ICache? Cache = CacheProvider.GetOrAddCache();
 
             if (Cache is null)
                 return;
 
             // Add our data to the cache.
-            Cache.Set("Test", new ExampleClass { A = 12 });
+            _ = Cache.Set("Test", new ExampleClass { A = 12 });
 
             // Check if our data is in the cache and retrieve it.
             Console.WriteLine("Data found: {0}", Cache.TryGetValue("Test", out ExampleClass value));

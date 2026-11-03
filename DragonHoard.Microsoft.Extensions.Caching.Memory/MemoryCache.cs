@@ -96,14 +96,13 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
                 Clear();
                 return;
             }
-            var MSCache = InternalCache as Microsoft.Extensions.Caching.Memory.MemoryCache;
-            if (MSCache is null)
+            if (InternalCache is not Microsoft.Extensions.Caching.Memory.MemoryCache MSCache)
                 return;
             MSCache.Compact(percentage);
             // Clean up the tag index to remove any keys that may have been evicted from the cache
             foreach (var Key in MSCache.Keys.ToList())
             {
-                TagIndex.Remove(Key);
+                _ = TagIndex.Remove(Key);
             }
         }
 

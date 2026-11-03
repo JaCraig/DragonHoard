@@ -182,7 +182,7 @@ namespace DragonHoard.InMemory
                 {
                     _CurrentSize -= Item.Size ?? 0;
                     _ = InternalCache.Remove(Item.Key);
-                    TagIndex.Remove(Item.Key);
+                    _ = TagIndex.Remove(Item.Key);
                     EvictionCallback(Item.Key, Item.Value, EvictionReason.Expired, this);
                 }
             }
@@ -513,7 +513,7 @@ namespace DragonHoard.InMemory
                     }
                     cache._CurrentSize -= Item.Size ?? 0;
                     _ = cache.InternalCache.Remove(Item.Key);
-                    cache.TagIndex.Remove(Item.Key);
+                    _ = cache.TagIndex.Remove(Item.Key);
                     cache.EvictionCallback(Item.Key, Item.Value, EvictionReason.Expired, cache);
                 }
             }

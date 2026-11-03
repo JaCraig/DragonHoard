@@ -14,8 +14,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-using System;
-
 namespace DragonHoard.Core.Utils
 {
     /// <summary>
@@ -44,7 +42,7 @@ namespace DragonHoard.Core.Utils
         {
             list ??= [];
             KeyToTagMapping.Replace(key, list);
-            for (int i = 0; i < list.Length; i++)
+            for (var i = 0; i < list.Length; i++)
             {
                 TagToKeyMapping.Add(list[i], key);
             }
@@ -68,11 +66,11 @@ namespace DragonHoard.Core.Utils
         {
             if (!TagToKeyMapping.TryGetValue(key, out var List))
                 return false;
-            for (int i = 0; i < List.Length; i++)
+            for (var i = 0; i < List.Length; i++)
             {
-                KeyToTagMapping.Remove(List[i], key);
+                _ = KeyToTagMapping.Remove(List[i], key);
             }
-            TagToKeyMapping.Remove(key);
+            _ = TagToKeyMapping.Remove(key);
             return true;
         }
 
@@ -85,11 +83,11 @@ namespace DragonHoard.Core.Utils
         {
             if (!KeyToTagMapping.TryGetValue(key, out var List))
                 return false;
-            for (int i = 0; i < List.Length; i++)
+            for (var i = 0; i < List.Length; i++)
             {
-                TagToKeyMapping.Remove(List[i], key);
+                _ = TagToKeyMapping.Remove(List[i], key);
             }
-            KeyToTagMapping.Remove(key);
+            _ = KeyToTagMapping.Remove(key);
             return true;
         }
 
@@ -99,9 +97,6 @@ namespace DragonHoard.Core.Utils
         /// <param name="key">The key.</param>
         /// <param name="values">The values.</param>
         /// <returns>True if it is returned, false otherwise.</returns>
-        public bool TryGetValue(int key, out object[] values)
-        {
-            return TagToKeyMapping.TryGetValue(key, out values);
-        }
+        public bool TryGetValue(int key, out object[] values) => TagToKeyMapping.TryGetValue(key, out values);
     }
 }

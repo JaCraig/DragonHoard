@@ -13,7 +13,7 @@ namespace DragonHoard.InMemory
         /// Gets the default.
         /// </summary>
         /// <value>The default.</value>
-        public static InMemoryCacheOptions Default => new InMemoryCacheOptions
+        public static InMemoryCacheOptions Default => new()
         {
             ScanFrequency = TimeSpan.FromMinutes(1)
         };
