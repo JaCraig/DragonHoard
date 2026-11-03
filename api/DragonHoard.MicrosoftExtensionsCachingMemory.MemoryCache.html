@@ -89,11 +89,11 @@
 
 
   <h1 id="DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache" data-uid="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache" class="text-break">
-Class MemoryCache  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L30"><i class="bi bi-code-slash"></i></a>
+Class MemoryCache  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="DragonHoard.html">DragonHoard</a>.<a class="xref" href="DragonHoard.MicrosoftExtensionsCachingMemory.html">MicrosoftExtensionsCachingMemory</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><span class="xref">DragonHoard</span>.<a class="xref" href="DragonHoard.MicrosoftExtensionsCachingMemory.html">MicrosoftExtensionsCachingMemory</a></dd></dl>
   <dl><dt>Assembly</dt><dd>DragonHoard.Microsoft.Extensions.Caching.Memory.dll</dd></dl>
   </div>
 
@@ -129,6 +129,9 @@ Class MemoryCache  <a class="header-action link-secondary" title="View source" h
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_TagIndex">CacheBaseClass.TagIndex</a>
+    </div>
     <div>
       <a class="xref" href="DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_GetByTag__1_System_String_">CacheBaseClass.GetByTag&lt;TValue&gt;(string)</a>
     </div>
@@ -180,7 +183,7 @@ Class MemoryCache  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache__ctor_Microsoft_Extensions_Caching_Memory_IMemoryCache_" data-uid="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)">
   MemoryCache(IMemoryCache)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html">MemoryCache</a> class.</p>
@@ -217,7 +220,7 @@ Class MemoryCache  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Name" data-uid="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the name.</p>
@@ -250,11 +253,41 @@ Class MemoryCache  <a class="header-action link-secondary" title="View source" h
 </h2>
 
 
+  <a id="DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Clear_" data-uid="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clear*"></a>
+
+  <h3 id="DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Clear" data-uid="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clear">
+  Clear()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes all entries from the underlying in-memory cache when available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Clear()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Clear_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>No action is taken when the internal cache is null or not a supported memory cache implementation.</p>
+</div>
+
+
+
+
   <a id="DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Clone_" data-uid="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clone*"></a>
 
   <h3 id="DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Clone" data-uid="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clone">
   Clone()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Clones this instance.</p>
@@ -287,7 +320,7 @@ Class MemoryCache  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Clone__1___0_" data-uid="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clone``1(``0)">
   Clone&lt;TOption&gt;(TOption)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Clones this instance.</p>
@@ -332,7 +365,7 @@ Class MemoryCache  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Compact_System_Double_" data-uid="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Compact(System.Double)">
   Compact(double)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L92"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Compacts the cache by the specified percentage.</p>
@@ -365,7 +398,7 @@ Class MemoryCache  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Dispose" data-uid="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L114"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting
@@ -393,7 +426,7 @@ unmanaged resources.</p>
 
   <h3 id="DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_RemoveByKey_System_Object_" data-uid="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.RemoveByKey(System.Object)">
   RemoveByKey(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L205"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes the items by the key.</p>
@@ -426,7 +459,7 @@ unmanaged resources.</p>
 
   <h3 id="DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_SetWithOptions__1_System_Object___0_DragonHoard_Core_CacheEntryOptions_" data-uid="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.SetWithOptions``1(System.Object,``0,DragonHoard.Core.CacheEntryOptions)">
   SetWithOptions&lt;TValue&gt;(object, TValue, CacheEntryOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L220"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the value with the options sent in.</p>
@@ -477,7 +510,7 @@ unmanaged resources.</p>
 
   <h3 id="DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Set__1_System_Object___0_" data-uid="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set``1(System.Object,``0)">
   Set&lt;TValue&gt;(object, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L130"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the specified key/value pair in the cache.</p>
@@ -525,7 +558,7 @@ unmanaged resources.</p>
 
   <h3 id="DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Set__1_System_Object___0_System_DateTimeOffset_" data-uid="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set``1(System.Object,``0,System.DateTimeOffset)">
   Set&lt;TValue&gt;(object, TValue, DateTimeOffset)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the specified key/value pair in the cache.</p>
@@ -576,7 +609,7 @@ unmanaged resources.</p>
 
   <h3 id="DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Set__1_System_Object___0_System_TimeSpan_System_Boolean_" data-uid="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Set``1(System.Object,``0,System.TimeSpan,System.Boolean)">
   Set&lt;TValue&gt;(object, TValue, TimeSpan, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L170"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the specified key/value pair in the cache.</p>
@@ -630,7 +663,7 @@ unmanaged resources.</p>
 
   <h3 id="DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_TryGetValue__1_System_Object___0__" data-uid="DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.TryGetValue``1(System.Object,``0@)">
   TryGetValue&lt;TValue&gt;(object, out TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L191"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Tries to get the value based on the key.</p>
@@ -682,7 +715,7 @@ unmanaged resources.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L30" class="edit-link">Edit this page</a>
+          <a href="https://github.com/JaCraig/DragonHoard/blob/main/DragonHoard.Microsoft.Extensions.Caching.Memory/MemoryCache.cs/#L31" class="edit-link">Edit this page</a>
         </div>
 
 

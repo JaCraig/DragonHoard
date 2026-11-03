@@ -38,6 +38,19 @@ references:
   fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.New
   nameWithType: CacheBaseClass.CacheBaseClass
   nameWithType.vb: CacheBaseClass.New
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Clear
+  name: Clear()
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Clear
+  commentId: M:DragonHoard.Core.BaseClasses.CacheBaseClass.Clear
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Clear()
+  nameWithType: CacheBaseClass.Clear()
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Clear*
+  name: Clear
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Clear_
+  commentId: Overload:DragonHoard.Core.BaseClasses.CacheBaseClass.Clear
+  isSpec: "True"
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.Clear
+  nameWithType: CacheBaseClass.Clear
 - uid: DragonHoard.Core.BaseClasses.CacheBaseClass.Clone
   name: Clone()
   href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_Clone
@@ -241,6 +254,19 @@ references:
   fullName.vb: DragonHoard.Core.BaseClasses.CacheBaseClass.Set(Of TValue)(Object, TValue, System.TimeSpan, Boolean)
   nameWithType: CacheBaseClass.Set<TValue>(object, TValue, TimeSpan, bool)
   nameWithType.vb: CacheBaseClass.Set(Of TValue)(Object, TValue, TimeSpan, Boolean)
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.TagIndex
+  name: TagIndex
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_TagIndex
+  commentId: P:DragonHoard.Core.BaseClasses.CacheBaseClass.TagIndex
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.TagIndex
+  nameWithType: CacheBaseClass.TagIndex
+- uid: DragonHoard.Core.BaseClasses.CacheBaseClass.TagIndex*
+  name: TagIndex
+  href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_TagIndex_
+  commentId: Overload:DragonHoard.Core.BaseClasses.CacheBaseClass.TagIndex
+  isSpec: "True"
+  fullName: DragonHoard.Core.BaseClasses.CacheBaseClass.TagIndex
+  nameWithType: CacheBaseClass.TagIndex
 - uid: DragonHoard.Core.BaseClasses.CacheBaseClass.TryGetValue*
   name: TryGetValue
   href: api/DragonHoard.Core.BaseClasses.CacheBaseClass.html#DragonHoard_Core_BaseClasses_CacheBaseClass_TryGetValue_
@@ -490,6 +516,19 @@ references:
   commentId: T:DragonHoard.Core.Interfaces.ICache
   fullName: DragonHoard.Core.Interfaces.ICache
   nameWithType: ICache
+- uid: DragonHoard.Core.Interfaces.ICache.Clear
+  name: Clear()
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Clear
+  commentId: M:DragonHoard.Core.Interfaces.ICache.Clear
+  fullName: DragonHoard.Core.Interfaces.ICache.Clear()
+  nameWithType: ICache.Clear()
+- uid: DragonHoard.Core.Interfaces.ICache.Clear*
+  name: Clear
+  href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Clear_
+  commentId: Overload:DragonHoard.Core.Interfaces.ICache.Clear
+  isSpec: "True"
+  fullName: DragonHoard.Core.Interfaces.ICache.Clear
+  nameWithType: ICache.Clear
 - uid: DragonHoard.Core.Interfaces.ICache.Clone
   name: Clone()
   href: api/DragonHoard.Core.Interfaces.ICache.html#DragonHoard_Core_Interfaces_ICache_Clone
@@ -648,6 +687,88 @@ references:
   fullName.vb: DragonHoard.Core.Interfaces.ICache.TryGetValue(Of TValue)(Object, TValue)
   nameWithType: ICache.TryGetValue<TValue>(object, out TValue)
   nameWithType.vb: ICache.TryGetValue(Of TValue)(Object, TValue)
+- uid: DragonHoard.Core.Utils
+  name: DragonHoard.Core.Utils
+  href: api/DragonHoard.Core.Utils.html
+  commentId: N:DragonHoard.Core.Utils
+  fullName: DragonHoard.Core.Utils
+  nameWithType: DragonHoard.Core.Utils
+- uid: DragonHoard.Core.Utils.ManyToManyIndex
+  name: ManyToManyIndex
+  href: api/DragonHoard.Core.Utils.ManyToManyIndex.html
+  commentId: T:DragonHoard.Core.Utils.ManyToManyIndex
+  fullName: DragonHoard.Core.Utils.ManyToManyIndex
+  nameWithType: ManyToManyIndex
+- uid: DragonHoard.Core.Utils.ManyToManyIndex.Add(System.Object,System.Int32[])
+  name: Add(object, params int[])
+  href: api/DragonHoard.Core.Utils.ManyToManyIndex.html#DragonHoard_Core_Utils_ManyToManyIndex_Add_System_Object_System_Int32___
+  commentId: M:DragonHoard.Core.Utils.ManyToManyIndex.Add(System.Object,System.Int32[])
+  name.vb: Add(Object, ParamArray Integer())
+  fullName: DragonHoard.Core.Utils.ManyToManyIndex.Add(object, params int[])
+  fullName.vb: DragonHoard.Core.Utils.ManyToManyIndex.Add(Object, ParamArray Integer())
+  nameWithType: ManyToManyIndex.Add(object, params int[])
+  nameWithType.vb: ManyToManyIndex.Add(Object, ParamArray Integer())
+- uid: DragonHoard.Core.Utils.ManyToManyIndex.Add*
+  name: Add
+  href: api/DragonHoard.Core.Utils.ManyToManyIndex.html#DragonHoard_Core_Utils_ManyToManyIndex_Add_
+  commentId: Overload:DragonHoard.Core.Utils.ManyToManyIndex.Add
+  isSpec: "True"
+  fullName: DragonHoard.Core.Utils.ManyToManyIndex.Add
+  nameWithType: ManyToManyIndex.Add
+- uid: DragonHoard.Core.Utils.ManyToManyIndex.Clear
+  name: Clear()
+  href: api/DragonHoard.Core.Utils.ManyToManyIndex.html#DragonHoard_Core_Utils_ManyToManyIndex_Clear
+  commentId: M:DragonHoard.Core.Utils.ManyToManyIndex.Clear
+  fullName: DragonHoard.Core.Utils.ManyToManyIndex.Clear()
+  nameWithType: ManyToManyIndex.Clear()
+- uid: DragonHoard.Core.Utils.ManyToManyIndex.Clear*
+  name: Clear
+  href: api/DragonHoard.Core.Utils.ManyToManyIndex.html#DragonHoard_Core_Utils_ManyToManyIndex_Clear_
+  commentId: Overload:DragonHoard.Core.Utils.ManyToManyIndex.Clear
+  isSpec: "True"
+  fullName: DragonHoard.Core.Utils.ManyToManyIndex.Clear
+  nameWithType: ManyToManyIndex.Clear
+- uid: DragonHoard.Core.Utils.ManyToManyIndex.Remove(System.Int32)
+  name: Remove(int)
+  href: api/DragonHoard.Core.Utils.ManyToManyIndex.html#DragonHoard_Core_Utils_ManyToManyIndex_Remove_System_Int32_
+  commentId: M:DragonHoard.Core.Utils.ManyToManyIndex.Remove(System.Int32)
+  name.vb: Remove(Integer)
+  fullName: DragonHoard.Core.Utils.ManyToManyIndex.Remove(int)
+  fullName.vb: DragonHoard.Core.Utils.ManyToManyIndex.Remove(Integer)
+  nameWithType: ManyToManyIndex.Remove(int)
+  nameWithType.vb: ManyToManyIndex.Remove(Integer)
+- uid: DragonHoard.Core.Utils.ManyToManyIndex.Remove(System.Object)
+  name: Remove(object)
+  href: api/DragonHoard.Core.Utils.ManyToManyIndex.html#DragonHoard_Core_Utils_ManyToManyIndex_Remove_System_Object_
+  commentId: M:DragonHoard.Core.Utils.ManyToManyIndex.Remove(System.Object)
+  name.vb: Remove(Object)
+  fullName: DragonHoard.Core.Utils.ManyToManyIndex.Remove(object)
+  fullName.vb: DragonHoard.Core.Utils.ManyToManyIndex.Remove(Object)
+  nameWithType: ManyToManyIndex.Remove(object)
+  nameWithType.vb: ManyToManyIndex.Remove(Object)
+- uid: DragonHoard.Core.Utils.ManyToManyIndex.Remove*
+  name: Remove
+  href: api/DragonHoard.Core.Utils.ManyToManyIndex.html#DragonHoard_Core_Utils_ManyToManyIndex_Remove_
+  commentId: Overload:DragonHoard.Core.Utils.ManyToManyIndex.Remove
+  isSpec: "True"
+  fullName: DragonHoard.Core.Utils.ManyToManyIndex.Remove
+  nameWithType: ManyToManyIndex.Remove
+- uid: DragonHoard.Core.Utils.ManyToManyIndex.TryGetValue(System.Int32,System.Object[]@)
+  name: TryGetValue(int, out object[])
+  href: api/DragonHoard.Core.Utils.ManyToManyIndex.html#DragonHoard_Core_Utils_ManyToManyIndex_TryGetValue_System_Int32_System_Object____
+  commentId: M:DragonHoard.Core.Utils.ManyToManyIndex.TryGetValue(System.Int32,System.Object[]@)
+  name.vb: TryGetValue(Integer, Object())
+  fullName: DragonHoard.Core.Utils.ManyToManyIndex.TryGetValue(int, out object[])
+  fullName.vb: DragonHoard.Core.Utils.ManyToManyIndex.TryGetValue(Integer, Object())
+  nameWithType: ManyToManyIndex.TryGetValue(int, out object[])
+  nameWithType.vb: ManyToManyIndex.TryGetValue(Integer, Object())
+- uid: DragonHoard.Core.Utils.ManyToManyIndex.TryGetValue*
+  name: TryGetValue
+  href: api/DragonHoard.Core.Utils.ManyToManyIndex.html#DragonHoard_Core_Utils_ManyToManyIndex_TryGetValue_
+  commentId: Overload:DragonHoard.Core.Utils.ManyToManyIndex.TryGetValue
+  isSpec: "True"
+  fullName: DragonHoard.Core.Utils.ManyToManyIndex.TryGetValue
+  nameWithType: ManyToManyIndex.TryGetValue
 - uid: DragonHoard.InMemory
   name: DragonHoard.InMemory
   href: api/DragonHoard.InMemory.html
@@ -679,6 +800,19 @@ references:
   fullName.vb: DragonHoard.InMemory.InMemoryCache.New
   nameWithType: InMemoryCache.InMemoryCache
   nameWithType.vb: InMemoryCache.New
+- uid: DragonHoard.InMemory.InMemoryCache.Clear
+  name: Clear()
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Clear
+  commentId: M:DragonHoard.InMemory.InMemoryCache.Clear
+  fullName: DragonHoard.InMemory.InMemoryCache.Clear()
+  nameWithType: InMemoryCache.Clear()
+- uid: DragonHoard.InMemory.InMemoryCache.Clear*
+  name: Clear
+  href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Clear_
+  commentId: Overload:DragonHoard.InMemory.InMemoryCache.Clear
+  isSpec: "True"
+  fullName: DragonHoard.InMemory.InMemoryCache.Clear
+  nameWithType: InMemoryCache.Clear
 - uid: DragonHoard.InMemory.InMemoryCache.Clone
   name: Clone()
   href: api/DragonHoard.InMemory.InMemoryCache.html#DragonHoard_InMemory_InMemoryCache_Clone
@@ -968,6 +1102,19 @@ references:
   fullName.vb: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.New
   nameWithType: MemoryCache.MemoryCache
   nameWithType.vb: MemoryCache.New
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clear
+  name: Clear()
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Clear
+  commentId: M:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clear
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clear()
+  nameWithType: MemoryCache.Clear()
+- uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clear*
+  name: Clear
+  href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Clear_
+  commentId: Overload:DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clear
+  isSpec: "True"
+  fullName: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clear
+  nameWithType: MemoryCache.Clear
 - uid: DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.Clone
   name: Clone()
   href: api/DragonHoard.MicrosoftExtensionsCachingMemory.MemoryCache.html#DragonHoard_MicrosoftExtensionsCachingMemory_MemoryCache_Clone
