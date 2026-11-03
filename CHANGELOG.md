@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.4.1"></a>
+## [2.4.1](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.4.1) (2026-11-03)
+
+### Bug Fixes
+
+* **cache:** capitalize disposable pattern name ([6dc0140](https://www.github.com/JaCraig/DragonHoard/commit/6dc0140d741e52a79908d243e07465b9d5de4021))
+* **cache:** modernize cache typing and cleanup ([fe74dc8](https://www.github.com/JaCraig/DragonHoard/commit/fe74dc826ed4968784901e36ed634b7409a182d4))
+
 <a name="2.4.0"></a>
 ## [2.4.0](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.4.0) (2026-11-03)
 
