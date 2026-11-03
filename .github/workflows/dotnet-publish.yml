@@ -7,6 +7,10 @@ on:
   push:
     branches: ["main"]
 
+permissions:
+  id-token: write
+  contents: write
+
 jobs:
   build:
     uses: "JaCraig/Centralized-Workflows/.github/workflows/dotnet-publish.yml@main"
@@ -15,5 +19,4 @@ jobs:
       user-email: "JaCraig@users.noreply.github.com"
       coveralls-upload: "./DragonHoard.InMemory.Tests/TestResults-10.0.x/coverage.net10.0.info"
       test-filter: "DragonHoard.InMemory.Tests"
-    secrets:
-      NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+      nuget-user: ${{ secrets.NUGET_USER }}
