@@ -88,6 +88,7 @@
 <h1 id="code">Code</h1>
 
 <pre><code class="lang-csharp">using DragonHoard.Core;
+using DragonHoard.Core.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DragonHoard.Example
@@ -118,22 +119,22 @@ namespace DragonHoard.Example
         private static void Main(string[] args)
         {
             // Create our service provider.
-            var ServiceProvider = new ServiceCollection().AddCanisterModules()?.BuildServiceProvider();
+            ServiceProvider? ServiceProvider = new ServiceCollection().AddCanisterModules()?.BuildServiceProvider();
 
             // Get our cache provider.
-            var CacheProvider = ServiceProvider?.GetService&lt;Cache&gt;();
+            Cache? CacheProvider = ServiceProvider?.GetService&lt;Cache&gt;();
 
             if (CacheProvider is null)
                 return;
 
             // Get our cache. This will create a new cache if one doesn't exist with the name &quot;Default&quot;.
-            var Cache = CacheProvider.GetOrAddCache();
+            ICache? Cache = CacheProvider.GetOrAddCache();
 
             if (Cache is null)
                 return;
 
             // Add our data to the cache.
-            Cache.Set(&quot;Test&quot;, new ExampleClass { A = 12 });
+            _ = Cache.Set(&quot;Test&quot;, new ExampleClass { A = 12 });
 
             // Check if our data is in the cache and retrieve it.
             Console.WriteLine(&quot;Data found: {0}&quot;, Cache.TryGetValue(&quot;Test&quot;, out ExampleClass value));
