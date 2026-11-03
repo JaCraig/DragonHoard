@@ -12,6 +12,21 @@ permissions:
   contents: write
 
 jobs:
+  login:
+    permissions:
+      contents: write
+      id-token: write
+    env:
+      BUILD_CONFIG: "Release"
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: NuGet login (OIDC)
+        id: nuget-login
+        uses: NuGet/login@v1
+        with:
+          user: ${{ secrets.NUGET_USER }}
+
   build:
     uses: "JaCraig/Centralized-Workflows/.github/workflows/dotnet-publish.yml@main"
     with:
@@ -20,4 +35,4 @@ jobs:
       coveralls-upload: "./DragonHoard.InMemory.Tests/TestResults-10.0.x/coverage.net10.0.info"
       test-filter: "DragonHoard.InMemory.Tests"
     secrets:
-      nuget-user: ${{ secrets.NUGET_USER }}
+      NUGET_API_KEY: ${{ steps.nuget-login.outputs.NUGET_API_KEY }}
