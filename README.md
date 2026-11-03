@@ -1,120 +1,167 @@
-# Dragon Hoard
+# DragonHoard
 
 [![.NET Publish](https://github.com/JaCraig/DragonHoard/actions/workflows/dotnet-publish.yml/badge.svg)](https://github.com/JaCraig/DragonHoard/actions/workflows/dotnet-publish.yml)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](./LICENSE)
 
-Dragon Hoard is a fast, thread safe, developer friendly in-memory caching service.
+DragonHoard is a .NET in-memory caching library with a small API for storing,
+retrieving, expiring, and grouping cached values. Choose its lightweight in-memory
+provider or a provider backed by `Microsoft.Extensions.Caching.Memory`.
 
-## Setting Up the Library
+## Why DragonHoard?
 
-Dragon Hoard can be set up using the ServiceCollection extension depending on the cache you want to set up:
+- Register caches through `Microsoft.Extensions.DependencyInjection`.
+- Create named caches for separate workloads.
+- Set absolute or sliding expiration, priority, size, and tags per entry.
+- Retrieve or remove entries by key or tag, and compact a cache when needed.
+- Target .NET 8, .NET 9, and .NET 10.
 
-    ServiceCollection.AddInMemoryHoard();
+DragonHoard is an in-process cache. It does not persist entries or synchronize them
+between application instances.
 
-The above code adds the faster/lighter in-memory cache while:
+## Choose a provider
 
-    ServiceCollection.AddMemoryCacheHoard();
+Install one provider package for your application. Both include the core API as a
+dependency.
 
-That allows the system to wrap Microsoft.Extensions.Caching.Memory.MemoryCache. Note that they are in separate Nuget packages so you'll have to download the one that you want.
+| Provider               | NuGet package                                                                                                                       | Use when                                                                    |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| DragonHoard in-memory  | [`DragonHoard.InMemory`](https://www.nuget.org/packages/DragonHoard.InMemory)                                                       | You want DragonHoard's built-in in-memory cache.                            |
+| Microsoft memory cache | [`DragonHoard.Microsoft.Extensions.Caching.Memory`](https://www.nuget.org/packages/DragonHoard.Microsoft.Extensions.Caching.Memory) | You want DragonHoard's API backed by `Microsoft.Extensions.Caching.Memory`. |
 
-## Basic Usage
+## Install
 
-The main class of interest is the Cache class found in DragonHoard.Core:
+Install the provider you chose with the .NET CLI:
 
-    public class ExampleClass
-    {
-        public ExampleClass(Cache myCache)
-        {
-            MyCache = myCache;
-        }
-
-        private Cache MyCache { get; set; }
-
-        public void SomeMethod()
-        {
-            var Cache = MyCache.GetOrAddCache("CacheName");
-        }
-    }
-
-The Cache object has a singleton lifespan and acts as a repository for your various caches. Note that it's generally a good idea to split caches based on their purpose so they can be treated accordingly and to reduce read/write contention. Once you have the ICache object that the GetOrAddCache method returns you have a couple of methods:
-
-    Cache.Set(...) // Used to set a key/value pair in the cache using various settings. You can specify absolute expiration, sliding, priority, size, and any tags that should be associated with the entry.
-    Cache.Remove(...) // Used to remove an entry based on the key.
-    Cache.TryGetValue(...) // Used to retrieve an entry from the cache based on the key.
-    Cache.RemoveByTag(...) // Will remove all entries that have been tagged with the corresponding string.
-    Cache.GetByTag(...) // Returns an array containing all entries that were tagged using the string.
-    Cache.Compact(...) // Used to remove a percentage of items from the cache.
-
-The cache will clear out invalid items on a scheduled period based on the criteria you set. However the schedule may only kick off after you call one of the above methods depending on the type of cache. Similarly the determination of what gets removed when calling Compact is specific to the individual cache provider. For instance, the in-memory provider uses these steps:
-
-1. Remove items that have expired.
-2. Put items into buckets based on priority and then go off this:
-    1. Remove items where absolute expiration is set going earliest to latest.
-    2. Remove items where sliding expiration is set going earliest to latest.
-    3. Remove items based on last accessed date/time.
-
-## Give Me Speed
-
-For those wondering why you'd want to use this over the MemoryCache provided by Microsoft, considering the following using the following setup:
-
-```ini
-
-BenchmarkDotNet=v0.12.1, OS=Windows 10.0.18363.1256 (1909/November2018Update/19H2)
-Intel Core i7-9850H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
-.NET Core SDK=5.0.102
-  [Host]     : .NET Core 5.0.2 (CoreCLR 5.0.220.61120, CoreFX 5.0.220.61120), X64 RyuJIT
-  DefaultJob : .NET Core 5.0.2 (CoreCLR 5.0.220.61120, CoreFX 5.0.220.61120), X64 RyuJIT
+```sh
+dotnet add package DragonHoard.InMemory
 ```
 
----
+Or install the Microsoft memory cache provider:
 
-Adding and removing an item from the cache is about 4 times faster and uses about 1/5 of the memory overhead:
+```sh
+dotnet add package DragonHoard.Microsoft.Extensions.Caching.Memory
+```
 
-| Method          |       Mean |     Error |    StdDev |     Median | Ratio | RatioSD |  Gen 0 | Gen 1 | Gen 2 | Allocated |
-| --------------- | ---------: | --------: | --------: | ---------: | ----: | ------: | -----: | ----: | ----: | --------: |
-| InMemory        |   422.7 ns |   7.29 ns |   8.96 ns |   420.4 ns |  1.00 |    0.00 | 0.0401 |     - |     - |     256 B |
-| MicrosoftMemory | 2,123.0 ns | 179.06 ns | 527.96 ns | 1,906.8 ns |  3.96 |    0.29 | 0.2060 |     - |     - |    1296 B |
+## Quick start
 
----
+This example registers the in-memory provider, creates the default cache, and stores
+and retrieves a value. Replace `AddInMemoryHoard()` with `AddMemoryCacheHoard()` to
+use the Microsoft memory cache provider.
 
-Retrieval of an item from the cache is about 50% faster:
+```csharp
+using DragonHoard.Core;
+using DragonHoard.Core.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 
-| Method          |     Mean |    Error |   StdDev |   Median | Ratio | RatioSD | Gen 0 | Gen 1 | Gen 2 | Allocated |
-| --------------- | -------: | -------: | -------: | -------: | ----: | ------: | ----: | ----: | ----: | --------: |
-| InMemory        | 153.9 ns |  3.06 ns |  7.39 ns | 151.5 ns |  1.00 |    0.00 |     - |     - |     - |         - |
-| MicrosoftMemory | 214.9 ns | 14.32 ns | 42.22 ns | 200.0 ns |  1.50 |    0.32 |     - |     - |     - |         - |
+var services = new ServiceCollection();
+services.AddInMemoryHoard();
 
----
+using var serviceProvider = services.BuildServiceProvider();
+var cacheManager = serviceProvider.GetRequiredService<Cache>();
+var cache = cacheManager.GetOrAddCache()!;
 
-When creating/storing items at high throughput scenarios, the system is about 5x faster with reduced memory overhead even when aggressive cache cleanup is used:
+cache.Set("greeting", "Hello, cache!");
+if (cache.TryGetValue<string>("greeting", out var greeting))
+{
+    Console.WriteLine(greeting);
+}
+```
 
-| Method          |     Mean |     Error |    StdDev | Ratio | RatioSD |  Gen 0 |  Gen 1 | Gen 2 | Allocated |
-| --------------- | -------: | --------: | --------: | ----: | ------: | -----: | -----: | ----: | --------: |
-| InMemory        | 1.043 μs | 0.0934 μs | 0.2557 μs |  1.00 |    0.00 | 0.0362 | 0.0134 |     - |     232 B |
-| MicrosoftMemory | 4.900 μs | 0.4043 μs | 1.1920 μs |  5.01 |    1.56 | 0.1755 | 0.0458 |     - |    1200 B |
+The `Cache` manager is registered as a singleton. It provides access to the default
+cache and additional named caches. Resolve it through dependency injection rather
+than creating a new manager for each operation.
 
----
+## Common operations
 
-And updating an item already in the cache is 8x faster with 12x improvement on memory consumption:
+### Create a named cache
 
-| Method          |       Mean |     Error |    StdDev |     Median | Ratio | RatioSD |  Gen 0 | Gen 1 | Gen 2 | Allocated |
-| --------------- | ---------: | --------: | --------: | ---------: | ----: | ------: | -----: | ----: | ----: | --------: |
-| InMemory        |   257.2 ns |  15.47 ns |  45.12 ns |   241.6 ns |  1.00 |    0.00 | 0.0165 |     - |     - |     104 B |
-| MicrosoftMemory | 2,041.9 ns | 204.26 ns | 602.26 ns | 1,785.9 ns |  8.00 |    1.93 | 0.1907 |     - |     - |    1200 B |
+Use a descriptive name to keep unrelated data in separate caches:
 
-## Installation
+```csharp
+ICache productCache = cacheManager.GetOrAddCache("products")!;
+```
 
-The library is available via Nuget with the package name "DragonHoard.InMemory" or "DragonHoard.Microsoft.Extensions.Caching.Memory". To install it run the following command in the Package Manager Console:
+### Set expiration and tags
 
-Install-Package DragonHoard.InMemory
+```csharp
+cache.Set("product:42", product, new CacheEntryOptions
+{
+    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10),
+    Tags = ["products", "featured"]
+});
+```
 
-or
+Entries can also use `AbsoluteExpiration`, `SlidingExpiration`, `Priority`, and
+`Size` options. The in-memory provider supports capacity and scan-frequency
+configuration through `AddInMemoryHoard`:
 
-Install-Package DragonHoard.Microsoft.Extensions.Caching.Memory
+```csharp
+services.AddInMemoryHoard(options =>
+{
+    options.MaxCacheSize = 10_000;
+    options.ScanFrequency = TimeSpan.FromMinutes(2);
+});
+```
 
-## Build Process
+### Remove or retrieve entries
 
-In order to build the library you may require the following:
+```csharp
+cache.Remove("product:42");
+bool found = cache.TryGetValue<Product>("product:42", out var product);
 
-1. Visual Studio 2019
+cache.RemoveByTag("featured");
+Product[] featuredProducts = cache.GetByTag<Product>("featured");
+```
 
-Other than that, just clone the project and you should be able to load the solution and build without too much effort.
+### Compact a cache
+
+`Compact` removes a fraction of entries according to the provider's eviction
+policy. For DragonHoard's in-memory provider, expired entries are removed first;
+remaining entries are considered from lowest to highest priority, then by expiration
+and last-access time.
+
+```csharp
+cache.Compact(0.25); // Ask the provider to remove about 25% of its entries.
+```
+
+## Expiration and provider behavior
+
+Expiration and eviction details depend on the provider. The in-memory provider uses
+a one-minute scan frequency by default. Expired values should not be treated as
+available after expiration, but background cleanup timing can depend on cache
+activity. `Compact` also follows the selected provider's eviction policy.
+
+## Develop and test
+
+The repository contains the library, an example application, tests, and BenchmarkDotNet
+benchmarks. A .NET 10 SDK is needed to build and test the full solution; the library
+packages target .NET 8, .NET 9, and .NET 10.
+
+```sh
+git clone https://github.com/JaCraig/DragonHoard.git
+cd DragonHoard
+dotnet build DragonHoard.sln
+dotnet test DragonHoard.sln
+```
+
+Run the example or benchmarks with:
+
+```sh
+dotnet run --project DragonHoard.Example
+dotnet run -c Release --project DragonHoard.Benchmarks
+```
+
+Benchmark results depend on the machine, runtime, and workload. Run the benchmarks
+yourself to compare current results rather than relying on historical numbers.
+
+## Documentation and help
+
+- [API reference](./docfx_project/index.md)
+- [Example application](./DragonHoard.Example/Program.cs)
+- [Contributing guide](./CONTRIBUTING.md)
+- [Security policy](./SECURITY.md)
+- [Report a bug or request a feature](https://github.com/JaCraig/DragonHoard/issues)
+
+## License
+
+DragonHoard is licensed under the [Apache License 2.0](./LICENSE).
