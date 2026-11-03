@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.4.2"></a>
+## [2.4.2](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.4.2) (2026-11-03)
+
+### Bug Fixes
+
+* **workflow:** add secrets section to dotnet-publish.yml ([db306ab](https://www.github.com/JaCraig/DragonHoard/commit/db306ab64fb9ad891edd18311642a6e1e2c16f99))
+* **workflow:** update permissions and refactor secrets in dotnet-publish.yml ([391d444](https://www.github.com/JaCraig/DragonHoard/commit/391d444c7ce6bf039b6ae752c4b9e1df066679ca))
+
+### Other
+
+* Merge branch 'main' of https://github.com/JaCraig/DragonHoard ([2248ebb](https://www.github.com/JaCraig/DragonHoard/commit/2248ebbc840a0f854cfa954e1db399043c694b2f))
+
 <a name="2.4.1"></a>
 ## [2.4.1](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.4.1) (2026-11-03)
 
