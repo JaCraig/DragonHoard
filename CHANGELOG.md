@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.4.4"></a>
+## [2.4.4](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.4.4) (2026-11-03)
+
+### Bug Fixes
+
+* Merge branch 'main' of https://github.com/JaCraig/DragonHoard ([41a1e08](https://www.github.com/JaCraig/DragonHoard/commit/41a1e0806b02977995e4ba85dc1bb60ef26a8847))
+* workflow ([6bd5bbd](https://www.github.com/JaCraig/DragonHoard/commit/6bd5bbd12695bed7a36f38273798990e2625f12f))
+
 <a name="2.4.3"></a>
 ## [2.4.3](https://www.github.com/JaCraig/DragonHoard/releases/tag/v2.4.3) (2026-11-03)
 
