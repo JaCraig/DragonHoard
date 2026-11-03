@@ -20,6 +20,7 @@ using DragonHoard.Core.Interfaces;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 using System;
+using System.Linq;
 
 namespace DragonHoard.MicrosoftExtensionsCachingMemory
 {
@@ -51,6 +52,21 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
         private IMemoryCache? InternalCache { get; set; }
 
         /// <summary>
+        /// Removes all entries from the underlying in-memory cache when available.
+        /// </summary>
+        /// <remarks>
+        /// No action is taken when the internal cache is null or not a supported memory cache implementation.
+        /// </remarks>
+        public override void Clear()
+        {
+            if (InternalCache is null)
+                return;
+            if (InternalCache is Microsoft.Extensions.Caching.Memory.MemoryCache Cache)
+                Cache.Clear();
+            TagIndex.Clear();
+        }
+
+        /// <summary>
         /// Clones this instance.
         /// </summary>
         /// <returns>A copy of this cache.</returns>
@@ -73,7 +89,23 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
         /// Compacts the cache by the specified percentage.
         /// </summary>
         /// <param name="percentage">The percentage.</param>
-        public override void Compact(double percentage) => (InternalCache as Microsoft.Extensions.Caching.Memory.MemoryCache)?.Compact(percentage);
+        public override void Compact(double percentage)
+        {
+            if (percentage >= 1)
+            {
+                Clear();
+                return;
+            }
+            var MSCache = InternalCache as Microsoft.Extensions.Caching.Memory.MemoryCache;
+            if (MSCache is null)
+                return;
+            MSCache.Compact(percentage);
+            // Clean up the tag index to remove any keys that may have been evicted from the cache
+            foreach (var Key in MSCache.Keys.ToList())
+            {
+                TagIndex.Remove(Key);
+            }
+        }
 
         /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting
@@ -84,6 +116,8 @@ namespace DragonHoard.MicrosoftExtensionsCachingMemory
             if (InternalCache is null)
                 return;
             InternalCache = null;
+            TagIndex.Clear();
+            GC.SuppressFinalize(this);
         }
 
         /// <summary>

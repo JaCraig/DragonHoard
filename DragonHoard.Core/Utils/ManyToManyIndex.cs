@@ -21,7 +21,7 @@ namespace DragonHoard.Core.Utils
     /// <summary>
     /// Two way, many to many index
     /// </summary>
-    internal class ManyToManyIndex
+    public class ManyToManyIndex
     {
         /// <summary>
         /// Gets the second mapping.
@@ -48,6 +48,15 @@ namespace DragonHoard.Core.Utils
             {
                 TagToKeyMapping.Add(list[i], key);
             }
+        }
+
+        /// <summary>
+        /// Removes all entries from both key-to-tag and tag-to-key mappings.
+        /// </summary>
+        public void Clear()
+        {
+            KeyToTagMapping.Clear();
+            TagToKeyMapping.Clear();
         }
 
         /// <summary>

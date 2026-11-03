@@ -31,6 +31,11 @@ namespace DragonHoard.Core.Interfaces
         string Name { get; }
 
         /// <summary>
+        /// Removes all items from the current instance.
+        /// </summary>
+        void Clear();
+
+        /// <summary>
         /// Clones this instance.
         /// </summary>
         /// <returns>A copy of this cache.</returns>

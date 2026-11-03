@@ -79,6 +79,28 @@ namespace DragonHoard.InMemory
         private InMemoryCacheOptions Options { get; }
 
         /// <summary>
+        /// Disposes disposable cached values, removes all entries from the cache, and resets the
+        /// tracked size to zero.
+        /// </summary>
+        /// <remarks>Performs the operation under a lock when the internal cache is available.</remarks>
+        public override void Clear()
+        {
+            if (InternalCache is null)
+                return;
+            lock (_LockObject)
+            {
+                foreach (CacheEntry Item in InternalCache.Values)
+                {
+                    if (Item.Value is IDisposable Disposable)
+                        Disposable.Dispose();
+                }
+                InternalCache.Clear();
+                TagIndex.Clear();
+                _CurrentSize = 0;
+            }
+        }
+
+        /// <summary>
         /// Clones this instance.
         /// </summary>
         /// <returns>A copy of this cache.</returns>
@@ -100,6 +122,11 @@ namespace DragonHoard.InMemory
         {
             if (InternalCache is null)
                 return;
+            if (percentage >= 1)
+            {
+                Clear();
+                return;
+            }
             var CurrentCount = InternalCache.Count;
             var ItemsToRemove = (int)Math.Round(CurrentCount * percentage, MidpointRounding.AwayFromZero);
             var TargetCount = CurrentCount - ItemsToRemove;
@@ -155,6 +182,7 @@ namespace DragonHoard.InMemory
                 {
                     _CurrentSize -= Item.Size ?? 0;
                     _ = InternalCache.Remove(Item.Key);
+                    TagIndex.Remove(Item.Key);
                     EvictionCallback(Item.Key, Item.Value, EvictionReason.Expired, this);
                 }
             }
@@ -174,6 +202,7 @@ namespace DragonHoard.InMemory
             }
             InternalCache.Clear();
             InternalCache = null;
+            TagIndex.Clear();
             GC.SuppressFinalize(this);
         }
 
@@ -484,6 +513,7 @@ namespace DragonHoard.InMemory
                     }
                     cache._CurrentSize -= Item.Size ?? 0;
                     _ = cache.InternalCache.Remove(Item.Key);
+                    cache.TagIndex.Remove(Item.Key);
                     cache.EvictionCallback(Item.Key, Item.Value, EvictionReason.Expired, cache);
                 }
             }

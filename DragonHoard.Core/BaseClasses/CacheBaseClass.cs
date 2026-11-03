@@ -28,6 +28,11 @@ namespace DragonHoard.Core.BaseClasses
     public abstract class CacheBaseClass : ICache
     {
         /// <summary>
+        /// The lock object
+        /// </summary>
+        private readonly object LockObject = new object();
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="CacheBaseClass"/> class.
         /// </summary>
         protected CacheBaseClass()
@@ -44,12 +49,12 @@ namespace DragonHoard.Core.BaseClasses
         /// Gets the index of the tags.
         /// </summary>
         /// <value>The index of the tags.</value>
-        private ManyToManyIndex TagIndex { get; } = new ManyToManyIndex();
+        protected ManyToManyIndex TagIndex { get; } = new ManyToManyIndex();
 
         /// <summary>
-        /// The lock object
+        /// Removes all elements from the current instance.
         /// </summary>
-        private readonly object LockObject = new object();
+        public abstract void Clear();
 
         /// <summary>
         /// Clones this instance.
