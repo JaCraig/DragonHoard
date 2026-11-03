@@ -19,4 +19,5 @@ jobs:
       user-email: "JaCraig@users.noreply.github.com"
       coveralls-upload: "./DragonHoard.InMemory.Tests/TestResults-10.0.x/coverage.net10.0.info"
       test-filter: "DragonHoard.InMemory.Tests"
+    secrets:
       nuget-user: ${{ secrets.NUGET_USER }}
